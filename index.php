@@ -65,6 +65,14 @@
   </header>
   <!-- Header Mobile End -->
 
+  <!--Mobile Main Banner Area Start-->
+  <div class="mobile-banner">
+    <h1>mieteinander</h1>
+    <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
+    <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
+  </div>
+  <!--Mobile Main Banner Area End-->
+
   <!--Main Banner Area Start-->
   <section class="main-banner">
     <div class="bg">
@@ -87,6 +95,7 @@
     </div>
   </section>
   <!--Main Banner Area End-->
+
   
   <section class="main body">
     <div class="sample">

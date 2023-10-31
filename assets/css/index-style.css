@@ -1,0 +1,370 @@
+/* 
+---------------------------------------------
+Global Styles
+--------------------------------------------- 
+*/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #1e1e1e;
+  font-size: 16px;
+  background: #fff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #fff;
+  font-weight: 700;
+}
+
+p {
+  font-size: 15px;
+  line-height: 30px;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-button a {
+  font-size: 14px;
+  color: #fff;
+  background-color: #7453fc;
+  border: 1px solid #7453fc;
+  padding: 12px 30px;
+  display: inline-block;
+  border-radius: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-button a:hover {
+  background-color: #fff;
+  color: #7453fc;
+  border: 1px solid #fff;
+}
+
+
+/* 
+---------------------------------------------
+Pre-loader Style
+--------------------------------------------- 
+*/
+
+.js-preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.98);
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  z-index: 9999;
+  -webkit-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+      -webkit-transform: translateX(96px);
+      transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+      -webkit-transform: translateX(-31px);
+      transform: translateX(-31px);
+  }
+}
+
+.preloader-inner {
+  position: relative;
+  width: 142px;
+  height: 40px;
+  background: transparent;
+}
+
+.preloader-inner .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #7453fc;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+  animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+  animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #7453fc;
+  border-radius: 50%;
+}
+
+
+
+/* 
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+.background-header {
+  background-color: #5170ff !important;
+  height: 70px!important;
+  position: fixed!important;
+  top: 0!important;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+  transition: all .5s ease 0s;
+  width: 100%;
+}
+
+.header-area {
+  background-color: transparent;
+  position: absolute;
+  height: 70px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all .5s ease 0s;
+}
+
+.header-area .main-nav {
+  min-height: 80px;
+  background: transparent;
+  display: flex;
+  background-color: #5170ff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.background-header .main-nav {
+  padding: 0px;
+  background-color: transparent;
+}
+
+.background-header .main-nav .logo {
+  margin-top: 8px;
+}
+
+.header-area .main-nav .logo img {
+  width: 100px;
+}
+
+.background-header .main-nav .logo img {
+  width: 75px;
+}
+
+.header-area .main-nav .nav {
+  display: inline-flex;
+  flex-basis: 70%;
+  justify-content: flex-end;
+  vertical-align: middle;
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 0px;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+  margin-left: 300px;
+}
+
+.header-area .main-nav .nav li {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+
+.header-area .main-nav .nav li a {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #2a2a2a;
+  transition: all 0.3s ease 0s;
+  border: transparent;
+  padding: 8px 15px;
+  border-radius: 18px;
+  letter-spacing: 1px;
+}
+
+.header-area .main-nav .nav li:hover a {
+  color: #fff;
+  background-color: #7453fc;
+}
+
+.header-area .main-nav .nav li a.active {
+  color: #fff;
+  background-color: #7453fc;
+}
+
+.header-area .menu-trigger {
+  cursor: pointer;
+  z-index: 99;
+  display: none;
+}
+
+/* 
+---------------------------------------------
+Banner Style
+--------------------------------------------- 
+*/
+
+.main-banner {
+  width: 40%;
+  height: 90vh;
+  background-image: url(../images/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+
+.main-banner .bg {
+  width: 130vh;
+  height: 90vh;
+  background: linear-gradient(to right, #5170ff, #da57fa);
+  margin-left: 100%;
+}
+
+.main-banner .container {
+  position: relative;
+  top: 30%;
+  left: 5%;
+}
+
+.main-banner h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+
+.main-banner p {
+  margin-top: 20px;
+}
+
+.main-banner .buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: start;
+}
+
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+footer {
+  background: #5170ff;
+  text-align: center;
+  padding: 25px 0px;
+}
+
+footer p {
+  color: #fff;
+}
+
+footer p a {
+  color: #fff;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+footer p a:hover {
+  color: #fff;
+  opacity: 0.75;
+}
+
+
+/* 
+---------------------------------------------
+Responsive Style
+--------------------------------------------- 
+*/
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .main-banner {  
+    background: linear-gradient(to right, #5170ff, #da57fa);
+    width: 100%;
+  }
+  
+  .main-banner .bg {
+    display: none;
+  }
+
+  .header-area { 
+    display: none;
+  }
+}

@@ -39,9 +39,6 @@
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Login / Register</a></li>
                     </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
                     <!-- Nav Bar End -->
 
                 </nav>
@@ -50,6 +47,23 @@
     </div>
   </header>
   <!-- Header End -->
+
+  <!-- Header Mobile -->
+  <header class="mobile-header">
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Explore</a></li>
+          <li><a class="menu__item" href="#">About Us</a></li>
+          <li><a class="menu__item" href="#">Login / Register</a></li>
+        </ul>
+      </div>
+  </header>
+  <!-- Header Mobile End -->
 
   <!--Main Banner Area Start-->
   <section class="main-banner">

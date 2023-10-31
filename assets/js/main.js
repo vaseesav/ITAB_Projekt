@@ -16,18 +16,4 @@ document.addEventListener('DOMContentLoaded', function () {
             headerElement.classList.remove("background-header");
         }
     });
-
-    // Hamburger Menu Dropdown Toggle
-    var menuTrigger = document.querySelector('.menu-trigger');
-    if (menuTrigger) {
-        menuTrigger.addEventListener('click', function () {
-            this.classList.toggle('active');
-            var nav = document.querySelector('.header-area .nav');
-            if (nav.style.display === 'block') {
-                nav.style.display = 'none';
-            } else {
-                nav.style.display = 'block';
-            }
-        });
-    }
-});
+})

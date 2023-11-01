@@ -420,7 +420,7 @@ Footer Style
 */
 
 footer {
-  background: var(--blau);
+  background: #5170ff;
   text-align: center;
   padding: 25px 0px;
 }

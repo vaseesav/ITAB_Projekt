@@ -1,5 +1,17 @@
 /* 
 ---------------------------------------------
+Vars
+--------------------------------------------- 
+*/
+:root{
+  --blau:#7453fc;
+  --lila:#da57fa;
+}
+
+
+
+/* 
+---------------------------------------------
 Global Styles
 --------------------------------------------- 
 */
@@ -41,8 +53,8 @@ img {
 .main-button a {
   font-size: 14px;
   color: #fff;
-  background-color: #7453fc;
-  border: 1px solid #7453fc;
+  background-color: var(--blau);
+  border: 1px solid var(--blau);
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -56,7 +68,7 @@ img {
 
 .main-button a:hover {
   background-color: #fff;
-  color: #7453fc;
+  color: var(--blau);
   border: 1px solid #fff;
 }
 
@@ -134,7 +146,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #7453fc;
+  background: var(--blau);
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -170,7 +182,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #5170ff !important;
+  background-color: var(--blau) !important;
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -196,7 +208,7 @@ Header Style
   min-height: 80px;
   background: transparent;
   display: flex;
-  background-color: #5170ff;
+  background-color: var(--blau);
   padding: 15px 30px;
   border-radius: 50px;
   width: 90%;
@@ -255,12 +267,12 @@ Header Style
 
 .header-area .main-nav .nav li:hover a {
   color: #fff;
-  background-color: #7453fc;
+  background-color: var(--blau);
 }
 
 .header-area .main-nav .nav li a.active {
   color: #fff;
-  background-color: #7453fc;
+  background-color: var(--blau);
 }
 
 
@@ -372,7 +384,7 @@ Banner Style
 .main-banner .bg {
   width: 130vh;
   height: 90vh;
-  background: linear-gradient(to right, #5170ff, #da57fa);
+  background: linear-gradient(to right, var(--blau), var(--lila));
   margin-left: 100%;
 }
 
@@ -408,7 +420,7 @@ Footer Style
 */
 
 footer {
-  background: #5170ff;
+  background: var(--blau);
   text-align: center;
   padding: 25px 0px;
 }
@@ -441,7 +453,7 @@ body {
 
 @media (max-width: 1000px) {
   .main-banner {  
-    background: linear-gradient(to right, #5170ff, #da57fa);
+    background: linear-gradient(to right, var(--blau), var(--lila));
     width: 100%;
   }
   

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--CSS Files-->
+    <link rel="stylesheet" href="assets/css/index-style.css">
     <link rel="stylesheet" href="assets/css/login-style.css">
 </head>
 <body>

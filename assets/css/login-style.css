@@ -100,7 +100,7 @@ Header Style
     border-radius: 50px;
     width: 90%;
     margin-left: 5%;
-    height: 105px;
+    height: 102px;
   }
   
   .background-header .main-nav {
@@ -127,7 +127,7 @@ Header Style
     justify-content: flex-end;
     vertical-align: middle;
     text-align: right;
-    margin-top: 5px;
+    margin-top: 0px;
     margin-right: 0px;
     transition: all 0.3s ease 0s;
     position: relative;

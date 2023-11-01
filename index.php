@@ -34,10 +34,10 @@
 
                     <!-- Nav Bar Start -->
                     <ul class="nav">
-                        <li><a href="index.php" class="active">Home</a></li>
-                        <li><a href="#">Explore</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Login / Register</a></li>
+                        <li><a href="index.php" class="active">Startseite</a></li>
+                        <li><a href="#">Erkunden</a></li>
+                        <li><a href="#">Über Uns</a></li>
+                        <li><a href="login.php">Anmelden / Registrieren</a></li>
                     </ul>   
                     <!-- Nav Bar End -->
 
@@ -57,9 +57,9 @@
         </label>
 
         <ul class="menu__box">
-          <li><a class="menu__item" href="#">Explore</a></li>
-          <li><a class="menu__item" href="#">About Us</a></li>
-          <li><a class="menu__item" href="#">Login / Register</a></li>
+          <li><a class="menu__item" href="#">Erkunden</a></li>
+          <li><a class="menu__item" href="#">Über Uns</a></li>
+          <li><a class="menu__item" href="login.php">Anmelden / Registrieren</a></li>
         </ul>
       </div>
   </header>

@@ -56,9 +56,9 @@
         </label>
 
         <ul class="menu__box">
-          <li><a class="menu__item" href="login.php">Anmelden / registrieren</a></li>
           <li><a class="menu__item" href="index.php">Startseite</a></li>
           <li><a class="menu__item" href="#">Erkunden</a></li>
+          <li><a class="menu__item" href="#">Über uns</a></li>
         </ul>
       </div>
   </header>

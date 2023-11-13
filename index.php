@@ -4,7 +4,7 @@
   <?php 
   include 'assets/php/head.php'; 
   ?>
-  <title>mieteinander</title>
+  <title>Startseite</title>
   </head>
 
 <body>
@@ -116,5 +116,6 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/navColor.js"></script>
   </body>
 </html>

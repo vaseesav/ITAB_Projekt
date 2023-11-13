@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-
+    setActiveClassBasedOnTitle();
     // Page loading animation
     document.getElementById('js-preloader').classList.add('loaded');
-
+    
     // Taskbar change on scroll
     window.addEventListener('scroll', function () {
         var scroll = window.scrollY;

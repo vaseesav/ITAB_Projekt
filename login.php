@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-		<title>Anmelden / Registrieren</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<!--CSS Files-->
-		<link rel="stylesheet" href="assets/css/index-style.css" />
+		<?php include("assets/php/head.php"); ?>
 		<link rel="stylesheet" href="assets/css/login-style.css" />
+		<title>Anmelden / Registrieren</title>
 	</head>
 	<body>
 		<div id="js-preloader" class="js-preloader">
@@ -24,44 +18,13 @@
 		</div>
 
 		<!-- Header Start-->
-		<header class="header-area header-sticky">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<nav class="main-nav">
-							<!-- Logo -->
-							<a href="index.php" class="logo"><img src="assets/images/logo.png" alt="" /></a>
-
-							<!-- Nav Bar Start -->
-							<ul class="nav">
-								<li><a href="index.php">Startseite</a></li>
-								<li><a href="#">Erkunden</a></li>
-								<li><a href="#">Über Uns</a></li>
-								<li><a href="login.php" class="active">Anmelden / Registrieren</a></li>
-							</ul>
-							<!-- Nav Bar End -->
-						</nav>
-					</div>
-				</div>
-			</div>
-		</header>
+		<?php include("assets/php/header.php"); ?>
 		<!-- Header End -->
 
 		<!-- Header Mobile -->
-		<header class="mobile-header">
-			<div class="hamburger-menu">
-				<input id="menu__toggle" type="checkbox" />
-				<label class="menu__btn" for="menu__toggle">
-					<span></span>
-				</label>
-
-				<ul class="menu__box">
-					<li><a class="menu__item" href="index.php">Startseite</a></li>
-					<li><a class="menu__item" href="#">Erkunden</a></li>
-					<li><a class="menu__item" href="#">Über uns</a></li>
-				</ul>
-			</div>
-		</header>
+		<?php 
+ 	 	include 'assets/php/mobileHeader.php'; 
+  		?>
 		<!-- Header Mobile End -->
 
 		<!-- Panel Body Start -->

@@ -1,10 +1,3 @@
-<?php
-session_start();
-
-// Überprüfen, ob der Nutzer eingeloggt ist
-$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
-?>
-
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -124,20 +117,6 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/navColor.js"></script>
-
-  <!-- If LoggedIn -->
-  <?php if ($loggedIn): ?>
-    <!-- Zeige den Login-Button nur, wenn der Nutzer nicht eingeloggt ist -->
-    <style>
-      #login {
-        display: none !important;
-      }
-
-      #profile {
-        display: block;
-      }
-    </style>
-<?php endif; ?>
 
   </body>
 </html>

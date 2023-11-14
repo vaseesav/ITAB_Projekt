@@ -1,3 +1,4 @@
+
 /* 
 ---------------------------------------------
 Vars
@@ -6,6 +7,18 @@ Vars
 :root{
   --blau:#7453fc;
   --lila:#da57fa;
+  --body-background-color: #2222229d; 
+  
+  --panel-color: #e4e3e3;
+
+  --switch-button-border-color: #ffffff;
+  --button-border-color: #7453fc;
+  --button-color: #7453fc;
+  --button-text-color: #fff;
+
+
+  --footer-text-color: #ffffff;
+  --footer-bg-color: #5170ff;
 }
 
 

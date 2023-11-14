@@ -8,10 +8,11 @@
 
                     <!-- Nav Bar Start -->
                     <ul class="nav">
-                        <li><a href="index.php">Startseite</a></li>
+                        <li><a href="index.php" class="active">Startseite</a></li>
                         <li><a href="#">Erkunden</a></li>
                         <li><a href="#">Über Uns</a></li>
-                        <li><a href="login.php">Anmelden / Registrieren</a></li>
+                        <li><a href="profile.php" id="profile">Profile</a></li>
+                        <li><a href="login.php" id="login">Anmelden / Registrieren</a></li>
                     </ul>   
 
                     <!-- Nav Bar End -->

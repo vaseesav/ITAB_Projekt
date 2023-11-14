@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Überprüfen, ob der Nutzer eingeloggt ist
+$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
+
 <!DOCTYPE html>
 <html lang="de">
   <head>

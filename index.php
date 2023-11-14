@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+// Überprüfen, ob der Nutzer eingeloggt ist
+$loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
+?>
+
 <!DOCTYPE html>
 <html lang="de">
   <head>
@@ -37,7 +44,8 @@
                         <li><a href="index.php" class="active">Startseite</a></li>
                         <li><a href="#">Erkunden</a></li>
                         <li><a href="#">Über Uns</a></li>
-                        <li><a href="login.php">Anmelden / Registrieren</a></li>
+                        <li><a href="#" id="profile">Profile</a></li>
+                        <li><a href="login.php" id="login">Anmelden / Registrieren</a></li>
                     </ul>   
                     <!-- Nav Bar End -->
 
@@ -59,7 +67,8 @@
         <ul class="menu__box">
           <li><a class="menu__item" href="#">Erkunden</a></li>
           <li><a class="menu__item" href="#">Über Uns</a></li>
-          <li><a class="menu__item" href="login.php">Anmelden / Registrieren</a></li>
+          <li><a class="menu__item" href="#" id="profile">Profile</a></li>
+          <li><a class="menu__item" href="login.php" id="login">Anmelden / Registrieren</a></li>
         </ul>
       </div>
   </header>
@@ -156,5 +165,20 @@
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
+
+  <!-- If LoggedIn -->
+  <?php if ($loggedIn): ?>
+    <!-- Zeige den Login-Button nur, wenn der Nutzer nicht eingeloggt ist -->
+    <style>
+      #login {
+        display: none !important;
+      }
+
+      #profile {
+        display: block;
+      }
+    </style>
+<?php endif; ?>
+
   </body>
 </html>

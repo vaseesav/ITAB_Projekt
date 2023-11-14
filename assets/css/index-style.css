@@ -275,6 +275,10 @@ Header Style
   background-color: var(--blau);
 }
 
+#profile {
+  display: none;
+}
+
 
 /* 
 ---------------------------------------------

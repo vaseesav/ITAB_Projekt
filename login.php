@@ -100,7 +100,7 @@
 					<a href="#">Passwort vergessen?</a>
 					<button type="submit">Anmelden</button>
 				</form>
-			</div>
+    		</div>
 			<!-- Signin Panel End -->
 
 			<!-- Panel Switcher Start -->

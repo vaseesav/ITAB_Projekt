@@ -1,0 +1,249 @@
+/* 
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+/* Neue CSS-Regel für die Unsichtbarkeit */
+.invisible {
+    display: none;
+}
+
+.background-header {
+    background-color: #5170ff !important;
+    height: 70px!important;
+    position: fixed!important;
+    top: 0!important;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15)!important;
+    transition: all .5s ease 0s;
+    width: 100%;
+  }
+  
+  .header-area {
+    background-color: transparent;
+    position: absolute;
+    height: 70px;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    transition: all .5s ease 0s;
+  }
+  
+  .header-area .main-nav {
+    min-height: 80px;
+    background: transparent;
+    display: flex;
+    background-color: #5170ff;
+    padding: 15px 30px;
+    border-radius: 50px;
+    width: 90%;
+    margin-left: 5%;
+  }
+  
+  .background-header .main-nav {
+    padding: 0px;
+    background-color: transparent;
+  }
+  
+  .background-header .main-nav .logo {
+    margin-top: 8px;
+  }
+  
+  .header-area .main-nav .logo img {
+    width: 100px;
+  }
+  
+  .background-header .main-nav .logo img {
+    width: 75px;
+  }
+  
+  .header-area .main-nav .nav {
+    display: inline-flex;
+    flex-basis: 70%;
+    justify-content: flex-end;
+    vertical-align: middle;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 0px;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    z-index: 999;
+    margin-left: 300px;
+  }
+  
+  .header-area .main-nav .nav li {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: inline-block;
+  }
+  
+  .header-area .main-nav .nav li a {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+    color: #2a2a2a;
+    transition: all 0.3s ease 0s;
+    border: transparent;
+    padding: 8px 15px;
+    border-radius: 18px;
+    letter-spacing: 1px;
+  }
+  
+  .header-area .main-nav .nav li:hover a {
+    color: #fff;
+    background-color: var(--blau);
+  }
+  
+  .header-area .main-nav .nav li a.active {
+    color: #fff;
+    background-color: var(--blau);
+  }
+  
+  
+
+/* Allgemeine Stile */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background-color: #1e1e1e;
+    color: #fff;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #fff;
+}
+
+/* Formularstil für Anzeige aufgeben */
+form {
+    max-width: 600px;
+    padding: 60px;
+    background-color: #5170ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #7453fc;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #da57fa;
+}
+
+/* Optimiere das Padding */
+body {
+    padding: 20px;
+}
+
+/* Füge Stil für Dropdown-Menü hinzu */
+.dropdown-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    margin-right: 10px;
+}
+
+
+/* 
+---------------------------------------------
+Footer Style
+--------------------------------------------- 
+*/
+
+footer {
+    background: #5170ff;
+    text-align: center;
+    padding: 25px 0px;
+  }
+  
+  footer p {
+    color: #fff;
+  }
+  
+  footer p a {
+    color: #fff;
+    font-weight: 500;
+    transition: all .3s;
+  }
+  
+  footer p a:hover {
+    color: #fff;
+    opacity: 0.75;
+  }
+  
+  
+  /* 
+  ---------------------------------------------
+  Responsive Style
+  --------------------------------------------- 
+  */
+  
+  body {
+    overflow-x: hidden;
+  }
+  
+  @media (max-width: 1000px) {
+    .main-banner {  
+      background: linear-gradient(to right, #5170ff, #da57fa);
+      width: 100%;
+    }
+    
+    .main-banner .bg {
+      display: none;
+    }
+  
+    .header-area { 
+      display: none;
+    }
+  
+    .mobile-header {
+      width: 0px;
+      height: 0px;
+      display: block;
+    }
+    .mobile-banner {
+      display: block;
+    }
+  }
+  

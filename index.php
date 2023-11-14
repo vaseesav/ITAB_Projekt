@@ -44,7 +44,7 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
                         <li><a href="index.php" class="active">Startseite</a></li>
                         <li><a href="#">Erkunden</a></li>
                         <li><a href="#">Über Uns</a></li>
-                        <li><a href="#" id="profile">Profile</a></li>
+                        <li><a href="profile.php" id="profile">Profile</a></li>
                         <li><a href="login.php" id="login">Anmelden / Registrieren</a></li>
                     </ul>   
                     <!-- Nav Bar End -->
@@ -67,7 +67,7 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
         <ul class="menu__box">
           <li><a class="menu__item" href="#">Erkunden</a></li>
           <li><a class="menu__item" href="#">Über Uns</a></li>
-          <li><a class="menu__item" href="#" id="profile">Profile</a></li>
+          <li><a class="menu__item" href="profile.php" id="profile">Profile</a></li>
           <li><a class="menu__item" href="login.php" id="login">Anmelden / Registrieren</a></li>
         </ul>
       </div>

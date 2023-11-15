@@ -1,3 +1,4 @@
+
 /* 
 ---------------------------------------------
 Vars
@@ -6,6 +7,18 @@ Vars
 :root{
   --blau:#7453fc;
   --lila:#da57fa;
+  --body-background-color: #2222229d; 
+  
+  --panel-color: #e4e3e3;
+
+  --switch-button-border-color: #ffffff;
+  --button-border-color: #7453fc;
+  --button-color: #7453fc;
+  --button-text-color: #fff;
+
+
+  --footer-text-color: #ffffff;
+  --footer-bg-color: #5170ff;
 }
 
 
@@ -35,7 +48,6 @@ a {
 h1, h2, h3, h4, h5{
   margin-top: 0px;
   margin-bottom: 0px;
-  color: #fff;
   font-weight: 700;
 }
 
@@ -275,6 +287,10 @@ Header Style
   background-color: var(--blau);
 }
 
+#profile {
+  display: none;
+}
+
 
 /* 
 ---------------------------------------------
@@ -393,6 +409,9 @@ Banner Style
   top: 30%;
   left: 5%;
 }
+.ueberschrift {
+    color: white;
+}
 
 .main-banner h2 {
   color: #fff;
@@ -473,4 +492,19 @@ body {
   .mobile-banner {
     display: block;
   }
+  h1, h2, h3, h4, h5{
+    padding-left: 10px;
+  }
+  h1{
+    font-size: 40px;
+ 
+  }
+  h2{
+    font-size: 17px;
+  }
+ p{
+  font-size: 19px;
+  padding-left: 10px;
+  padding: 50px;
+ }
 }

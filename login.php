@@ -87,7 +87,9 @@
 
 		<!--Footer Start-->
 		<footer>
-			<p>Copyright © 2023 <a href="#">mieteinander</a> All rights reserved.</p>
+		<?php 
+ 	 	include 'assets/php/footer.php'; 
+  		?>
 		</footer>
 		<!--Footer End-->
 

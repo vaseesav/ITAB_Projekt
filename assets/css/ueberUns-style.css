@@ -43,12 +43,12 @@ body {
     margin-top: 200px;
     }
 
-    .container {
+    .teamcontainter {
     padding: 0 16px;
     height: 496px;
     }
 
-    .container::after, .row::after {
+    .teamcontainter::after, .row::after {
     content: "";
     clear: both;
     display: table;
@@ -68,15 +68,19 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
-    margin-top: auto; /* Pushes the button to the bottom */
     }
 
     .button:hover {
     background-color: #555;
     }
     .teamDiv{
+        margin-top: 200px;
         padding: 20px;
         font-size: 40px;
+    }
+
+    .row h2 {
+        margin-top: 10px;
     }
     p{
         color: #000;
@@ -90,7 +94,7 @@ body {
         /* display: block; */
         /* flex-direction: column-reverse; */
     }
-    .container{
+    .teamcontainter{
         display: flex;
         flex-direction: column;
         height: auto;

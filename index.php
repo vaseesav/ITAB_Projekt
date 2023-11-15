@@ -46,7 +46,7 @@
         <div class="row">
           <div class="col-lg-6 align-self-center">
             <div class="header-text">
-              <h1>mieteinander</h1>
+              <h1 class="ueberschrift">mieteinander</h1>
               <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
               <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
               <div class="buttons">

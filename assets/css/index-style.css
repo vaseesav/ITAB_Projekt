@@ -409,6 +409,9 @@ Banner Style
   top: 30%;
   left: 5%;
 }
+.ueberschrift {
+    color: white;
+}
 
 .main-banner h2 {
   color: #fff;

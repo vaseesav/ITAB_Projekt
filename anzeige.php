@@ -1,5 +1,5 @@
 <?php
-// Verbindung zur Datenbank herstellen (Passen Sie die Daten an Ihre Konfiguration an)
+// Verbindung zur Datenbank herstellen
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -7,38 +7,48 @@ $dbname = "mieteinander";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Überprüfen Sie die Verbindung
+// Überprüfen der Verbindung
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 // Überprüfen, ob das Suchformular abgeschickt wurde
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Erfassen Sie die Suchkriterien aus dem Formular
-    $veranstaltungstyp = $_POST["veranstaltungstyp"];
-    $budget = $_POST["budget"];
+    // Überprüfen der Existenz der Schlüssel
+    if (isset($_POST["raumname"]) && isset($_POST["veranstaltungstyp"]) && isset($_POST["anzahl-gaeste"]) && isset($_POST["beschreibung"]) &&
+        isset($_POST["postleitzahl"]) && isset($_POST["stadt"]) && isset($_POST["bundesland"]) && isset($_POST["land"]) &&
+        isset($_POST["startDatum"]) && isset($_POST["endDatum"]) && isset($_POST["preis"])) {
 
-    // Erstellen Sie die SQL-Abfrage basierend auf den Suchkriterien
-    $sql = "SELECT * FROM `Anzeige aufgeben` WHERE `Veranstaltungstyp` = '$veranstaltungstyp' AND `Budget` <= $budget";
+        // Erfassen der Anzeigeninformationen aus dem Formular
+        $raumname = $_POST["raumname"];
+        $veranstaltungstyp = $_POST["veranstaltungstyp"];
+        $anzahlGaeste = $_POST["anzahl-gaeste"];
+        $beschreibung = $_POST["beschreibung"];
+        $postleitzahl = $_POST["postleitzahl"];
+        $stadt = $_POST["stadt"];
+        $bundesland = $_POST["bundesland"];
+        $land = $_POST["land"];
+        $startDatum = $_POST["startDatum"];
+        $endDatum = $_POST["endDatum"];
+        $preis = $_POST["preis"];
 
-    // Führen Sie die SQL-Abfrage aus
-    $result = $conn->query($sql);
+        // Erstellen der SQL-Abfrage basierend auf den Anzeigeninformationen
+        $sql = "INSERT INTO `Anzeige aufgeben` (`Raumname`, `Veranstaltungstyp`, `AnzahlGaeste`, `Beschreibung des Raumes`, 
+                `Postleitzahl`, `Stadt`, `Bundesland`, `Land`, `Verfügbarkeit`, `Preis`) VALUES ('$raumname', '$veranstaltungstyp', 
+                $anzahlGaeste, '$beschreibung', '$postleitzahl', '$stadt', '$bundesland', '$land', '$startDatum-$endDatum', '$preis')";
 
-    // Überprüfen Sie die Ergebnisse und zeigen Sie sie an
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            // Hier können Sie die Ergebnisse anzeigen, z.B. in einer HTML-Tabelle
-            echo "Raumname: " . $row["Raumname"] . "<br>";
-            echo "Beschreibung: " . $row["Beschreibung des Raumes"] . "<br>";
-            // Fügen Sie weitere Informationen hinzu, je nach Bedarf
-            echo "<hr>";
+        // Führen der SQL-Abfrage aus
+        if ($conn->query($sql) === TRUE) {
+            echo "Anzeige erfolgreich aufgegeben!";
+        } else {
+            echo "Fehler beim Aufgeben der Anzeige: " . $conn->error;
         }
     } else {
-        echo "Keine Ergebnisse gefunden.";
+        echo "Ein oder mehrere Formularfelder fehlen.";
     }
 }
 
-// Schließen Sie die Verbindung zur Datenbank
+// Schließen der Verbindung zur Datenbank
 $conn->close();
 ?>
 
@@ -48,118 +58,140 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anzeige aufgeben - mieteinander</title>
-    <link rel="stylesheet" href="assets/css/anzeigen-style.css"> 
+    <link rel="stylesheet" href="assets/css/anzeigen-style.css">
 
-    <head>
-    <!-- ... (andere Head-Elemente) ... -->
     <script>
-        function toggleForm(selectedForm) {
-            var anzeigenForm = document.getElementById('anzeigenForm');
-            var gesuchForm = document.getElementById('gesuchForm');
+        function toggleForm() {
+            // Holen Sie sich die Formularelemente
+            let anzeigenForm = document.getElementById('anzeigenForm');
+            let gesuchForm = document.getElementById('gesuchForm');
 
             // Verstecke oder zeige die Formulare basierend auf der Auswahl im Dropdown
-            if (selectedForm === 'anzeigen') {
-                anzeigenForm.classList.remove('invisible');
-                gesuchForm.classList.add('invisible');
+            if (anzeigenForm.style.display !== 'none') {
+                anzeigenForm.style.display = 'none';
+                gesuchForm.style.display = 'block';
             } else {
-                anzeigenForm.classList.add('invisible');
-                gesuchForm.classList.remove('invisible');
+                anzeigenForm.style.display = 'block';
+                gesuchForm.style.display = 'none';
             }
         }
     </script>
 </head>
 
-
-</head>
 <body>
 
+<!-- Schalter für "Gesuch aufgeben" oder "Anzeige aufgeben" -->
 
-<!-- Dropdown-Menü für "Gesuch aufgeben" oder "Anzeige aufgeben" -->
-<div class="dropdown-container">
-        <select class="dropdown" onchange="toggleForm(this.value)">
-            <option value="anzeigen">Anzeige aufgeben</option>
-            <option value="gesuch">Gesuch aufgeben</option>
-        </select>
-    </div>
+<div class="description-box">
+    <p>Auf unserer Plattform dreht sich alles um das "Miteinander". Hier kannst du nicht nur Räume mieten, sondern auch jede Menge Lacher erleben.</p>
+    <p>Wir bieten nicht nur Raum für Ideen, sondern auch Raum für Wortspiele. Wir machen es dir leicht, den perfekten Raum zu finden oder anzubieten - miteinander wird's möglich!</p>
+    <p>Ob du einen "Raumtastischen" Ort für deine Veranstaltung suchst oder einfach etwas "Raumantisches" teilen möchtest, hier bist du richtig.</p>
+    <p>Verpasse nicht die Gelegenheit, bei uns deine Raumkomödie zu starten. Wir sind der Meinung, dass das "Miteinander" nicht nur praktisch, sondern auch lustig sein sollte.</p>
+    <p>Mieteinander, lacheinander, erlebeinander - denn bei uns wird das Mieten zum Gaudi! Willkommen in unserer Raumkomödien-Gemeinschaft!</p>
+</div>
 
-    <main>
-        <section class="form-section">
-            <!-- Anzeige aufgeben Formular -->
-            <form id="anzeigenForm" class="invisible">
-                <!-- ... (dein Anzeige aufgeben Formular) ... -->
-            </form>
+<div class="toggle-container">
+    <label class="toggle-label">
+        <input type="checkbox" id="toggleSwitch" onclick="toggleForm()">
+        <span class="slider"></span>
+    </label>
+    <span class="toggle-text">Anzeige aufgeben</span>
+    <span class="toggle-text">Gesuch aufgeben</span>
+</div>
 
-            <!-- Gesuch aufgeben Formular -->
-            <form id="gesuchForm" class="invisible">
-                <!-- ... (dein Gesuch aufgeben Formular) ... -->
-            </form>
-        </section>
-    </main>
+<main>
+    <section class="form-section">
+        <!-- Anzeige aufgeben Formular -->
+        <form id="anzeigenForm" class="invisible">
+            <label for="anzeigeTitel">Titel der Anzeige:</label>
+            <input type="text" id="anzeigeTitel" name="anzeigeTitel" required>
 
-    <header class="background-header">
-        <div class="main-nav">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="mieteinander Logo"> 
-            </div>
-            <ul class="nav">
-                <li><a href="#">Startseite</a></li>
-                <li><a href="#">Anzeige aufgeben</a></li>
-                <li><a href="#">Gesuch aufgeben</a></li>
-              
-            </ul>
+            <label for="anzeigeInhalt">Inhalt der Anzeige:</label>
+            <textarea id="anzeigeInhalt" name="anzeigeInhalt" required></textarea>
+
+            <button type="submit">Anzeige aufgeben</button>
+        </form>
+
+        <!-- Gesuch aufgeben Formular -->
+        <form id="gesuchForm" class="invisible" style="display:none;">
+            <label for="gesuchTitel">Titel des Gesuchs:</label>
+            <input type="text" id="gesuchTitel" name="gesuchTitel" required>
+
+            <label for="gesuchInhalt">Inhalt des Gesuchs:</label>
+            <textarea id="gesuchInhalt" name="gesuchInhalt" required></textarea>
+
+            <button type="submit">Gesuch aufgeben</button>
+        </form>
+    </section>
+</main>
+
+<header class="background-header">
+    <div class="main-nav">
+        <div class="logo">
+            <!-- Hier könnte zusätzlicher Text oder ein alternativer Text für das Bild hinzugefügt werden -->
+            <img src="assets/images/logo.png" alt="mieteinander Logo"> 
         </div>
-    </header>
+    </div>
+</header>
 
-    <main>
-        <section class="form-section">
-            <form>
-                <label for="raumname">Raumname</label>
-                <input type="text" id="raumname" name="raumname" required>
+<main>
+    <section class="form-section">
+        <!-- Formular für die Anzeige eines Raumes -->
+        <form>
+            <!-- Weitere Eingabefelder für die Anzeige eines Raumes -->
+            <label for="raumname">Raumname</label>
+            <input type="text" id="raumname" name="raumname" required>
 
-                <label for="veranstaltungstyp">Veranstaltungstyp</label>
-                <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
+            <label for="veranstaltungstyp">Veranstaltungstyp</label>
+            <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
 
-                <label for="anzahl-gaeste">Anzahl der Gäste</label>
-                <input type="number" id="anzahl-gaeste" name="anzahl-gaeste" required>
+            <label for="anzahl-gaeste">Anzahl der Gäste</label>
+            <input type="number" id="anzahl-gaeste" name="anzahl-gaeste" required>
 
-                <label for="beschreibung">Beschreibung des Raumes</label>
-                <textarea id="beschreibung" name="beschreibung" required></textarea>
+            <label for="beschreibung">Beschreibung des Raumes</label>
+            <textarea id="beschreibung" name="beschreibung" required></textarea>
 
-                <label for="postleitzahl">Postleitzahl</label>
-                <input type="text" id="postleitzahl" name="postleitzahl" required>
+            <label for="postleitzahl">Postleitzahl</label>
+            <input type="text" id="postleitzahl" name="postleitzahl" required>
 
-                <label for="stadt">Stadt</label>
-                <input type="text" id="stadt" name="stadt" required>
+            <label for="stadt">Stadt</label>
+            <input type="text" id="stadt" name="stadt" required>
 
-                <label for="bundesland">Bundesland</label>
-                <input type="text" id="bundesland" name="bundesland" required>
+            <label for="bundesland">Bundesland</label>
+            <input type="text" id="bundesland" name="bundesland" required>
 
-                <label for="land">Land</label>
-                <input type="text" id="land" name="land" required>
+            <label for="land">Land</label>
+            <input type="text" id="land" name="land" required>
 
-                <label for="verfuegbarkeit">Verfügbarkeit (Datum/ Zeit)</label>
-                <input type="datetime-local" id="verfuegbarkeit" name="verfuegbarkeit" required>
+            <label for="startDatum">Startdatum und -zeit:</label>
+            <input type="datetime-local" id="startDatum" name="startDatum" required>
 
-                <label for="preis">Preis/ pro Stunde/Tag</label>
+            <label for="endDatum">Enddatum und -zeit:</label>
+            <input type="datetime-local" id="endDatum" name="endDatum" required>
+
+            <!-- Für die Auswahl zwischen Stunde und Tag -->
+            <label for="preis">Preis</label>
+            <div>
                 <input type="text" id="preis" name="preis" required>
-
-                <label for="verifiziert">Verifiziert</label>
-                <select id="verifiziert" name="verifiziert" required>
-                    <option value="ja">Ja</option>
-                    <option value="nein">Nein</option>
+                <select name="einheit" id="einheit">
+                    <option value="stunde">pro Stunde</option>
+                    <option value="tag">pro Tag</option>
                 </select>
+                <span class="currency">EUR</span>
+            </div>
 
-                <label for="fotos">Fotos</label>
-                <input type="file" id="fotos" name="fotos" accept="image/*">
+            <label for="fotos">Fotos</label>
+            <input type="file" id="fotos" name="fotos" accept="image/*">
 
-                <button type="submit">Anzeige aufgeben</button>
-            </form>
-        </section>
-    </main>
+            <button type="submit">Anzeige aufgeben</button>
+        </form>
+    </section>
+</main>
 
-    <footer>
-        <p>&copy; 2023 mieteinander. Alle Rechte vorbehalten.</p>
-    </footer>
+<footer>
+    <!-- Hier können zusätzliche Informationen oder Links für den Footer hinzugefügt werden -->
+    <p>&copy; 2023 mieteinander. Alle Rechte vorbehalten.</p>
+</footer>
 
 </body>
 </html>

@@ -16,12 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $conn->real_escape_string($_POST['email']);
     $password = $conn->real_escape_string($_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE email='$email'";
+    $sql = "SELECT * FROM user WHERE Email='$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
         $user = $result->fetch_assoc();
-        if (password_verify($password, $user['password'])) {
+        if (password_verify($password, $user['Passworthash'])) {
             // Password is correct
             $_SESSION['loggedin'] = true;
             $_SESSION['userId'] = $user['id'];

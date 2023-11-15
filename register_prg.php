@@ -23,7 +23,7 @@ $password = $conn->real_escape_string($_POST['password']);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Überprüfen, ob der Benutzer bereits in der Datenbank existiert
-$sql = "SELECT * FROM users WHERE email='$email'";
+$sql = "SELECT * FROM user WHERE email='$email'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
     echo "Ein Benutzer mit dieser E-Mail-Adresse existiert bereits.";
 } else {
     // Einfügen des neuen Benutzers in die Datenbank
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+    $sql = "INSERT INTO user (UName, Email, Passworthash) VALUES ('$username', '$email', '$hashedPassword')";
 
     if ($conn->query($sql) === TRUE) {
         // Benutzer erfolgreich registriert

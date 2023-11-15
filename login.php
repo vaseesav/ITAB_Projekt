@@ -22,8 +22,8 @@
 		<!-- Header End -->
 
 		<!-- Header Mobile -->
-		<?php
- 	 	include 'assets/php/mobileHeader.php';
+		<?php 
+ 	 	include 'assets/php/mobileHeader.php'; 
   		?>
 		<!-- Header Mobile End -->
 
@@ -87,9 +87,9 @@
 
 <!--Footer Start-->
   <?php
-  include 'assets/php/footer.php';
+    include 'assets/php/footer.php';
   ?>
-  <!--Footer End-->
+ <!--Footer End-->
 
 		<!-- Scripts -->
 		<script src="assets/js/login.js"></script>

@@ -1,10 +1,14 @@
 <?php
+// Fehlerprotokollierung aktivieren
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-//  Datenbankverbindung (Kenndaten)
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "mieteinander";
+// Datenbankverbindung (Kenndaten)
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
 
 // Herstellen der Datenbankverbindung
 $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
@@ -23,22 +27,25 @@ $password = $conn->real_escape_string($_POST['password']);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Überprüfen, ob der Benutzer bereits in der Datenbank existiert
-$sql = "SELECT * FROM user WHERE email='$email'";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     // Benutzer existiert bereits
     echo "Ein Benutzer mit dieser E-Mail-Adresse existiert bereits.";
 } else {
     // Einfügen des neuen Benutzers in die Datenbank
-    $sql = "INSERT INTO user (UName, Email, Passworthash) VALUES ('$username', '$email', '$hashedPassword')";
+    $stmt = $conn->prepare("INSERT INTO user (UName, Email, Passworthash) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $hashedPassword);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         // Benutzer erfolgreich registriert
         echo "Neuer Benutzer erfolgreich registriert.";
     } else {
-        // Fehlerbehandlung
-        echo "Fehler: " . $sql . "<br>" . $conn->error;
+        // Fehler beim Einfügen
+        echo "Fehler beim Einfügen: " . mysqli_error($conn);
     }
 }
 

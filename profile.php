@@ -1,10 +1,9 @@
+<?php
+include 'assets/php/head.php';
+?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<head>
-  <?php
-    include 'assets/php/head.php';
-  ?>
   <?php
 // Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
 if (!isset($_SESSION['loggedin'])) {

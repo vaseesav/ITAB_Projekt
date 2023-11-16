@@ -1,7 +1,9 @@
+<?php
+include 'assets/php/head.php';
+?>
 <!DOCTYPE html>
 <html lang="de">
 	<head>
-		<?php include("assets/php/head.php"); ?>
 		<!-- <link rel="stylesheet" href="assets/css/login-style.css" /> -->
 		<link rel="stylesheet" href="assets/css/ueberUns-style.css">
 		<title>Über Uns</title>

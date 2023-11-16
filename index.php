@@ -1,9 +1,9 @@
+<?php
+include 'assets/php/head.php';
+?>
 <!DOCTYPE html>
 <html lang="de">
   <head>
-  <?php
-  include 'assets/php/head.php';
-  ?>
   <title>Startseite</title>
   </head>
 

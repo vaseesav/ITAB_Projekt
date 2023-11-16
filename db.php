@@ -1,14 +1,30 @@
 <?php
-$db_host = 'localhost'; 
-$db_user = 'root'; 
-$db_pass = ''; 
-$db_name = 'mieteinander'; 
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
 
+try {
+    $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+    if ($conn->connect_error) {
+        die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+    }
 
+    $dump = file_get_contents('sql/mieteinander.sql');
+    if ($dump === false) {
+        throw new Exception("Fehler beim Laden der SQL-Datei.");
+    }
 
-if ($conn->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+    $success = $conn->multi_query($dump);
+    if (!$success) {
+        throw new Exception("Fehler beim Ausführen der SQL-Anweisungen: " . $conn->error);
+    }
+
+    echo "SQL-Anweisungen erfolgreich ausgeführt.";
+} catch (Exception $e) {
+    echo "Ein Fehler ist aufgetreten: " . $e->getMessage();
 }
+
+$conn->close();
 ?>

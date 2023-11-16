@@ -1,8 +1,8 @@
 <?php
-$dbServername = "rdbms.strato.de";
-$dbUsername = "dbu2408738";
-$dbPassword = "#code-cruncher-2023%";
-$dbName = "dbs12222605";
+$dbServername = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'mieteinander';
 
 try {
     $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);

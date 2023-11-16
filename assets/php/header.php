@@ -4,7 +4,7 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- Logo -->
-                    <a href="index.php" class="logo"><img src="assets/images/logo.png" alt=""></a>
+                    <a href="index.php" class="logo"><img src="assets/images/logo_new.png" alt=""></a>
 
                     <!-- Nav Bar Start -->
                     <ul class="nav">

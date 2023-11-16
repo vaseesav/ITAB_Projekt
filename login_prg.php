@@ -1,10 +1,11 @@
 <?php
 session_start();
 
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
+
 $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
 if ($conn->connect_error) {

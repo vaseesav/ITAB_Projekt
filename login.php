@@ -34,7 +34,7 @@ include 'assets/php/head.php';
 		<div class="box" id="box">
 			<!-- Register Panel Start -->
 			<div class="form-box sign-up-box">
-				<form name="register" action="register_prg.php" method="post" onsubmit="return validateForm()">
+				<form name="register" id="register" method="post">
 					<h1>Konto Erstellen</h1>
 					<div class="social-box">
 						<a href="#" class="social">
@@ -46,13 +46,14 @@ include 'assets/php/head.php';
 					<input type="email" placeholder="Email" name="email" />
 					<input type="password" placeholder="Password" name="password" />
 					<button type="submit">Registrieren</button>
+                    <div id="register-result"></div>
 				</form>
 			</div>
 			<!-- Register Panel End -->
 
 			<!-- Signin Panel Start -->
 			<div class="form-box sign-in-box">
-				<form name="login" action="login_prg.php" method="post" onsubmit="return validateLoginForm()">
+                <form name="login-form" id="login-form" method="post">
 					<h1>Anmelden</h1>
 					<div class="social-box">
 						<a href="#" class="social">
@@ -60,10 +61,11 @@ include 'assets/php/head.php';
 						</a>
 					</div>
 					<span>oder benutze dein Konto</span>
-					<input type="email" placeholder="Email" name="email" />
-					<input type="password" placeholder="Password" name="password" />
+					<input type="email" placeholder="Email" name="login_email" />
+					<input type="password" placeholder="Password" name="login_password" />
 					<a href="#">Passwort vergessen?</a>
 					<button type="submit">Anmelden</button>
+                    <div id="login-result"></div>
 				</form>
 			</div>
 			<!-- Signin Panel End -->
@@ -94,6 +96,7 @@ include 'assets/php/head.php';
  <!--Footer End-->
 
 		<!-- Scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script src="assets/js/login.js"></script>
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/navColor.js"></script>

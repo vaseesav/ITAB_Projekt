@@ -41,9 +41,23 @@ if (!isset($_SESSION['loggedin'])) {
         ?>
 
         <!-- Buttons -->
-        <button onclick="location.href='change_pw.php'">Passwort ändern</button>
+        <button onclick="openModal()">Passwort ändern</button>
         <button onclick="logout()">Abmelden</button>
     </div>
+
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Passwort ändern</h2>
+            <form id="changePasswordForm">
+                Neues Passwort:<br> <input type="password" name="new_password" required><br>
+                Passwort bestätigen:<br> <input type="password" name="confirm_password" required><br>
+                <button type="submit" value="Passwort ändern">Passwort ändern</button>
+            </form>
+            <p id="passwordChangeMessage"></p>
+        </div>
+    </div>
+
 
     <br>
       <br>

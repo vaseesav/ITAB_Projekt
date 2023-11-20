@@ -1,13 +1,13 @@
 <?php
 ini_set('display_errors', '1');
 
-$servername = "localhost"; // oder Ihre Server-Adresse
-$username = "root";
-$password = "";
-$dbname = "mieteinander";
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
 
 // Erstellen der Verbindung
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
 // Überprüfen der Verbindung
 if ($conn->connect_error) {

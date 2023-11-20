@@ -10,20 +10,6 @@ signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
 
-function validateLoginForm() {
-	var email = document.forms["login"]["email"].value;
-	var password = document.forms["login"]["password"].value;
-
-	if (email === "" || password === "") {
-		alert("Bitte E-Mail und Passwort eingeben.");
-		return false;
-	}
-
-	// Anmeldeinformationen sind vorhanden
-	return true;
-}
-
-
 /**
  * Validierungsfunktion für das Registrierungs-Formular
  */
@@ -91,9 +77,11 @@ function validateEmail(email) {
 
 // Hilfsfunktion zur Überprüfung des Passworts
 function validatePassword(password) {
-	var re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/; // Mindestens 8 Zeichen, mindestens ein Buchstabe und eine Zahl
+	var re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&\-])[A-Za-z\d@$!%*?&\-]{8,}$/;
 	return re.test(String(password));
 }
+
+
 
 /**
  * Validierungsfunktion für das Login-Formular

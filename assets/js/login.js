@@ -77,9 +77,10 @@ function validateEmail(email) {
 
 // Hilfsfunktion zur Überprüfung des Passworts
 function validatePassword(password) {
-	var re = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&\-])[A-Za-z\d@$!%*?&\-]{8,}$/;
+	var re = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{8,}$/;
 	return re.test(String(password));
 }
+
 
 
 

@@ -34,7 +34,7 @@ include 'assets/php/head.php';
 		<div class="box" id="box">
 			<!-- Register Panel Start -->
 			<div class="form-box sign-up-box">
-				<form action="register_prg.php" method="post">
+				<form name="register" action="register_prg.php" method="post" onsubmit="return validateForm()">
 					<h1>Konto Erstellen</h1>
 					<div class="social-box">
 						<a href="#" class="social">
@@ -52,7 +52,7 @@ include 'assets/php/head.php';
 
 			<!-- Signin Panel Start -->
 			<div class="form-box sign-in-box">
-				<form action="login_prg.php" method="post">
+				<form name="login" action="login_prg.php" method="post" onsubmit="return validateLoginForm()">
 					<h1>Anmelden</h1>
 					<div class="social-box">
 						<a href="#" class="social">

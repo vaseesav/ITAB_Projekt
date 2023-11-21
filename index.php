@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
+
+<head>
   <?php
   include 'assets/php/head.php';
   ?>
   <title>Startseite</title>
-  </head>
+</head>
 
 <body>
   <div id="js-preloader" class="js-preloader">
@@ -35,7 +36,8 @@
   <div class="mobile-banner">
     <h1>mieteinander</h1>
     <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
-    <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
+    <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location
+      needs.</p>
   </div>
   <!--Mobile Main Banner Area End-->
 
@@ -48,7 +50,8 @@
             <div class="header-text">
               <h1 class="ueberschrift">mieteinander</h1>
               <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
-              <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
+              <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event
+                location needs.</p>
               <div class="buttons">
                 <div class="main-button">
                   <a href="#">Explore Top Locations</a>
@@ -61,8 +64,6 @@
     </div>
   </section>
   <!--Main Banner Area End-->
-
-  
   <section class="main body">
     <div class="sample">
       <br>
@@ -118,5 +119,6 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/navColor.js"></script>
 
-  </body>
+</body>
+
 </html>

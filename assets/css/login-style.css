@@ -459,6 +459,61 @@ input {
     margin-top: 10px;
 }
 
+/*
+---------------------------------------------
+Password Field Style
+---------------------------------------------
+*/
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+#password {
+    width: 100%;
+    padding-right: 30px;
+}
+
+.show-password-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+    .show-password-btn:active {
+        outline: none;
+        border: none;
+        /* Prevents the button from moving downwards */
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+
+    .show-password-btn:focus {
+        outline: none;
+    }
+
+
+.show-password-btn img {
+    width: 20px;
+    height: auto;
+    display: block;
+}
+
+.show-password-btn:focus, .show-password-btn:active {
+    outline: none;
+    border: none;
+}
+
+
+
 
 /* 
 ---------------------------------------------

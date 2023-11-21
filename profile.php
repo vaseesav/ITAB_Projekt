@@ -65,8 +65,8 @@ if (!isset($_SESSION['loggedin'])) {
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Passwort ändern</h2>
             <form id="changePasswordForm">
-                Neues Passwort:<br> <input type="password" name="new_password" required><br>
-                Passwort bestätigen:<br> <input type="password" name="confirm_password" required><br>
+                Neues Passwort:<br> <input type="password" name="new_password" required autocomplete="new-password"><br>
+                Passwort bestätigen:<br> <input type="password" name="confirm_password" required autocomplete="new-password"><br>
                 <button type="submit" value="Passwort ändern">Passwort ändern</button>
             </form>
             <p id="passwordChangeMessage"></p>

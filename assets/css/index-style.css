@@ -6,6 +6,10 @@ Global Styles
 * {
   box-sizing: border-box;
 }
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
 
 html, body {
   font-family: 'Roboto', sans-serif;
@@ -13,7 +17,6 @@ html, body {
   font-size: 16px;
   background: var(--index-bg);
   margin: 0;
-  overflow-y: scroll;
 }
 
 a {

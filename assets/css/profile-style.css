@@ -3,6 +3,7 @@ body {
     background-color: var(--profiles-bg);
     text-align: center;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .containered {
     width: 80%;

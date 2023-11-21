@@ -6,10 +6,10 @@ error_reporting(0); // Keine Fehlerberichterstattung
 
 
 // Datenbankverbindung (Kenndaten)
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
 
 
 // Herstellen der Datenbankverbindung

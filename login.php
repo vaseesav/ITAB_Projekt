@@ -41,8 +41,14 @@ include 'assets/php/head.php';
 					<span>oder benutze deine Email für die Registrierung</span>
 					<input type="text" placeholder="Name" name="username" />
 					<input type="email" placeholder="Email" name="email" />
-					<input type="password" placeholder="Password" name="password" />
-					<button type="submit">Registrieren</button>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Passwort" autocomplete="new-password">
+                        <button type="button" id="showPassword" class="show-password-btn">
+                            <img src="assets/images/eye.png" alt="Passwort anzeigen">
+                        </button>
+                    </div>
+
+                    <button type="submit">Registrieren</button>
                     <div id="register-result"></div>
 				</form>
 			</div>

@@ -1,4 +1,5 @@
 <?php
+global $conn;
 session_start();
 
 // Überprüfen, ob der Benutzer eingeloggt ist
@@ -10,15 +11,10 @@ if (!isset($_SESSION['loggedin'])) {
 function validatePassword($password) {
     return preg_match('/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d\S]{8,}$/', $password);
 }
+require '../../database/connect.php';
 
-// Datenbankverbindung herstellen
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
 
 try {
-    $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
     // Überprüfen der Verbindung
     if ($conn->connect_error) {

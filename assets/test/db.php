@@ -1,11 +1,8 @@
 <?php
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
+global $conn;
+require '../../database/connect.php';
 
 try {
-    $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
     if ($conn->connect_error) {
         die("Verbindung fehlgeschlagen: " . $conn->connect_error);

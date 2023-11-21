@@ -1,19 +1,13 @@
 <?php
 // Fehlerprotokollierung deaktivieren
+global $conn;
 ini_set('display_errors', 0);
 ini_set('display_startup_errors', 0);
 error_reporting(0); // Keine Fehlerberichterstattung
 
 
 // Datenbankverbindung (Kenndaten)
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
-
-
-// Herstellen der Datenbankverbindung
-$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
+require '../../database/connect.php';
 
 // Überprüfen auf Verbindungsfehler
 if ($conn->connect_error) {

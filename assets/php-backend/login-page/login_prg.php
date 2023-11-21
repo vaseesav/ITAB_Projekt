@@ -1,12 +1,10 @@
 <?php
+global $conn;
 session_start();
 
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
-
-$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+require '../../database/connect.php';
 
 if ($conn->connect_error) {
     die("Verbindung fehlgeschlagen: " . $conn->connect_error);

@@ -1,10 +1,16 @@
 <?php
+// Fehlerprotokollierung deaktivieren
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+error_reporting(0); // Keine Fehlerberichterstattung
 
-//  Datenbankverbindung (Kenndaten)
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "mieteinander";
+
+// Datenbankverbindung (Kenndaten)
+$dbServername = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'mieteinander';
+
 
 // Herstellen der Datenbankverbindung
 $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
@@ -23,22 +29,25 @@ $password = $conn->real_escape_string($_POST['password']);
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 // Überprüfen, ob der Benutzer bereits in der Datenbank existiert
-$sql = "SELECT * FROM users WHERE email='$email'";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT * FROM user WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     // Benutzer existiert bereits
     echo "Ein Benutzer mit dieser E-Mail-Adresse existiert bereits.";
 } else {
     // Einfügen des neuen Benutzers in die Datenbank
-    $sql = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashedPassword')";
+    $stmt = $conn->prepare("INSERT INTO user (UName, Email, Passworthash) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $email, $hashedPassword);
 
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         // Benutzer erfolgreich registriert
         echo "Neuer Benutzer erfolgreich registriert.";
     } else {
-        // Fehlerbehandlung
-        echo "Fehler: " . $sql . "<br>" . $conn->error;
+        // Fehler beim Einfügen
+        echo "Fehler beim Einfügen: " . mysqli_error($conn);
     }
 }
 

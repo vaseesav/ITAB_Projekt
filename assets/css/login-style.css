@@ -449,6 +449,16 @@ input {
 	width: 40px;
 }
 
+#register-result {
+    color: green;
+    margin-top: 10px;
+}
+
+#login-result {
+    color: green;
+    margin-top: 10px;
+}
+
 
 /* 
 ---------------------------------------------

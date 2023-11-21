@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <!-- Header Start-->
         <?php
-        include  'assets/php/preloader.php';
+        include 'assets/php/preloader.php';
         include 'assets/php/header.php';
         ?>
     <!-- Header End -->
@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
         <h2>Profil</h2>
 
         <div class="profile-picture-container">
-            <?php include 'assets/php-backend/profilePicture.php'?>
+            <?php include 'assets/php-backend/profile-page/profilePicture.php' ?>
             <!-- Formular für Bild-Upload -->
             <input type="file" id="profilePictureInput" name="profilePicture" style="display: none;" onchange="uploadProfilePicture()">
             <br>

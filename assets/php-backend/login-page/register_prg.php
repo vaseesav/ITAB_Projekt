@@ -1,19 +1,13 @@
 <?php
 // Fehlerprotokollierung deaktivieren
+global $conn;
 ini_set('display_errors', 0);
 ini_set('display_startup_errors', 0);
 error_reporting(0); // Keine Fehlerberichterstattung
 
 
 // Datenbankverbindung (Kenndaten)
-$dbServername = "rdbms.strato.de";
-$dbUsername = "dbu2408738";
-$dbPassword = "#code-cruncher-2023%";
-$dbName = "dbs12222605";
-
-
-// Herstellen der Datenbankverbindung
-$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
+require '../../database/connect.php';
 
 // Überprüfen auf Verbindungsfehler
 if ($conn->connect_error) {

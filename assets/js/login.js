@@ -42,7 +42,7 @@ $(document).ready(function() {
 		// AJAX-Anfrage, wenn die Validierung erfolgreich ist
 		$.ajax({
 			type: "POST",
-			url: "../final/register_prg.php",
+			url: "../final/assets/php-backend/login-page/register_prg.php",
 			data: $(this).serialize(),
 			success: function(response) {
 				hidePreloader();
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 		$.ajax({
 			type: "POST",
-			url: "../final/login_prg.php",
+			url: "../final/assets/php-backend/login-page/login_prg.php",
 			data: { login_email: email, login_password: password },
 			dataType: "json",
 			success: function(response) {

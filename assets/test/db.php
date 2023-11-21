@@ -1,11 +1,8 @@
 <?php
-$dbServername = "rdbms.strato.de";
-$dbUsername = "dbu2408738";
-$dbPassword = "#code-cruncher-2023%";
-$dbName = "dbs12222605";
+global $conn;
+require '../../database/connect.php';
 
 try {
-    $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
     if ($conn->connect_error) {
         die("Verbindung fehlgeschlagen: " . $conn->connect_error);

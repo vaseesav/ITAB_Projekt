@@ -1,18 +1,8 @@
 <?php
+global $conn;
 ini_set('display_errors', '1');
 
-$dbServername = "rdbms.strato.de";
-$dbUsername = "dbu2408738";
-$dbPassword = "#code-cruncher-2023%";
-$dbName = "dbs12222605";
-
-// Erstellen der Verbindung
-$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
-
-// Überprüfen der Verbindung
-if ($conn->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
-}
+require '../../database/connect.php';
 
 // Deaktivieren der Fremdschlüsselbeschränkungen
 $conn->query("SET FOREIGN_KEY_CHECKS=0");

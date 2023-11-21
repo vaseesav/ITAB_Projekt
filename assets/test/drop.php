@@ -1,13 +1,13 @@
 <?php
 ini_set('display_errors', '1');
 
-$servername = "localhost"; // oder Ihre Server-Adresse
-$username = "root";
-$password = "";
-$dbname = "mieteinander";
+$dbServername = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'mieteinander';
 
 // Erstellen der Verbindung
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);
 
 // Überprüfen der Verbindung
 if ($conn->connect_error) {

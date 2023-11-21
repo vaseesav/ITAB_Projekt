@@ -9,19 +9,10 @@ include 'assets/php/head.php';
 		<title>Über Uns</title>
 	</head>
 	<body>
+    <?php
+    include 'assets/php/preloader.php';
+    ?>
 	<div class="leitbild">Online-Plattform, auf der Privatpersonen ihre Räumlichkeiten und Flächen für unterschiedlichste Events in ihrer Umgebung anbieten können, und gleichzeitig Privatpersonen, die nach solchen Räumlichkeiten suchen, diese bequem finden und buchen können</div>
-
-		<div id="js-preloader" class="js-preloader">
-			<div class="preloader-inner">
-				<span class="dot"></span>
-				<div class="dots">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-
 		<!-- Header Start-->
 		<?php include("assets/php/header.php"); ?>
 		<!-- Header End -->

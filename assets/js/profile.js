@@ -1,3 +1,14 @@
+/**
+ * waiting animation
+ */
+function showPreloader() {
+    document.getElementById('preloader').style.display = 'block';
+}
+
+function hidePreloader() {
+    document.getElementById('preloader').style.display = 'none';
+}
+
 function logout() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "logout.php", true);
@@ -24,14 +35,52 @@ window.onclick = function(event) {
     }
 }
 
-// Anfrage für Passwortänderung
-document.getElementById("changePasswordForm").onsubmit = function(e) {
-    e.preventDefault();
-    var formData = new FormData(this);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "change_password.php", true);
-    xhr.onload = function() {
-        document.getElementById("passwordChangeMessage").innerText = this.responseText;
+$(document).ready(function() {
+    $("#changePasswordForm").submit(function(event) {
+        event.preventDefault();
+        console.log("Formular wird abgeschickt"); // Zum Testen
+        showPreloader(); // Preloader anzeigen
+
+        var formData = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "../final/change_password.php", // Pfad zu Ihrer PHP-Datei
+            data: formData,
+            success: function(response) {
+                hidePreloader(); // Preloader ausblenden
+                $("#passwordChangeMessage").html(response);
+            },
+            error: function() {
+                hidePreloader(); // Preloader ausblenden
+                $("#passwordChangeMessage").html("Ein Fehler ist aufgetreten.");
+            }
+        });
+    });
+});
+
+
+/**
+ * Profile picture upload
+ */
+function uploadProfilePicture() {
+    var input = document.getElementById('profilePictureInput');
+    if (input.files && input.files[0]) {
+        var formData = new FormData();
+        formData.append('profilePicture', input.files[0]);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '../final/assets/php-backend/profilePicture.php', true);
+        xhr.onload = function () {
+            if (this.status == 200) {
+                console.log(this.responseText);
+                // Hier können Sie weitere Aktionen durchführen, z.B. das Bild auf der Seite aktualisieren
+            } else {
+                // Fehlerbehandlung
+                console.error('Fehler beim Hochladen des Bildes');
+            }
+        };
+        xhr.send(formData);
     }
-    xhr.send(formData);
 }
+

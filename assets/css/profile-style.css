@@ -32,6 +32,36 @@ button:hover {
 
 /*
 ---------------------------------------------
+Profile Picture Style
+---------------------------------------------
+ */
+.profile-picture-container {
+    text-align: center;
+    margin: 20px;
+}
+
+.profile-picture-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-picture-container input[type="file"] {
+    margin-top: 10px;
+}
+
+.profile-picture-container button{
+    margin-top: 10px;
+
+}
+.upload_button {
+    margin-top: 10px;
+}
+
+
+/*
+---------------------------------------------
 Change Password Style
 ---------------------------------------------
  */

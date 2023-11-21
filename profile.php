@@ -37,6 +37,15 @@ if (!isset($_SESSION['loggedin'])) {
     <div class="containered">
         <h2>Profil</h2>
 
+        <div class="profile-picture-container">
+            <?php include 'assets/php-backend/profilePicture.php'?>
+            <!-- Formular für Bild-Upload -->
+            <input type="file" id="profilePictureInput" name="profilePicture" style="display: none;" onchange="uploadProfilePicture()">
+            <br>
+            <button onclick="document.getElementById('profilePictureInput').click();">Bild auswählen</button>
+        </div>
+
+
         <?php
         if (isset($_SESSION['username'])) {
             $username = $_SESSION['username'];

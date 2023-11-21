@@ -58,3 +58,29 @@ $(document).ready(function() {
         });
     });
 });
+
+
+/**
+ * Profile picture upload
+ */
+function uploadProfilePicture() {
+    var input = document.getElementById('profilePictureInput');
+    if (input.files && input.files[0]) {
+        var formData = new FormData();
+        formData.append('profilePicture', input.files[0]);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '../final/assets/php-backend/profilePicture.php', true);
+        xhr.onload = function () {
+            if (this.status == 200) {
+                console.log(this.responseText);
+                // Hier können Sie weitere Aktionen durchführen, z.B. das Bild auf der Seite aktualisieren
+            } else {
+                // Fehlerbehandlung
+                console.error('Fehler beim Hochladen des Bildes');
+            }
+        };
+        xhr.send(formData);
+    }
+}
+

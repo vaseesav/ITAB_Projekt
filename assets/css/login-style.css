@@ -3,20 +3,6 @@
 Global Styles
 ---------------------------------------------
 */
-:root {
-    --body-background-color: #2222229d;
-
-    --panel-color: #e4e3e3;
-
-    --switch-button-border-color: #ffffff;
-    --button-border-color: #7453fc;
-    --button-color: #7453fc;
-    --button-text-color: #fff;
-
-
-    --footer-text-color: #ffffff;
-    --footer-bg-color: #5170ff;
-}
 
 body {
     background: var(--login-bg);
@@ -27,6 +13,7 @@ body {
     font-family: sans-serif;
     height: 100vh;
     margin: -20px 0 50px;
+    overflow-y: scroll;
 }
 
 h1 {

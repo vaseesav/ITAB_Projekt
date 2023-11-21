@@ -13,6 +13,7 @@ html, body {
   font-size: 16px;
   background: var(--index-bg);
   margin: 0;
+  overflow-y: scroll;
 }
 
 a {
@@ -119,10 +120,6 @@ Banner Style
 Responsive Style
 --------------------------------------------- 
 */
-
-body {
-  overflow-x: hidden;
-}
 
 @media (max-width: 1000px) {
   .main-banner {

@@ -2,6 +2,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: var(--profiles-bg);
     text-align: center;
+    overflow-y: scroll;
 }
 .containered {
     width: 80%;
@@ -82,7 +83,6 @@ Change Password Style
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: var(--profiles-pass-field);
     padding-top: 60px;
 }
@@ -146,10 +146,6 @@ footer {
 Responsive Style
 ---------------------------------------------
 */
-
-body {
-    overflow-x: hidden;
-}
 
 @media (max-width: 1000px) {
      p {

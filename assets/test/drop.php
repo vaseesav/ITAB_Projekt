@@ -1,10 +1,10 @@
 <?php
 ini_set('display_errors', '1');
 
-$dbServername = "rdbms.strato.de";
-$dbUsername = "dbu2408738";
-$dbPassword = "#code-cruncher-2023%";
-$dbName = "dbs12222605";
+$dbServername = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'mieteinander';
 
 // Erstellen der Verbindung
 $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbName);

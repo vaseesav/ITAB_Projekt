@@ -21,6 +21,11 @@ include 'assets/php/head.php';
   		?>
 		<!-- Header Mobile End -->
 
+    <!-- Loading Animation (Server loading time) -->
+    <div id="preloader" style="display: none;">
+        <?php include 'assets/php/preloader.php'; ?>
+    </div>
+
 		<!-- Panel Body Start -->
 
 		<div class="box" id="box">

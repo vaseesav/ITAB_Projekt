@@ -2,6 +2,9 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('box');
 
+/**
+ * Switching between registration and login
+ */
 signUpButton.addEventListener('click', () => {
 	container.classList.add("right-panel-active");
 });
@@ -9,6 +12,18 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });
+
+
+/**
+ * waiting animation
+ */
+function showPreloader() {
+	document.getElementById('preloader').style.display = 'block';
+}
+
+function hidePreloader() {
+	document.getElementById('preloader').style.display = 'none';
+}
 
 /**
  * Validierungsfunktion für das Registrierungs-Formular
@@ -22,12 +37,15 @@ $(document).ready(function() {
 			return; // Beendet die Funktion, wenn die Validierung fehlschlägt
 		}
 
+		showPreloader(); // Preloader anzeigen
+
 		// AJAX-Anfrage, wenn die Validierung erfolgreich ist
 		$.ajax({
 			type: "POST",
 			url: "../final/register_prg.php",
 			data: $(this).serialize(),
 			success: function(response) {
+				hidePreloader();
 				$("#register-result").html(response);
 				if (response.includes("erfolgreich registriert")) {
 					$("#register")[0].reset(); // Setzt das Formular zurück
@@ -39,6 +57,7 @@ $(document).ready(function() {
 				}
 			},
 			error: function(xhr, status, error) {
+				hidePreloader();
 				var errorMessage = "Ein Fehler ist aufgetreten.";
 				$("#register-result").html(errorMessage);
 			}
@@ -94,12 +113,15 @@ $(document).ready(function() {
 		var email = $("input[name=login_email]").val();
 		var password = $("input[name=login_password]").val();
 
+		showPreloader(); // Preloader anzeigen
+
 		$.ajax({
 			type: "POST",
 			url: "../final/login_prg.php",
 			data: { login_email: email, login_password: password },
 			dataType: "json",
 			success: function(response) {
+				hidePreloader();
 				console.log(response);
 				if (response.success) {
 					// Anmeldung war erfolgreich
@@ -110,11 +132,11 @@ $(document).ready(function() {
 				}
 			},
 			error: function(xhr, status, error) {
+				hidePreloader();
 				console.error("Ein Fehler ist aufgetreten: " + error);
 			}
 		});
 
 	});
 });
-
 

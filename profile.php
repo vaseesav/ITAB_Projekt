@@ -10,7 +10,6 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
-
 ?>
     <title>Profil</title>
     <link rel="stylesheet" href="assets/css/profile-style.css">
@@ -29,6 +28,11 @@ if (!isset($_SESSION['loggedin'])) {
         include 'assets/php/mobileHeader.php';
         ?>
   <!-- Header Mobile End -->
+
+    <!-- Loading Animation (Server loading time) -->
+    <div id="preloader" style="display: none;">
+        <?php include 'assets/php/preloader.php'; ?>
+    </div>
 
     <div class="containered">
         <h2>Profil</h2>
@@ -91,6 +95,7 @@ if (!isset($_SESSION['loggedin'])) {
       <br>
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/profile.js"></script>
     <script src="assets/js/navColor.js"></script>
  

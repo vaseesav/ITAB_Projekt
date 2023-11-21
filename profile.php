@@ -1,5 +1,5 @@
 <?php
-include 'assets/php/head.php';
+require_once 'assets/php/head.php';
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -13,7 +13,7 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
     <title>Profil</title>
     <link rel="stylesheet" href="assets/css/profile-style.css">
-</head> 
+</head>
 
 <body>
     <!-- Header Start-->
@@ -43,6 +43,7 @@ if (!isset($_SESSION['loggedin'])) {
             <input type="file" id="profilePictureInput" name="profilePicture" style="display: none;" onchange="uploadProfilePicture()">
             <br>
             <button onclick="document.getElementById('profilePictureInput').click();">Bild auswählen</button>
+            <p class="error_text"></p>
         </div>
 
 
@@ -107,7 +108,7 @@ if (!isset($_SESSION['loggedin'])) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/profile.js"></script>
     <script src="assets/js/navColor.js"></script>
- 
+
 <!--Footer Start-->
     <?php
     include 'assets/php/footer.php';

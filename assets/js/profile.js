@@ -1,3 +1,14 @@
+/**
+ * waiting animation
+ */
+function showPreloader() {
+    document.getElementById('preloader').style.display = 'block';
+}
+
+function hidePreloader() {
+    document.getElementById('preloader').style.display = 'none';
+}
+
 function logout() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "logout.php", true);
@@ -24,14 +35,26 @@ window.onclick = function(event) {
     }
 }
 
-// Anfrage für Passwortänderung
-document.getElementById("changePasswordForm").onsubmit = function(e) {
-    e.preventDefault();
-    var formData = new FormData(this);
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "change_password.php", true);
-    xhr.onload = function() {
-        document.getElementById("passwordChangeMessage").innerText = this.responseText;
-    }
-    xhr.send(formData);
-}
+$(document).ready(function() {
+    $("#changePasswordForm").submit(function(event) {
+        event.preventDefault();
+        console.log("Formular wird abgeschickt"); // Zum Testen
+        showPreloader(); // Preloader anzeigen
+
+        var formData = $(this).serialize();
+
+        $.ajax({
+            type: "POST",
+            url: "../final/change_password.php", // Pfad zu Ihrer PHP-Datei
+            data: formData,
+            success: function(response) {
+                hidePreloader(); // Preloader ausblenden
+                $("#passwordChangeMessage").html(response);
+            },
+            error: function() {
+                hidePreloader(); // Preloader ausblenden
+                $("#passwordChangeMessage").html("Ein Fehler ist aufgetreten.");
+            }
+        });
+    });
+});

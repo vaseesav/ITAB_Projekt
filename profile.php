@@ -19,6 +19,7 @@ if (!isset($_SESSION['loggedin'])) {
 <body>
     <!-- Header Start-->
         <?php
+        include  'assets/php/preloader.php';
         include 'assets/php/header.php';
         ?>
     <!-- Header End -->

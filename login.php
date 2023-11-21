@@ -8,17 +8,9 @@ include 'assets/php/head.php';
 		<title>Anmelden / Registrieren</title>
 	</head>
 	<body>
-		<div id="js-preloader" class="js-preloader">
-			<div class="preloader-inner">
-				<span class="dot"></span>
-				<div class="dots">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>
-		</div>
-
+    <?php
+        include 'assets/php/preloader.php';
+    ?>
 		<!-- Header Start-->
 		<?php include("assets/php/header.php"); ?>
 		<!-- Header End -->

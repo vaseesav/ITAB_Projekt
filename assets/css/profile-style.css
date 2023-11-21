@@ -188,3 +188,30 @@ body {
         margin-top: 100px;
     }
 }
+
+@media (max-width: 400px) {
+    body {
+        height: 900px;
+    }
+
+    footer {
+        padding: 0;
+    }
+}
+
+@media (max-height: 760px) {
+    body {
+        height: 900px;
+    }
+
+    footer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 300px) {
+    .menu__box {
+        left: -200%;
+    }
+    
+}

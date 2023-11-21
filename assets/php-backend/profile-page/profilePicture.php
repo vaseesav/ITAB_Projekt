@@ -17,7 +17,7 @@ if (isset($_FILES['profilePicture']) && $_FILES['profilePicture']['error'] == 0)
 
     // zusätzliche Überprüfungen hinzufügen (Dateigröße, Dateityp usw.)
 
-    if (move_uploaded_file($_FILES["profilePicture"]["tmp_name"], "../../userdata/$userId/pb.jpg")) {
+    if (move_uploaded_file($_FILES["profilePicture"]["tmp_name"], "../../../userdata/$userId/pb.jpg")) {
         // TODO: Pfad in der Datenbank aktualisieren
 
         // echo "Bild erfolgreich hochgeladen";

@@ -125,12 +125,18 @@
     });
 
     function saveThemePreference(theme) {
+        showPreloader();
         $.ajax({
             url: 'assets/php-backend/profile-page/save-theme.php',
             type: 'POST',
             data: {theme: theme},
             success: function(response) {
+                hidePreloader();
                 console.log("Theme gespeichert: " + theme);
+            },
+            error: function(error) {
+                hidePreloader();
+                console.error('Fehler beim Speichern des Themes:', error);
             }
         });
     }

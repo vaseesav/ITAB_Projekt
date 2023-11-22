@@ -149,7 +149,7 @@ label, .toggle {
     height: 2.8rem;
     border-radius: 15px;
 }
-label {
+.content label {
     width: 100%;
     background-color: var(--profiles-switch-bg);
     border-radius: 15px;
@@ -220,6 +220,9 @@ Responsive Style
     .menu__btn {
         z-index: 99999999;
     }
+    .menu__btn .toggle {
+        display: none;
+    }
 
     .containered {
         margin-top: 100px;
@@ -259,11 +262,5 @@ Responsive Style
 
     footer {
         padding: 0;
-    }
-}
-
-@media (max-width: 300px) {
-    .menu__box {
-        left: -200%;
     }
 }

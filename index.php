@@ -28,6 +28,9 @@ include 'assets/php/head.php';
     <h1>mieteinander</h1>
     <h2>Wo Träume Räume werden</h2>
     <p>Gemeinsam Räume teilen, <br> einzigartige Erlebnisse schaffen.</p>
+    <div class="main-button">
+      <a href="#">Erkunden</a>
+    </div>
   </div>
   <!--Mobile Main Banner Area End-->
 

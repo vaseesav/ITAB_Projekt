@@ -37,13 +37,13 @@
     Ueber Uns color
     ---------------------------------------------
     */
-    --uns-bg: white;
+    --uns-bg: linear-gradient(to right, #5170ff, #da57fa);
     --uns-about-bg: #5170ff;
     --uns-about-text: #fff;
     --uns-title: grey;
     --uns-button-text: white;
-    --uns-button-bg: #7453fc;
-    --uns-button-hover: #A995FF;
+    --uns-button-bg: #5170ff;
+    --uns-button-hover: #7453fc;
     --uns-text: #000;
 
     /*

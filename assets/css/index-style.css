@@ -137,7 +137,9 @@ Responsive Style
   .header-area { 
     display: none;
   }
-
+  .main-button{
+    padding-left: 40px;
+  }
   .mobile-header {
     width: 0px;
     height: 0px;

@@ -1,11 +1,3 @@
-function showPreloader() {
-    document.getElementById('preloader').style.display = 'block';
-}
-
-function hidePreloader() {
-    document.getElementById('preloader').style.display = 'none';
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     var themeStatusElement = document.getElementById('themeStatus');
     var currentTheme = themeStatusElement.getAttribute('data-theme');
@@ -32,12 +24,12 @@ function toggleTheme() {
 
     link.textContent = currentTheme === 'accessible-colors' ? 'Barrierefreies Theme deaktivieren' : 'Barrierefreies Theme aktivieren';
 
-    if (currentTheme === 'accessible-colors') {
-        document.getElementById('switch').checked = true;
-    } else {
-        document.getElementById('switch').checked = false;
+    var themeSwitch = document.getElementById('switch');
+    if (themeSwitch !== null) { // Stellen Sie sicher, dass themeSwitch nicht null ist
+        themeSwitch.checked = (currentTheme === 'accessible-colors');
     }
 }
+
 
 
 function changeTheme(theme) {
@@ -46,16 +38,13 @@ function changeTheme(theme) {
 }
 
 function saveThemePreference(theme) {
-    showPreloader();
     $.ajax({
         url: 'assets/php-backend/profile-page/save-theme.php',
         type: 'POST',
         data: {theme: theme},
         success: function(response) {
-            hidePreloader();
         },
         error: function(error) {
-            hidePreloader();
         }
     });
 }

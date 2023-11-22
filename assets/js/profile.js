@@ -115,12 +115,15 @@
      * Profile Switch
      */
     document.getElementById('switch').addEventListener('change', function() {
+        var link = document.getElementById('accessibilityThemeLink');
         if (this.checked) {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/accessible-colors.css');
             saveThemePreference('accessible-colors');
+            link.textContent = 'Barrierefreies Theme deaktivieren';
         } else {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/light-colors.css');
             saveThemePreference('light-colors');
+            link.textContent = 'Barrierefreies Theme aktivieren';
         }
     });
 
@@ -140,6 +143,8 @@
             }
         });
     }
+
+
 
 
 

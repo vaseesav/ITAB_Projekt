@@ -249,18 +249,10 @@ Responsive Style
     body {
         height: 900px;
     }
-
-    footer {
-        padding: 0;
-    }
 }
 
 @media (max-height: 760px) {
     body {
         height: 900px;
-    }
-
-    footer {
-        padding: 0;
     }
 }

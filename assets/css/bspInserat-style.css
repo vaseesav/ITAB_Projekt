@@ -1,0 +1,25 @@
+body{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+.inseratausgabe{
+    font-size: 20px;
+
+}
+.inseratTitel{
+    font-size: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.grau{
+    color: rgba(0, 0, 0, 0.515);
+}
+div{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+span{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -6,6 +6,7 @@ include 'assets/php/head.php';
 
 <head>
     <title>Inserat</title>
+    <link rel="stylesheet" href="assets/css/bspInserat-style.css">
     <script>
         function loadData() {
             fetch('fetch_data.php')
@@ -19,6 +20,10 @@ include 'assets/php/head.php';
                 });
         }
     </script>
+    <script>
+        loadData();
+    </script>
+
 </head>
 
 <body>
@@ -44,14 +49,11 @@ include 'assets/php/head.php';
     ?>
     <!-- Header Mobile End -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>Anzeigen Table Data</h1>
-
-    <button onclick="loadData()">Load Data</button>
 
     <table border="1" id="tableData">
         <!-- Data will be loaded here -->
     </table>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!--Footer Start-->
     <?php
     include 'assets/php/footer.php';

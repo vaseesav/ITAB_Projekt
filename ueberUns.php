@@ -24,8 +24,9 @@ include 'assets/php/head.php';
 		<!-- Header Mobile End -->
 
 		<!-- Panel Body Start -->
-
+    <div class="header-text">
 <div class="teamDiv" style="text-align:center">Unser Team</div>
+    </div>
 <div class="row-team">
 	<div class="column">
 		<div class="card">
@@ -34,7 +35,7 @@ include 'assets/php/head.php';
 			<h2>Jan Krüger</h2>
 			<p class="title">Back-End Programmierer</p>
 			<p>Jan ist unser junges Programmier-Talent. Mit nur 17 Jahren bringt er frische und innovative Ansichten in unsere technische Umsetzung. Seine Leidenschaft für das Programmieren und seine Fähigkeiten sind beeindruckend und tragen wesentlich dazu bei, dass "mieteinander" technisch auf dem neuesten Stand ist. </p>
-			<br>
+            <br>
 			<br>
 			<br>
 			<br>

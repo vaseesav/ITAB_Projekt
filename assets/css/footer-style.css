@@ -25,3 +25,28 @@ footer p a:hover {
     opacity: 0.75;
 }
 
+.theme-change-footer a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.theme-change-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1000px) {
+    footer p {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    footer a {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        padding-bottom: 15px;
+    }
+}
+

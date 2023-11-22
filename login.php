@@ -65,7 +65,7 @@ include 'assets/php/head.php';
 					</div>
 					<span>oder benutze dein Konto</span>
 					<input type="email" placeholder="Email" name="login_email" autocomplete="current-password" />
-					<input type="password" placeholder="Password" name="login_password" autocomplete="email" />
+					<input type="password" placeholder="Password" name="login_password" autocomplete="current-username" />
                     <div class="header-text">
 					<a href="#">Passwort vergessen?</a>
 					<button type="submit">Anmelden</button>

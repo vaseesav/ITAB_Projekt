@@ -78,7 +78,7 @@ Header Style
 .header-area .main-nav .nav li a {
     display: block;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 20px;
     text-transform: capitalize;
     color: var(--nav-text);
     transition: all 0.3s ease 0s;

@@ -11,7 +11,9 @@ $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <!--CSS Files-->
+    
     <link rel="stylesheet" href="assets/css/light-colors.css">
+    <link rel="stylesheet" href="assets/css/accessible-colors.css">
     <link rel="stylesheet" href="assets/css/preloader-style.css">
     <link rel="stylesheet" href="assets/css/navbar-style.css">
     <link rel="stylesheet" href="assets/css/navbar-mob-style.css">

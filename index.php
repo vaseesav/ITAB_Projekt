@@ -26,8 +26,8 @@ include 'assets/php/head.php';
   <!--Mobile Main Banner Area Start-->
   <div class="mobile-banner">
     <h1>mieteinander</h1>
-    <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
-    <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
+    <h2>Wo Träume Räume werden</h2>
+    <p>Gemeinsam Räume teilen, <br> einzigartige Erlebnisse schaffen.</p>
   </div>
   <!--Mobile Main Banner Area End-->
 
@@ -39,11 +39,11 @@ include 'assets/php/head.php';
           <div class="col-lg-6 align-self-center">
             <div class="header-text">
               <h1 class="ueberschrift">mieteinander</h1>
-              <h2>SEARCH, RENT &amp; CELEBRATE!</h2>
-              <p>Discover and book unique event venues effortlessly on our platform, designed exclusively for your event location needs.</p>
+              <h2>Wo Träume Räume werden</h2>
+              <p>Gemeinsam Räume teilen, <br> einzigartige Erlebnisse schaffen.</p>
               <div class="buttons">
                 <div class="main-button">
-                  <a href="#">Explore Top Locations</a>
+                  <a href="#">Erkunden</a>
                 </div>
               </div>
             </div>

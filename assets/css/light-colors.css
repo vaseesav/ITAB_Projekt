@@ -1,0 +1,98 @@
+:root {
+    /*
+    ---------------------------------------------
+    Index color
+    ---------------------------------------------
+    */
+    --index-bg: #fff;
+    --button-main: #7453fc;
+    --button-main-hover: #7453fc;
+    --button-main-text: #fff;
+    --index-gradient: linear-gradient(to right, #5170ff, #da57fa);
+    --index-text: #fff;
+
+
+    /*
+    ---------------------------------------------
+    Profiles color
+    ---------------------------------------------
+    */
+    --profiles-bg: #fff;
+    --profiles-text: #000;
+    --profiles-button-bg: #007bff;
+    --profiles-button-text: #fff;
+    --profiles-button-hover: #0056b3;
+    --profiles-error-text: red;
+    --profiles-pass-field: rgba(0,0,0,0.4);
+    --profiles-pass-field-bg: #fefefe;
+    --profiles-pass-field-border: #888;
+
+
+    /*
+    ---------------------------------------------
+    Ueber Uns color
+    ---------------------------------------------
+    */
+    --uns-bg: white;
+    --uns-about-bg: #5170ff;
+    --uns-about-text: #fff;
+    --uns-title: grey;
+    --uns-button-text: white;
+    --uns-button-bg: #7453fc;
+    --uns-text: #000;
+
+    /*
+    ---------------------------------------------
+    Login color
+    ---------------------------------------------
+    */
+    --login-bg: #2222229d;
+    --login-text: #333;
+    --login-text-header: #fff;
+    --login-button-border: #7453fc;
+    --login-button: #7453fc;
+    --login-button-text: #fff;
+    --login-switch-button-border: #fff;
+    --login-inside-panel: #e4e3e3;
+    --login-input-field: #eee;
+    --login-panel-shadow: rgba(0,0,0,0.25);
+
+    /*
+    ---------------------------------------------
+    Pre-loader color
+    ---------------------------------------------
+    */
+    --preloader-bg: rgba(0,0,0,0.98);
+    --preloader: #7453fc;
+
+    /*
+    ---------------------------------------------
+    Nav-bar color
+    ---------------------------------------------
+    */
+    --nav-bg: #5170ff;
+    --nav-shadow: rgba(0,0,0,0.15);
+    --nav-text: #000;
+    --nav-text-hover: #7453fc;
+
+
+    /*
+    ---------------------------------------------
+    Nav-bar-mobile color
+    ---------------------------------------------
+    */
+    --nav-mob-ham: #000;
+    --nav-mob-bg: #fff;
+    --nav-mob-shadow: rgba(0, 0, 0, .4);
+    --nav-mob-text: #000;
+    --nav-mob-item-bg: #c2b5f7;
+    --nav-mob-item-bg-hover: #aca1d8;
+
+    /*
+    ---------------------------------------------
+    Footer color
+    ---------------------------------------------
+    */
+    --footer-bg: #5170ff;
+    --footer-text: #fff;
+}

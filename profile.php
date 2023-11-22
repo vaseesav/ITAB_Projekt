@@ -1,5 +1,5 @@
 <?php
-include 'assets/php/head.php';
+require_once 'assets/php/head.php';
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -13,12 +13,12 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
     <title>Profil</title>
     <link rel="stylesheet" href="assets/css/profile-style.css">
-</head> 
+</head>
 
 <body>
     <!-- Header Start-->
         <?php
-        include  'assets/php/preloader.php';
+        include 'assets/php/preloader.php';
         include 'assets/php/header.php';
         ?>
     <!-- Header End -->
@@ -38,11 +38,12 @@ if (!isset($_SESSION['loggedin'])) {
         <h2>Profil</h2>
 
         <div class="profile-picture-container">
-            <?php include 'assets/php-backend/profilePicture.php'?>
+            <?php include 'assets/php-backend/profile-page/profilePicture.php' ?>
             <!-- Formular für Bild-Upload -->
             <input type="file" id="profilePictureInput" name="profilePicture" style="display: none;" onchange="uploadProfilePicture()">
             <br>
             <button onclick="document.getElementById('profilePictureInput').click();">Bild auswählen</button>
+            <p class="error_text"></p>
         </div>
 
 
@@ -64,50 +65,22 @@ if (!isset($_SESSION['loggedin'])) {
             <span class="close" onclick="closeModal()">&times;</span>
             <h2>Passwort ändern</h2>
             <form id="changePasswordForm">
-                Neues Passwort:<br> <input type="password" name="new_password" required><br>
-                Passwort bestätigen:<br> <input type="password" name="confirm_password" required><br>
+                Neues Passwort:<br> <input type="password" name="new_password" required autocomplete="new-password"><br>
+                Passwort bestätigen:<br> <input type="password" name="confirm_password" required autocomplete="new-password"><br>
+
                 <button type="submit" value="Passwort ändern">Passwort ändern</button>
             </form>
+            <div class="header-text">
             <p id="passwordChangeMessage"></p>
+            </div>
         </div>
     </div>
-
-
-    <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/profile.js"></script>
     <script src="assets/js/navColor.js"></script>
- 
+
 <!--Footer Start-->
     <?php
     include 'assets/php/footer.php';

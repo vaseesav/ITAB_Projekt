@@ -1,33 +1,35 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--profiles-bg);
     text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .containered {
     width: 80%;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--profiles-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 190px;
 }
 
 h2, p {
-    color: black;
+    color: var(--profiles-text)
 }
 
 button {
     padding: 10px 20px;
     margin-top: 20px;
-    background-color: #007bff;
-    color: white;
+    background-color: var(--profiles-button-bg);
+    color: var(--profiles-button-text);
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: var(--profiles-button-hover);
 }
 
 /*
@@ -52,11 +54,19 @@ Profile Picture Style
 }
 
 .profile-picture-container button{
-    margin-top: 10px;
+    margin-top: 20px;
 
 }
-.upload_button {
-    margin-top: 10px;
+
+
+/*
+---------------------------------------------
+Profile Picture Box Style
+---------------------------------------------
+ */
+
+.error_text {
+    color: var(--profiles-error-text);
 }
 
 
@@ -74,9 +84,7 @@ Change Password Style
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background-color: var(--profiles-pass-field);
     padding-top: 60px;
 }
 
@@ -85,11 +93,11 @@ Change Password Style
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: var(--profiles-pass-field-bg);
     width: 80%;
     margin: 5% auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid var(--profiles-pass-field-border);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 125px;
 }
@@ -99,13 +107,13 @@ input[type="password"] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid var(--profiles-pass-field-border);
     box-sizing: border-box;
     border-radius: 4px;
 }
 
 .close {
-    color: #aaa;
+    color: var(--profiles-pass-field-border);
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -128,28 +136,58 @@ Footer Style
 --------------------------------------------- 
 */
 footer {
-    background-color: var(--footer-bg-color);
-    color: var(--footer-text-color);
-    font-size: 14px;
     bottom: 0;
     position: fixed;
     left: 0;
     right: 0;
-    text-align: center;
-    z-index: 999;
 }
 
-footer p {
-    color: var(--footer-text-color);
-  }
-  
-  footer p a {
-    color: var(--footer-text-color);
-    font-weight: 500;
-    transition: all .3s;
-  }
-  
-  footer p a:hover {
-    color: var(--footer-text-color);
-    opacity: 0.75;
-  }
+/*
+---------------------------------------------
+Responsive Style
+---------------------------------------------
+*/
+
+@media (max-width: 1000px) {
+     p {
+         padding: 0;
+     }
+
+    .menu__box {
+        z-index: 9999
+    }
+    .menu__btn {
+        z-index: 99999999;
+    }
+
+    .containered {
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        height: 900px;
+    }
+
+    footer {
+        padding: 0;
+    }
+}
+
+@media (max-height: 760px) {
+    body {
+        height: 900px;
+    }
+
+    footer {
+        padding: 0;
+    }
+}
+
+@media (max-width: 300px) {
+    .menu__box {
+        left: -200%;
+    }
+    
+}

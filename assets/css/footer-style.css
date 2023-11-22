@@ -1,0 +1,26 @@
+/*
+---------------------------------------------
+Footer Style
+---------------------------------------------
+*/
+
+footer {
+    background: var(--footer-bg);
+    text-align: center;
+    padding: 25px 0px;
+}
+
+footer p {
+    color: var(--footer-text);
+}
+
+footer p a {
+    color: var(--footer-text);
+    font-weight: 500;
+    transition: all .3s;
+}
+
+footer p a:hover {
+    color: var(--footer-text);
+    opacity: 0.75;
+}

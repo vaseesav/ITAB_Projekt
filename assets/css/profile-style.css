@@ -187,7 +187,8 @@ label {
 }
 
 .light {
-    margin-right: 55px;
+    margin-right: 25px;
+    margin-left: -15px;
 }
 
 /* 
@@ -225,11 +226,18 @@ Responsive Style
     }
 
     .names {
-        margin-top: -7%;
+        margin-top: -5%;
     }
 
     .light {
-        margin-right: 50px;
+        margin-right: 27px;
+        margin-left: -15px;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .accessible-colors {
+        font-size: 14px;
+        font-weight: bolder;
     }
 
 }

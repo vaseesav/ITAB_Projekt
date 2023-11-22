@@ -114,19 +114,19 @@
     /**
      * Profile Switch
      */
-    document.getElementById('themeSwitch').addEventListener('change', function() {
+    document.getElementById('switch').addEventListener('change', function() {
         if (this.checked) {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/accessible-colors.css');
-            saveThemePreference('dark');
+            saveThemePreference('accessible-colors');
         } else {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/light-colors.css');
-            saveThemePreference('light');
+            saveThemePreference('light-colors');
         }
     });
 
     function saveThemePreference(theme) {
         $.ajax({
-            url: 'save-theme.php',
+            url: 'assets/php-backend/profile-page/save-theme.php',
             type: 'POST',
             data: {theme: theme},
             success: function(response) {

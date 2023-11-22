@@ -1,4 +1,5 @@
 <?php
+global $theme;
 require_once 'assets/php/head.php';
 ?>
 <!DOCTYPE html>
@@ -52,7 +53,6 @@ if (!isset($_SESSION['loggedin'])) {
             $username = $_SESSION['username'];
             echo "<p>Nutzername: " . $username . "</p>";
             echo "<p>E-Mail: " . $_SESSION['email'] . "</p>";
-            echo $_SESSION['theme'];
         }
         ?>
 
@@ -60,14 +60,14 @@ if (!isset($_SESSION['loggedin'])) {
         <button onclick="openModal()">Passwort ändern</button>
         <button onclick="logout()">Abmelden</button>
         <!-- Theme-Wechsel-Switch -->
-        <input type="checkbox" id="switch">
+        <input type="checkbox" id="switch" <?php echo ($theme === 'accessible-colors' ? 'checked' : ''); ?>>
         <div class="app">
             <div class="content">
                 <label for="switch">
                     <div class="toggle"></div>
                     <div class="names">
-                        <p class="light">Hell</p>
-                        <p class="dark">Dunkel</p>
+                        <p class="light">Standard</p>
+                        <p class="accessible-colors">Zugänglich</p>
                     </div>
                 </label>
             </div>

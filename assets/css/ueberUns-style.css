@@ -85,7 +85,7 @@ body {
     }
 
     .button:hover {
-    background-color: #555;
+    background-color:var(--uns-button-hover);
     }
     .teamDiv{
         margin-top: 200px;

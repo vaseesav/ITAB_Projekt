@@ -5,12 +5,12 @@
     ---------------------------------------------
     */
     --index-bg: #fff;
-    --button-main: #7453fc;
-    --button-main-hover: #7453fc;
+    --button-main: #6451D6;
+    --button-main-hover: #6451D6;
     --button-main-text: #fff;
-    --index-gradient: linear-gradient(to right, #5170ff, #da57fa);
-    --index-text: #fff;
-    --index-paragraph: white;
+    --index-gradient: linear-gradient(to right, #7791FF, #FF96C2);
+    --index-text: #333333;
+    --index-paragraph: #333333;
 
 
     /*
@@ -37,7 +37,7 @@
     Ueber Uns color
     ---------------------------------------------
     */
-    --uns-bg: white;
+    --uns-bg: linear-gradient(to right, #7791FF, #FF96C2);
     --uns-about-bg: #5170ff;
     --uns-about-text: #fff;
     --uns-title: grey;
@@ -53,10 +53,10 @@
     */
     --login-bg: #2222229d;
     --login-text: #333;
-    --login-text-header: #fff;
+    --login-text-header: #333333;
     --login-button-border: #7453fc;
-    --login-button: #7453fc;
-    --login-button-text: #fff;
+    --login-button: #A995FF;
+    --login-button-text: #333333;
     --login-switch-button-border: #fff;
     --login-inside-panel: #e4e3e3;
     --login-input-field: #eee;
@@ -75,10 +75,10 @@
     Nav-bar color
     ---------------------------------------------
     */
-    --nav-bg: #5170ff;
+    --nav-bg: #6451D6;
     --nav-shadow: rgba(0,0,0,0.15);
-    --nav-text: #000;
-    --nav-text-hover: #7453fc;
+    --nav-text: white;
+    --nav-text-hover: #A995FF;
 
 
     /*
@@ -86,18 +86,18 @@
     Nav-bar-mobile color
     ---------------------------------------------
     */
-    --nav-mob-ham: #000;
+    --nav-mob-ham: #333333;
     --nav-mob-bg: #fff;
     --nav-mob-shadow: rgba(0, 0, 0, .4);
-    --nav-mob-text: #000;
-    --nav-mob-item-bg: #c2b5f7;
-    --nav-mob-item-bg-hover: #aca1d8;
+    --nav-mob-text: #ffffff;
+    --nav-mob-item-bg: #6451D6;
+    --nav-mob-item-bg-hover: #A995FF;
 
     /*
     ---------------------------------------------
     Footer color
     ---------------------------------------------
     */
-    --footer-bg: #5170ff;
+    --footer-bg: #6451D6;
     --footer-text: #fff;
 }

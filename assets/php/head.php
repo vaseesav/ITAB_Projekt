@@ -4,7 +4,7 @@ session_start();
 // Überprüfen, ob der Nutzer eingeloggt ist
 $loggedIn = isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true;
 if (!isset($_SESSION['theme'])) {
-    $_SESSION['theme'] = 'accessible-colors'; // Standard-Theme setzen
+    $_SESSION['theme'] = 'light-colors'; // Standard-Theme setzen
 }
 $theme = $_SESSION['theme'];
 ?>

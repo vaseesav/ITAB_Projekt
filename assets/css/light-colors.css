@@ -26,6 +26,9 @@
     --profiles-pass-field: rgba(0,0,0,0.4);
     --profiles-pass-field-bg: #fefefe;
     --profiles-pass-field-border: #888;
+    --profiles-switch-bg: #ccc;
+    --profiles-switch-light: #fff;
+    --profiles-switch-dark: #007bff;
 
 
     /*

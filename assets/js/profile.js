@@ -111,5 +111,30 @@
         });
     }
 
+    /**
+     * Profile Switch
+     */
+    document.getElementById('themeSwitch').addEventListener('change', function() {
+        if (this.checked) {
+            document.getElementById('themeStyle').setAttribute('href', 'assets/css/accessible-colors.css');
+            saveThemePreference('dark');
+        } else {
+            document.getElementById('themeStyle').setAttribute('href', 'assets/css/light-colors.css');
+            saveThemePreference('light');
+        }
+    });
+
+    function saveThemePreference(theme) {
+        $.ajax({
+            url: 'save-theme.php',
+            type: 'POST',
+            data: {theme: theme},
+            success: function(response) {
+                console.log("Theme gespeichert: " + theme);
+            }
+        });
+    }
+
+
 
 

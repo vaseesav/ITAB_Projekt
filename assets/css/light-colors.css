@@ -18,18 +18,18 @@
     Profiles color
     ---------------------------------------------
     */
-    --profiles-bg: #fff;
+    --profiles-bg: linear-gradient(to right, #5170ff, #da57fa);
     --profiles-text: #000;
-    --profiles-button-bg: #007bff;
+    --profiles-button-bg: #5170ff;
     --profiles-button-text: #fff;
-    --profiles-button-hover: #0056b3;
+    --profiles-button-hover: #7453fc;
     --profiles-error-text: red;
     --profiles-pass-field: rgba(0,0,0,0.4);
     --profiles-pass-field-bg: #fefefe;
     --profiles-pass-field-border: #888;
     --profiles-switch-bg: #ccc;
     --profiles-switch-light: #fff;
-    --profiles-switch-dark: #007bff;
+    --profiles-switch-dark: #5170ff;
 
 
     /*
@@ -77,7 +77,7 @@
     */
     --nav-bg: #5170ff;
     --nav-shadow: rgba(0,0,0,0.15);
-    --nav-text: #000;
+    --nav-text: #fff;
     --nav-text-hover: #7453fc;
 
 

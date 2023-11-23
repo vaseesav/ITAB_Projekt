@@ -13,6 +13,11 @@
     <!-- Header Start-->
     <?php include("assets/php/header.php"); ?>
     <!-- Header End -->
+
+    <!-- Loading Animation (Server loading time) -->
+    <div id="preloader" style="display: none;">
+        <?php include 'assets/php/preloader.php'; ?>
+    </div>
     <br><br><br><br><br><br><br><br>
 
     <form action="suchergebnisse.php" method="post">

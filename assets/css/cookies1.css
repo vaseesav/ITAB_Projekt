@@ -1,0 +1,41 @@
+/* Stil für das Popup - Anpassen nach Bedarf */
+#cookie-popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background-color: var(--cookie-background);
+    text-align: center;
+    box-shadow: 0 -2px 10px var(--cookie-box-shadow) rgba(0, 0, 0, 0.1);
+    display: none;
+    color: var(--cookie-button-text);
+    z-index: 10;
+}
+
+#cookie-popup p {
+    margin: 10px 0;
+    color: var(--cookie-button-text);
+}
+
+#cookie-popup button {
+    margin: 0 10px; /* Fügt etwas Abstand zwischen den Buttons hinzu */
+    background-color: var(--cookie-button);
+    color: var(--cookie-button-text);
+    border-radius: 25px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#cookie-popup button:hover {
+    background-color:var(--cookie-button-hover);
+}
+
+#cookie-popup #change-settings-button {
+    background-color:var(--cookie-button);
+}
+
+#cookie-popup #change-settings-button:hover {
+    background-color:var(--cookie-button-hover);
+}

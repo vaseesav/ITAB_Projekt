@@ -24,3 +24,6 @@ $theme = $_SESSION['theme'];
     <link rel="stylesheet" href="assets/css/navbar-mob-style.css">
     <link rel="stylesheet" href="assets/css/footer-style.css">
     <link rel="stylesheet" href="assets/css/index-style.css">
+    <link rel="stylesheet" href="assets/css/cookies.css">
+    <script src="assets/js/cookies1.js" defer></script>
+    <?php include('cookies.php'); ?>

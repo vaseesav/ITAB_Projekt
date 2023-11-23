@@ -12,6 +12,16 @@
     --index-text: #fff;
     --index-paragraph: white;
 
+    /*
+    ---------------------------------------------
+    Cookie color
+    ---------------------------------------------
+    */
+    --cookie-button:#e5a024;
+    --cookie-button-hover:#be861c;
+    --cookie-button-text: black;
+    --cookie-background: #f0f0f0;
+    --cookie-box-shadow: rgba(0, 0, 0, 0.1);
 
     /*
     ---------------------------------------------
@@ -89,9 +99,9 @@
     --nav-mob-ham: #000;
     --nav-mob-bg: #fff;
     --nav-mob-shadow: rgba(0, 0, 0, .4);
-    --nav-mob-text: #000;
-    --nav-mob-item-bg: #c2b5f7;
-    --nav-mob-item-bg-hover: #aca1d8;
+    --nav-mob-text: #fff;
+    --nav-mob-item-bg: #5170ff;
+    --nav-mob-item-bg-hover: #7453fc;
 
     /*
     ---------------------------------------------

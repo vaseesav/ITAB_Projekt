@@ -10,7 +10,7 @@ h2 {
 }
 
 /* Container für den gesamten Inhalt */
-.container {
+.container-agb {
     max-width: 800px;
     margin: 0 auto;
     margin-bottom: 70px;
@@ -102,7 +102,7 @@ section p {
 }
 
 @media (max-width: 350px) {
-    .container {
+    .container-agb {
         margin-right: 0;
         margin-left: 0;
     }

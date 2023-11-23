@@ -21,7 +21,7 @@ include 'assets/php/preloader.php';
 include 'assets/php/mobileHeader.php';
 ?>
 <!-- Header Mobile End -->
-<div class="container">
+<div class="container-agb">
     <div class="header-text">
         <h1>Allgemeine Geschäftsbedingungen des Mieteinander-Vereins</h1>
 

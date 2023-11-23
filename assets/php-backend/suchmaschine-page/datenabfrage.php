@@ -4,10 +4,6 @@ global $conn;
 // Datenbankverbindung (Kenndaten)
 require '../../database/connect.php';
 
-// Überprüfen auf Verbindungsfehler
-if ($conn->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
-}
 // Hier wird die Suchlogik implementiert
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validierung der Benutzereingaben

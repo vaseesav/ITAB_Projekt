@@ -15,7 +15,7 @@
     <!-- Header End -->
 <br><br><br><br><br><br>
     <div class="container">
-        <?php include 'assets/php/datenabfrage.php'; // Führt das Skript für die Datenabfrage aus ?>
+        <?php include 'assets/php-backend/suchmaschine-page/datenabfrage.php'; // Führt das Skript für die Datenabfrage aus ?>
     </div>
 
     <!-- Lade externe Javascript-Dateien -->

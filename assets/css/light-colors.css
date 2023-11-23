@@ -122,4 +122,16 @@
     --impressum-section-shadow: rgba(0, 0, 0, 0.29);
     --impressum-link: #5170ff;
     --impressum-divider: #5170ff;
+
+    /*
+---------------------------------------------
+AGB color
+---------------------------------------------
+*/
+    --agb-bg: #fff;
+    --agb-text: #333;
+    --agb-section-bg: #f8f7f7;
+    --agb-section-shadow: rgba(0, 0, 0, 0.29);
+    --agb-link: #5170ff;
+    --agb-divider: #5170ff;
 }

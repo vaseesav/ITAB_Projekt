@@ -1,20 +1,12 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 20px;
-    color: #333;
+    margin: 0;
 }
 
-h1, h2 {
-    color: #007BFF;
-}
 
 h2 {
     margin-top: 30px;
-}
-
-p {
-    color: #555;
 }
 
 /* Container für den gesamten Inhalt */
@@ -28,7 +20,6 @@ p {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #007BFF;
 }
 
 /* Abschnittsunterüberschriften */
@@ -40,58 +31,81 @@ p {
 
 /* Link-Styling */
 a {
-    color: #007BFF;
     text-decoration: underline;
+    color: var(--agb-link);
 }
 
-a:hover {
-    color: #0056b3;
+section {
+    background-color: var( --agb-bg);
+    max-width: 60em;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--agb-section-shadow);
+    border-radius: 8px;
 }
 
-/* Hervorhebungen und Warnungen */
-.warning {
-    color: #721c24;
-    background-color: #f8d7da;
-    border: 1px solid #f5c6cb;
-    padding: 10px;
+section h2 {
+    border-bottom: 2px solid var(--agb-divider);
+    padding-bottom: 10px;
     margin-bottom: 20px;
-    border-radius: 4px;
 }
 
-/* Styles für Beendigung des Nutzungsverhältnisses */
-.closure-info {
-    font-style: italic;
-    color: #dc3545;
+section p {
+    color: var(--impressum-text);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.1em;
 }
 
-/* Schlussbestimmungen */
-.final-remarks {
-    margin-top: 30px;
-    font-style: italic;
+.header-text {
+    margin-top: 180px;
 }
 
-/* Abschnitts-Trennlinien */
-hr {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #ccc, rgba(0, 0, 0, 0));
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    .imp-sections {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    section p {
+        margin-right: 15px;
+    }
 }
 
-/* Media Query für kleinere Bildschirme */
-@media only screen and (max-width: 600px) {
+@media (max-width: 1170px) {
     body {
         font-size: 14px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 18px;
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 14px;
     }
 
+
+    .header-text {
+        margin-top: 200px;
+    }
+}
+
+@media (max-width: 350px) {
     .container {
-        margin: 10px;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    section {
+        margin: 0;
     }
 }

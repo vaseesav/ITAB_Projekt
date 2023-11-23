@@ -111,14 +111,26 @@
     --footer-text: #fff;
 
     /*
----------------------------------------------
-Impressum color
----------------------------------------------
-*/
+    ---------------------------------------------
+    Impressum color
+    ---------------------------------------------
+    */
     --impressum-bg: #fff;
     --impressum-text: #333;
     --impressum-section-bg: #f8f7f7;
     --impressum-section-shadow: rgba(0, 0, 0, 0.29);
     --impressum-link: #6451D6;
     --impressum-divider: #A995FF;
+
+    /*
+    ---------------------------------------------
+    AGB color
+    ---------------------------------------------
+    */
+    --agb-bg: #fff;
+    --agb-text: #333;
+    --agb-section-bg: #f8f7f7;
+    --agb-section-shadow: rgba(0, 0, 0, 0.29);
+    --agb-link: #6451D6;
+    --agb-divider: #A995FF;
 }

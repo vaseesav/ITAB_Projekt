@@ -1,7 +1,7 @@
+<?php include("assets/php/head.php"); ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <?php include("assets/php/head.php"); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Allgemeine Geschäftsbedingungen - Mieteinander e.V.</title>
@@ -9,11 +9,24 @@
 
 </head>
 <body>
+<?php
+include 'assets/php/preloader.php';
+?>
+<!-- Header Start-->
+<?php include("assets/php/header.php"); ?>
+<!-- Header End -->
+
+<!-- Header Mobile -->
+<?php
+include 'assets/php/mobileHeader.php';
+?>
+<!-- Header Mobile End -->
 <div class="container">
+    <div class="header-text">
         <h1>Allgemeine Geschäftsbedingungen des Mieteinander-Vereins</h1>
 
         <nav id="table-of-contents">
-            <h2>Inhaltsverzeichnis</h2>
+            <h2>Inhaltsverzeichnis:</h2>
             <ul>
                 <li><a href="#geltungsbereich">Geltungsbereich</a></li>
                 <li><a href="#vertragsgegenstand">Vertragsgegenstand</a></li>
@@ -25,6 +38,7 @@
                 <li><a href="#schlussbestimmungen">Schlussbestimmungen</a></li>
             </ul>
         </nav>
+    </div>
 
         <section id="geltungsbereich">
             <h2>Geltungsbereich</h2>
@@ -101,5 +115,10 @@
 <!--Footer Start-->
 <?php include 'assets/php/footer.php'; ?>
 <!--Footer End-->
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navColor.js"></script>
 </body>
 </html>

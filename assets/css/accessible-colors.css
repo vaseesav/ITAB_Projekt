@@ -12,6 +12,15 @@
     --index-text: #333333;
     --index-paragraph: #333333;
 
+    /*
+    ---------------------------------------------
+    Cookie color
+    ---------------------------------------------
+    */
+    --cookie-button:#e5a024;
+    --cookie-button-hover:#be861c;
+    --cookie-button-text: #000;
+    --cookie-background: #f0f0f0;
 
     /*
     ---------------------------------------------

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/cookies1.css">
+    <link rel="stylesheet" href="assets/css/cookies.css">
     <title>Cookie Hinweis</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
 </div>
 
 <!-- Der Pfad zur JavaScript-Datei wird hier angegeben -->
-<script src="assets/js/cookies1.js"></script>
+<script src="assets/js/cookies.js"></script>
 
 </body>
 </html>

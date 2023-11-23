@@ -1,61 +1,60 @@
 body {
-    font-family: Arial, sans-serif;
-    
-}
-
-h1 {
-    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-form {
-    margin-bottom: 30px;
-    margin: 20px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-select {
+input[type="text"], select, input[type="number"], input[type="date"] {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
     width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-select {
-    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 input[type="submit"] {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
 
-.result {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin-bottom: 10px;
+fieldset {
+    border: none;
+    margin-bottom: 20px;
 }
 
-fieldset.flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
 }
 
-fieldset.flex-container zeitraum,
-fieldset.flex-container input {
-    margin-bottom: 10px;
+.btn-suchen {
+    margin-left: 15px;
+}
+
+.suche-container {
+    margin: 25px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1170px) {
+    .suche-container {
+        margin-top: 60px;
+    }
 }

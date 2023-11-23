@@ -34,6 +34,7 @@ include 'assets/php/mobileHeader.php';
     <form action="suchergebnisse.php" method="post">
 
         <!-- Allgemeine Suche -->
+        <section class="suche-container">
         <fieldset>
             <div class="header-text">
             <legend>Allgemeine Suche</legend>
@@ -130,7 +131,8 @@ include 'assets/php/mobileHeader.php';
             <input type="number" name="veranstaltungsdauer" id="veranstaltungsdauer" placeholder="Veranstaltungsdauer">
         </fieldset>
 
-        <input type="submit" value="Suchen">
+        <input class="btn-suchen" type="submit" value="Suchen">
+        </section>
     </form>
 
     <!-- Ergebniscontainer -->

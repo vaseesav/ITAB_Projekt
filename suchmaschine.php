@@ -1,8 +1,10 @@
+<?php
+include 'assets/php/head.php';
+?>
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-    <?php include("assets/php/head.php"); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mieteinander - Suchmaschine</title>
@@ -10,23 +12,34 @@
 </head>
 
 <body>
-    <!-- Header Start-->
-    <?php include("assets/php/header.php"); ?>
-    <!-- Header End -->
+<?php
+include 'assets/php/preloader.php';
+?>
+<!-- Header Start-->
+<?php include("assets/php/header.php"); ?>
+<!-- Header End -->
 
-    <!-- Loading Animation (Server loading time) -->
-    <div id="preloader" style="display: none;">
-        <?php include 'assets/php/preloader.php'; ?>
-    </div>
+<!-- Header Mobile -->
+<?php
+include 'assets/php/mobileHeader.php';
+?>
+<!-- Header Mobile End -->
+
+<!-- Loading Animation (Server loading time) -->
+<div id="preloader" style="display: none;">
+    <?php include 'assets/php/preloader.php'; ?>
+</div>
     <br><br><br><br><br><br><br><br>
 
     <form action="suchergebnisse.php" method="post">
 
         <!-- Allgemeine Suche -->
         <fieldset>
+            <div class="header-text">
             <legend>Allgemeine Suche</legend>
             <label for="searchText">Suche nach Text:</label>
             <input type="text" name="searchText" id="searchText" placeholder="Suchtext eingeben">
+            </div>
         </fieldset>
 
         <!-- Standortsuche-->
@@ -122,13 +135,15 @@
 
     <!-- Ergebniscontainer -->
     <div class="result-container"></div>
-
-    <!-- Lade externe Javascript-Dateien -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="assets/js/suchmaschine.js"></script>
         <!--Footer Start-->
         <?php include 'assets/php/footer.php'; ?>
         <!--Footer End-->
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navColor.js"></script>
+<script src="assets/js/suchmaschine.js"></script>
 </body>
 
 </html>

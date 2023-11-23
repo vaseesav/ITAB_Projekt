@@ -115,25 +115,36 @@
      * Profile Switch
      */
     document.getElementById('switch').addEventListener('change', function() {
+        var link = document.getElementById('accessibilityThemeLink');
         if (this.checked) {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/accessible-colors.css');
             saveThemePreference('accessible-colors');
+            link.textContent = 'Barrierefreies Theme deaktivieren';
         } else {
             document.getElementById('themeStyle').setAttribute('href', 'assets/css/light-colors.css');
             saveThemePreference('light-colors');
+            link.textContent = 'Barrierefreies Theme aktivieren';
         }
     });
 
     function saveThemePreference(theme) {
+        showPreloader();
         $.ajax({
             url: 'assets/php-backend/profile-page/save-theme.php',
             type: 'POST',
             data: {theme: theme},
             success: function(response) {
+                hidePreloader();
                 console.log("Theme gespeichert: " + theme);
+            },
+            error: function(error) {
+                hidePreloader();
+                console.error('Fehler beim Speichern des Themes:', error);
             }
         });
     }
+
+
 
 
 

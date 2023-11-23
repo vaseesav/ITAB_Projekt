@@ -1,21 +1,27 @@
+<?php include("assets/php/head.php"); ?>
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <?php include("assets/php/head.php"); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum - mieteinander</title>
     <link rel="stylesheet" href="assets/css/impressum.css">
 </head>
 <body>
-    <!-- Header Start-->
-    <?php include("assets/php/header.php"); ?>
-    <!-- Header End -->
+<?php
+include 'assets/php/preloader.php';
+?>
+<!-- Header Start-->
+<?php include("assets/php/header.php"); ?>
+<!-- Header End -->
 
-    <!-- Header Mobile -->
-    <?php include 'assets/php/mobileHeader.php'; ?>
-    <!-- Header Mobile End -->
+<!-- Header Mobile -->
+<?php
+include 'assets/php/mobileHeader.php';
+?>
+<div class="imp-sections">
     <section>
+        <div class="header-text">
         <h2>mieteinander wird betrieben von:</h2>
         <p> Code Crunchers <br>
             Kilianistraße 6 <br>
@@ -25,6 +31,7 @@
             mieteinander wird vertreten durch: <br>
             Annika Mustermann (Inhaberin)
         </p>
+        </div>
 
     </section>
     <section>
@@ -96,19 +103,18 @@
 
     <section>
         <h2>Datenschutzerklärung:</h2>
-        <p>Datenschutzerklärung: 
-            <div class="link-container">
-                <a class="link" href="https://docs.google.com/document/d/1fev1rBf0l3NnZSrymNZorZKjyQR1LBw__HP0G0ZpukU/edit?usp=sharing"> // TODO: Text rauskopieren
-                    <span>Datenschutzerklärung</span>
-    </a>
-</div></p>
+        <p>Datenschutzerklärung:
     </section>
+</div>
 
-    <footer>
     <!--Footer Start-->
     <?php include 'assets/php/footer.php'; ?>
     <!--Footer End-->
-    </footer>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navColor.js"></script>
 
 </body>
 </html>

@@ -1,58 +1,71 @@
 body {
-    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     font-size: 1em;
     margin: 0;
     padding-top: 10em;
-    background: linear-gradient(to right, #5170ff, #da57fa);
-    color: #333;
+    background: var(--impressum-bg);
+    color: var(--impressum-text);
     height: auto;
 }
 
-header h1 {
-    margin: 0;
-}´
-
-.p {
-    color:#333;
-}
-
 section {
-    padding-top: 20px; /* Hinzugefügt: Platz über dem Text in der ersten Section */
-    background-color: #fff; /* Hinzugefügt: Hintergrundfarbe für bessere Lesbarkeit */
+    background-color: var(--impressum-section-bg);
     max-width: 60em;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--impressum-section-shadow);
     border-radius: 8px;
 }
 
 section h2 {
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid var(--impressum-divider);
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 section p {
-    color: #333;
+    color: var(--impressum-text);
     margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.1em;
 }
 
 main {
-    margin-top: 60px; /* Verringert, um den Header zu berücksichtigen */
+    margin-top: 60px;
+}
+.imp-sections {
+    margin-bottom: 60px;
 }
 
 /* Responsive Styles */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
     section {
-        padding: 10px;
+        margin: 20px;
+    }
+
+    .imp-sections {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    section p {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .imp-sections {
+        margin-top: 50px
     }
 }
 
 /* Link Styles */
 a {
-    color: #007BFF;
+    color: var(--impressum-link);
     text-decoration: none;
 }
 

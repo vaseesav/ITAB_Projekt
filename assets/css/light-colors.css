@@ -110,4 +110,16 @@
     */
     --footer-bg: #5170ff;
     --footer-text: #fff;
+
+    /*
+    ---------------------------------------------
+    Impressum color
+    ---------------------------------------------
+    */
+    --impressum-bg: #fff;
+    --impressum-text: #333;
+    --impressum-section-bg: #f8f7f7;
+    --impressum-section-shadow: rgba(0, 0, 0, 0.29);
+    --impressum-link: #5170ff;
+    --impressum-divider: #5170ff;
 }

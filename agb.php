@@ -98,5 +98,8 @@
     </div>
 
 
+<!--Footer Start-->
+<?php include 'assets/php/footer.php'; ?>
+<!--Footer End-->
 </body>
 </html>

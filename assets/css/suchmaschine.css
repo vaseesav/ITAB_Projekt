@@ -46,6 +46,10 @@ legend {
     margin: 25px;
 }
 
+.result-container p {
+    color: var(--such-text)
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-container {

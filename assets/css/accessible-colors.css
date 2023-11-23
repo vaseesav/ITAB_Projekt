@@ -133,4 +133,18 @@
     --agb-section-shadow: rgba(0, 0, 0, 0.29);
     --agb-link: #6451D6;
     --agb-divider: #A995FF;
+
+    /*
+    ---------------------------------------------
+    Suchmaschine color
+    ---------------------------------------------
+    */
+    --such-bg: #f4f4f4;
+    --such-text: #333;
+    --such-border: #ddd;
+    --such-shadow: rgba(0,0,0,0.1);
+    --such-btn: #7453fc;
+    --such-btn-hover: #A995FF;
+    --such-btn-text: #fff;
+    --such-header: #333;
 }

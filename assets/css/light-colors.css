@@ -124,14 +124,28 @@
     --impressum-divider: #5170ff;
 
     /*
----------------------------------------------
-AGB color
----------------------------------------------
-*/
+    ---------------------------------------------
+    AGB color
+    ---------------------------------------------
+    */
     --agb-bg: #fff;
     --agb-text: #333;
     --agb-section-bg: #f8f7f7;
     --agb-section-shadow: rgba(0, 0, 0, 0.29);
     --agb-link: #5170ff;
     --agb-divider: #5170ff;
+
+    /*
+    ---------------------------------------------
+    Suchmaschine color
+    ---------------------------------------------
+    */
+    --such-bg: #f4f4f4;
+    --such-text: #333;
+    --such-border: #ddd;
+    --such-shadow: rgba(0,0,0,0.1);
+    --such-btn: #5170ff;
+    --such-btn-hover: #7453fc;
+    --such-btn-text: #fff;
+    --such-header: #333;
 }

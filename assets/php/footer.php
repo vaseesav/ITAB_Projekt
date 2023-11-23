@@ -2,6 +2,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
+            <a class="agb-text" href="agb.php" >AGB</a>
+            <a class="impressum-text" href="impressum.php" >Impressum</a>
           <p>Copyright © 2023 <a href="#">mieteinander</a> All rights reserved.
             <div class="theme-change-footer">
                 <a href="#" id="accessibilityThemeLink">Barrierefreies Theme aktivieren</a>

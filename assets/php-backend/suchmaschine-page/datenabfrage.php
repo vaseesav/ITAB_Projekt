@@ -63,7 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         while ($row = $result->fetch_assoc()) {
             array_push($resultArray, $row);
         }
-    }
+    } else {
+    echo json_encode([]); // Sendet ein leeres Array zurück
+}
 
     // Ergebnisse als JSON zurückgeben
     header('Content-Type: application/json');

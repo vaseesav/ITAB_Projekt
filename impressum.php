@@ -98,7 +98,7 @@
         <h2>Datenschutzerklärung:</h2>
         <p>Datenschutzerklärung: 
             <div class="link-container">
-                <a class="link" href="https://docs.google.com/document/d/1fev1rBf0l3NnZSrymNZorZKjyQR1LBw__HP0G0ZpukU/edit?usp=sharing">
+                <a class="link" href="https://docs.google.com/document/d/1fev1rBf0l3NnZSrymNZorZKjyQR1LBw__HP0G0ZpukU/edit?usp=sharing"> // TODO: Text rauskopieren
                     <span>Datenschutzerklärung</span>
     </a>
 </div></p>

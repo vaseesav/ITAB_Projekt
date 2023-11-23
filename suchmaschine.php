@@ -120,12 +120,10 @@
 
     <!-- Lade externe Javascript-Dateien -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="suchmaschine.js"></script>
-    <footer>
+    <script src="assets/js/suchmaschine.js"></script>
         <!--Footer Start-->
         <?php include 'assets/php/footer.php'; ?>
         <!--Footer End-->
-    </footer>
 </body>
 
 </html>

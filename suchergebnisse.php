@@ -19,7 +19,7 @@
     </div>
 
     <!-- Lade externe Javascript-Dateien -->
-    <script src="ergebnisse.js"></script>
+   <!-- <script src="ergebnisse.js"></script> --> // TODO: Verlinkung
     <footer>
         <!--Footer Start-->
         <?php include 'assets/php/footer.php'; ?>

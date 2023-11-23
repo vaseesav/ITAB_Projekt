@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         let formData = new FormData(form);
 
-        fetch('datenabfrage.php', {
+        fetch('assets/php-backend/suchmaschine-page/datenabfrage.php', {
             method: 'POST',
             body: formData
         })

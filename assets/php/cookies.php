@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/cookies.css">
-    <title>Cookie Hinweis</title>
-</head>
-<body>
+<link rel="stylesheet" href="assets/css/cookies.css">
 
 <div id="cookie-popup">
     <p>mieteinander verwendet Cookies, um Ihnen ein optimales Erlebnis zu bieten. Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden und uns dabei helfen, die Leistung unserer Website zu verbessern. <br> Sie ermöglichen es uns auch, Ihnen relevante Inhalte bereitzustellen.</p>
@@ -19,6 +10,3 @@
 
 <!-- Der Pfad zur JavaScript-Datei wird hier angegeben -->
 <script src="assets/js/cookies.js"></script>
-
-</body>
-</html>

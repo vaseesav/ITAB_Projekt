@@ -5,22 +5,14 @@ include 'assets/php/head.php';
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
+// Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: login.php');
+    exit;
+}
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data and store it in variables
-    $anzeigenTitel =
-        $anzeigenInhalt = $_POST['anzeigenInhalt'] ?? '';
-    $WEGDAMIT = $_POST['WEGDAMIT'] ?? '';
-    $veranstaltungstyp = $_POST['veranstaltungstyp'] ?? '';
-    $anzahlGaeste = $_POST['anzahl-gaeste'] ?? 0;
-    $beschreibung = $_POST['beschreibung'] ?? '';
-    $postleitzahl = $_POST['postleitzahl'] ?? '';
-    $stadt = $_POST['stadt'] ?? '';
-    $bundesland = $_POST['bundesland'] ?? '';
-    $land = $_POST['land'] ?? '';
-    $startDatum = $_POST['startDatum'] ?? '';
-    $endDatum = $_POST['endDatum'] ?? '';
-    $preis = $_POST['preis'] ?? '';
 
     $userId = $_SESSION['userId'];
 
@@ -29,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nutzerID = $userId; // Beispiel-NutzerID
     $anzeigenName = $_POST['anzeigenTitel'] ?? '';
     $veranstaltungstyp = $_POST['veranstaltungstyp'] ?? '';
-    $beschreibung = $_POST['beschreibung'] ?? '';
+    $beschreibung = $_POST['anzeigenInhalt'] ?? '';
     $anzahlGaeste = $_POST['anzahl-gaeste'] ?? 0;
     $plz = $_POST['postleitzahl'] ?? '';
     $stadt = $_POST['stadt'] ?? '';
@@ -53,28 +45,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Schließe Statement und Verbindung
     $stmt->close();
     $conn->close();
-
-
-
-
-
-
-
-
-    // Echo the variables
-    echo "Titel der Anzeige: " . htmlspecialchars($anzeigenTitel) . "<br>";
-    echo "Beschreibung der Anzeige: " . htmlspecialchars($anzeigenInhalt) . "<br>";
-    echo "WEGDAMIT: " . htmlspecialchars($WEGDAMIT) . "<br>";
-    echo "Veranstaltungstyp: " . htmlspecialchars($veranstaltungstyp) . "<br>";
-    echo "Anzahl der Gäste: " . htmlspecialchars($anzahlGaeste) . "<br>";
-    echo "Beschreibung des Raumes: " . htmlspecialchars($beschreibung) . "<br>";
-    echo "Postleitzahl: " . htmlspecialchars($postleitzahl) . "<br>";
-    echo "Stadt: " . htmlspecialchars($stadt) . "<br>";
-    echo "Bundesland: " . htmlspecialchars($bundesland) . "<br>";
-    echo "Land: " . htmlspecialchars($land) . "<br>";
-    echo "Startdatum und -zeit: " . htmlspecialchars($startDatum) . "<br>";
-    echo "Enddatum und -zeit: " . htmlspecialchars($endDatum) . "<br>";
-    echo "Mietpreis pro Tag: " . htmlspecialchars($preis) . "<br>";
 
     // Handle file upload
     if (isset($_FILES['fotos'])) {
@@ -131,17 +101,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="gesuchInhalt">Inhalt des Gesuchs:</label>
                 <textarea id="gesuchInhalt" name="gesuchInhalt" required></textarea>
             </div>
-
-            <label for="WEGDAMIT">WEGDAMIT:</label>
-            <input type="text" id="WEGDAMIT" name="WEGDAMIT" required>
-
             <label for="veranstaltungstyp">Veranstaltungstyp:</label>
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
             <label for="anzahl-gaeste">Anzahl der Gäste:</label>
             <input type="number" id="anzahl-gaeste" name="anzahl-gaeste" required>
-
-            <label for="beschreibung">Beschreibung des Raumes:</label>
-            <textarea id="beschreibung" name="beschreibung" required></textarea>
 
             <label for="postleitzahl">Postleitzahl:</label>
             <input type="text" id="postleitzahl" name="postleitzahl" required>

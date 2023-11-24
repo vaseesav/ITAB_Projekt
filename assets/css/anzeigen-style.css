@@ -1,0 +1,75 @@
+/* Neue CSS-Regel für die Unsichtbarkeit */
+.invisible {
+    display: none;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  padding-top: 15px;
+}
+
+
+/* Allgemeine Stile */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: var(--anzeige-bg);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Formularstil für Anzeige aufgeben */
+form {
+    max-width: 600px;
+    margin: 10em auto; /* Zentriere horizontal und vertikal */
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+}
+
+.label-container label {
+    margin-right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--textarea-border);
+    border-radius: 5px;
+    resize: vertical;
+}
+
+button {
+    background-color: var(--anzeige-btn);
+    color: var(--anzeige-btn-text);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: var(--anzeige-btn-hover);
+    color: var(--anzeige-btn-hover-text);
+}

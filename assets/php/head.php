@@ -9,21 +9,21 @@ if (!isset($_SESSION['theme'])) {
 $theme = $_SESSION['theme'];
 ?>
 <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
 
-    <!-- <title>mieteinander</title> -->
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<!-- <title>mieteinander</title> -->
+<meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <!--CSS Files-->
+<!--CSS Files-->
 <!--
     <link rel="stylesheet" href="assets/css/accessible-colors.css">
     <link rel="stylesheet" href="assets/css/light-colors.css"> -->
-    <link rel="stylesheet" id="themeStyle" href="assets/css/<?php echo $theme; ?>.css">
-    <link rel="stylesheet" href="assets/css/preloader-style.css">
-    <link rel="stylesheet" href="assets/css/navbar-style.css">
-    <link rel="stylesheet" href="assets/css/navbar-mob-style.css">
-    <link rel="stylesheet" href="assets/css/footer-style.css">
-    <link rel="stylesheet" href="assets/css/index-style.css">
-    <link rel="stylesheet" href="assets/css/cookies.css">
-    <script src="assets/js/cookies.js" defer></script>
-    <?php include('cookies.php'); ?>
+<link rel="stylesheet" id="themeStyle" href="assets/css/<?php echo $theme; ?>.css">
+<link rel="stylesheet" href="assets/css/preloader-style.css">
+<link rel="stylesheet" href="assets/css/navbar-style.css">
+<link rel="stylesheet" href="assets/css/navbar-mob-style.css">
+<link rel="stylesheet" href="assets/css/footer-style.css">
+<link rel="stylesheet" href="assets/css/index-style.css">
+<link rel="stylesheet" href="assets/css/cookies.css">
+<script src="assets/js/cookies.js" defer></script>
+<?php include('cookies.php'); ?>

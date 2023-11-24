@@ -117,7 +117,9 @@ Banner Style
   display: flex;
   justify-content: start;
 }
-
+.bildInserat{
+  max-width: 60%;
+}
 /* 
 ---------------------------------------------
 Responsive Style

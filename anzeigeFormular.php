@@ -109,9 +109,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </div>
     </div>
-    <br><br><br><br><br><br><br><br>
+    <br>
     <inputboxn>
         <form method="post" enctype="multipart/form-data">
+            <h1>Anzeige oder Gesuch aufgeben</h1><br>
             <!-- Your HTML form content goes here -->
             <div class="toggle-container">
                 <button class="toggle-text" onclick="toggleAnzeige()">Anzeige aufgeben</button>
@@ -138,7 +139,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="veranstaltungstyp">Veranstaltungstyp:</label>
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
             <label for="anzahl-gaeste">Anzahl der Gäste:</label>
-            <input type="number" id="anzahl-gaeste" name="anzahl-gaeste" required>
+            <input type="number" min="1" id="anzahl-gaeste" name="anzahl-gaeste" required>
 
             <label for="beschreibung">Beschreibung des Raumes:</label>
             <textarea id="beschreibung" name="beschreibung" required></textarea>

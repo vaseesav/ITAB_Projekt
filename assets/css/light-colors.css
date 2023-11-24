@@ -74,6 +74,23 @@
 
     /*
     ---------------------------------------------
+    Anzeige/Gesuch color
+    ---------------------------------------------
+    */
+    
+    --anzeige-bg: #f4f4f4;
+    --anzeige-text: var(--such-text);
+    --anzeige-border: var(--such-border);
+    --anzeige-shadow: var(--such-shadow);
+    --anzeige-btn: #5170ff;
+    --anzeige-btn-hover: #7453fc;
+    --anzeige-btn-text: white;
+    --textarea-border: #ccc;
+    --anzeige-header: var(--such-header);
+
+
+    /*
+    ---------------------------------------------
     Pre-loader color
     ---------------------------------------------
     */

@@ -32,8 +32,11 @@ h2 {
 
 /* Link-Styling */
 a {
-    text-decoration: underline;
     color: var(--agb-link);
+}
+
+#table-of-contents a{
+    text-decoration: underline;
 }
 
 section {

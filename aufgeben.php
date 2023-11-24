@@ -1,36 +1,16 @@
 <?php
 include 'assets/php/head.php';
 ?>
+<?php
+include 'assets/php/dbAuslesen.php';
+?>
 <!DOCTYPE html>
+
 <html>
 
 <head>
     <title>Inserat</title>
     <link rel="stylesheet" href="assets/css/bspInserat-style.css">
-    <script>
-        function loadData() {
-            fetch('fetch_data.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('tableData').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("Error loading data");
-                });
-        }
-        function loadImg() {
-            fetch('fetch_image.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('tableImg').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("Error loading data");
-                });
-        }
-    </script>
     <script>
         loadData();
         loadImg();

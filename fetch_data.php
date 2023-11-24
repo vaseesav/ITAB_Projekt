@@ -5,11 +5,10 @@ $sql = "SELECT * FROM anzeige";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Output data of each row
-    $row = $result->fetch_assoc();
-    echo "<div class='inseratausgabe'>
-                <div>" . $row["istAnzeige"] . "</div>            
-                <div class='inseratTitel'>" . $row["AnzeigenName"] . "</div>
+  // Output data of each row
+  $row = $result->fetch_assoc();
+  echo "<div class='inseratausgabe'>
+  <div class='inseratTitel'>" . $row["AnzeigenName"] . "</div>
                 <div class='grau'>Veranstaltungstyp:</div>
                 <div>" . $row["Veranstaltungstyp"] . "</div>
                 <div class='grau'>Beschreibung:</div>
@@ -21,9 +20,11 @@ if ($result->num_rows > 0) {
                 <span>" . $row["Stadt"] . "</span>
                 <span>" . $row["Bundesland"] . "</span>
                 <div>Preis pro Tag:</div>
-                <div>" . $row["preis"] . "</div>
+                <div>" . $row["preis"] . " €" . "</div>
                 
               </div";
 }
+// <div>" . $row["istAnzeige"] . "</div>            
+// <div class='inseratTitel'>" . $row["AnzeigenName"] . "</div>
 $conn->close();
 ?>

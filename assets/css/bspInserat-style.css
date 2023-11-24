@@ -23,3 +23,9 @@ span{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+img{
+    max-width: 50% !important ;
+}
+.bildInserat{
+    max-width: 50% !important ;
+}

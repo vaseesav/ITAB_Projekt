@@ -1,18 +1,12 @@
 <?php
-$db_host = 'localhost';
-$db_user = 'root';
-$db_pass = '';
-$db_name = 'mieteinander';
-
-
-$conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
-
-
-if ($conn->connect_error) {
-    die("Verbindung fehlgeschlagen: " . $conn->connect_error);
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
 }
 
-$nutzerID = 1; // Beispiel-NutzerID
+$userId = $_SESSION['userId'];
+include '../../database/connect.php';
+
+$nutzerID = $userId; // Beispiel-NutzerID
 $anzeigenName = 'Beispielname';
 $veranstaltungstyp = 'Beispieltyp';
 $beschreibung = 'Beispielbeschreibung';

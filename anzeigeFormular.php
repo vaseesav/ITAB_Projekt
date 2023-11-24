@@ -1,14 +1,15 @@
-<!-- <?php
-// include 'assets/php/inserateDb.php';
-?> -->
 <?php
+include 'assets/php/head.php';
+?>
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data and store it in variables
-    $anzeigenTitel = $_POST['anzeigenTitel'] ?? '';
-    $anzeigenInhalt = $_POST['anzeigenInhalt'] ?? '';
-    $gesuchTitel = $_POST['gesuchTitel'] ?? '';
-    $gesuchInhalt = $_POST['gesuchInhalt'] ?? '';
+    $anzeigenTitel =
+        $anzeigenInhalt = $_POST['anzeigenInhalt'] ?? '';
     $raumname = $_POST['raumname'] ?? '';
     $veranstaltungstyp = $_POST['veranstaltungstyp'] ?? '';
     $anzahlGaeste = $_POST['anzahl-gaeste'] ?? 0;
@@ -21,11 +22,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $endDatum = $_POST['endDatum'] ?? '';
     $preis = $_POST['preis'] ?? '';
 
+    $userId = $_SESSION['userId'];
+
+    include 'assets/database/connect.php';
+
+    $nutzerID = $userId; // Beispiel-NutzerID
+    $anzeigenName = $_POST['anzeigenTitel'] ?? '';
+    $veranstaltungstyp = 'Beispieltyp';
+    $beschreibung = 'Beispielbeschreibung';
+    $anzahlGaeste = 10;
+    $plz = 12345;
+    $stadt = 'Beispielstadt';
+    $bundesland = 'Beispielbundesland';
+    $preis = 100.50;
+    $istAnzeige = 1;
+
+
+    // Einfüge-Query vorbereiten
+    $sql = "INSERT INTO anzeige (NutzerID, AnzeigenName, Veranstaltungstyp, Beschreibung, anzahlGaeste, Plz, Stadt, Bundesland, preis, istAnzeige) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+
+    // Parameter an die Query binden
+    $stmt->bind_param("isssiiisdi", $nutzerID, $anzeigenName, $veranstaltungstyp, $beschreibung, $anzahlGaeste, $plz, $stadt, $bundesland, $preis, $istAnzeige);
+
+    // Query ausführen
+    $stmt->execute();
+
+    echo "Neue Anzeige erfolgreich hinzugefügt!";
+
+    // Schließe Statement und Verbindung
+    $stmt->close();
+    $conn->close();
+
+
+
+
+
+
+
+
     // Echo the variables
     echo "Titel der Anzeige: " . htmlspecialchars($anzeigenTitel) . "<br>";
     echo "Beschreibung der Anzeige: " . htmlspecialchars($anzeigenInhalt) . "<br>";
-    echo "Titel des Gesuchs: " . htmlspecialchars($gesuchTitel) . "<br>";
-    echo "Inhalt des Gesuchs: " . htmlspecialchars($gesuchInhalt) . "<br>";
     echo "Raumname: " . htmlspecialchars($raumname) . "<br>";
     echo "Veranstaltungstyp: " . htmlspecialchars($veranstaltungstyp) . "<br>";
     echo "Anzahl der Gäste: " . htmlspecialchars($anzahlGaeste) . "<br>";
@@ -45,15 +83,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Keine Fotodatei hochgeladen.<br>";
     }
 }
+//include 'assets/php-backend/anzeigen/anzeigeAufgeben.php';
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="de">
 
 <head>
-    <?php
-    include 'assets/php/head.php';
-    ?>
     <title>Anzeige oder Gesuch aufgeben</title>
     <link rel="stylesheet" href="assets/css/anzeigen-style.css">
     <script src="assets/js/inserate.js"></script>

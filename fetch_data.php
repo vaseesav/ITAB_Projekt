@@ -1,5 +1,5 @@
 <?php
-include 'dbAuslesen.php';
+include 'assets/database/connect.php';
 
 $sql = "SELECT * FROM anzeige";
 $result = $conn->query($sql);

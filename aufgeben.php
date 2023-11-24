@@ -2,7 +2,7 @@
 include 'assets/php/head.php';
 ?>
 <?php
-include 'assets/php/dbAuslesen.php';
+include 'assets/database/connect.php';
 ?>
 <!DOCTYPE html>
 

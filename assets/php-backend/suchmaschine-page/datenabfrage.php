@@ -3,67 +3,57 @@ global $conn;
 require '../../database/connect.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $searchText = isset($_POST["searchText"]) ? htmlspecialchars($_POST["searchText"]) : "";
-    $bundesland = isset($_POST["bundesland"]) ? htmlspecialchars($_POST["bundesland"]) : "";
-    $stadt = isset($_POST["stadt"]) ? htmlspecialchars($_POST["stadt"]) : "";
-    $veranstaltungstyp = isset($_POST["veranstaltungstyp"]) ? htmlspecialchars($_POST["veranstaltungstyp"]) : "";
-    $sortieren = isset($_POST["sortieren"]) ? htmlspecialchars($_POST["sortieren"]) : "";
-    $sortierreihenfolge = isset($_POST["sortierreihenfolge"]) ? htmlspecialchars($_POST["sortierreihenfolge"]) : "";
-    $anzahlGaeste = isset($_POST["anzahlGaeste"]) ? htmlspecialchars($_POST["anzahlGaeste"]) : "";
-    $veranstaltungsdauer = isset($_POST["veranstaltungsdauer"]) ? htmlspecialchars($_POST["veranstaltungsdauer"]) : "";
-    $postleitzahl = isset($_POST["postleitzahl"]) ? htmlspecialchars($_POST["postleitzahl"]) : "";
-    $startdatum = isset($_POST["startdatum"]) ? htmlspecialchars($_POST["startdatum"]) : "";
-    $enddatum = isset($_POST["enddatum"]) ? htmlspecialchars($_POST["enddatum"]) : "";
-
-    if(isset($_POST["preis"]) && $_POST["preis"] != "custom") {
-        $preisBereich = explode("-", $_POST["preis"]);
-        $minPreis = $preisBereich[0];
-        $maxPreis = $preisBereich[1];
-    } else {
-        $minPreis = isset($_POST["minPreis"]) ? htmlspecialchars($_POST["minPreis"]) : 0;
-        $maxPreis = isset($_POST["maxPreis"]) ? htmlspecialchars($_POST["maxPreis"]) : PHP_INT_MAX;
-    }
+    // Eingaben validieren
+    $searchText = $_POST["searchText"] ?? "";
+    $bundesland = $_POST["bundesland"] ?? "";
+    $stadt = $_POST["stadt"] ?? "";
+    $veranstaltungstyp = $_POST["veranstaltungstyp"] ?? "";
+    $sortieren = $_POST["sortieren"] ?? "preis";
+    $sortierreihenfolge = $_POST["sortierreihenfolge"] ?? "aufsteigend";
+    $anzahlGaeste = $_POST["anzahlGaeste"] ?? "";
+    $veranstaltungsdauer = $_POST["veranstaltungsdauer"] ?? "";
+    $postleitzahl = $_POST["postleitzahl"] ?? "";
+    $startdatum = $_POST["startdatum"] ?? "";
+    $enddatum = $_POST["enddatum"] ?? "";
+    $preis = $_POST["preis"] ?? "custom";
+    $minPreis = $_POST["minPreis"] !== "" ? $_POST["minPreis"] : 0;
+    $maxPreis = $_POST["maxPreis"] !== "" ? $_POST["maxPreis"] : PHP_INT_MAX;
 
     $sqlConditions = [];
     $params = [];
     $paramTypes = "";
 
+    // Filterbedingungen hinzufügen
     if (!empty($searchText)) {
         $sqlConditions[] = "(a.Veranstaltungstyp LIKE CONCAT('%', ?, '%') OR a.Beschreibung LIKE CONCAT('%', ?, '%'))";
         array_push($params, $searchText, $searchText);
         $paramTypes .= "ss";
     }
+    // [Hinzufügen weiterer Bedingungen basierend auf anderen Filtern]
 
-    // Bundesland Filter
-    if (!empty($bundesland)) {
-        $sqlConditions[] = "a.Bundesland = ?";
-        array_push($params, $bundesland);
-        $paramTypes .= "s";
-    }
-
-    // Preis-Filter
-    if (isset($minPreis) && isset($maxPreis)) {
+    if ($preis == "custom") {
         $sqlConditions[] = "a.preis BETWEEN ? AND ?";
         array_push($params, $minPreis, $maxPreis);
-        $paramTypes .= "ii";
+        $paramTypes .= "dd";
     }
 
-    // TODO: weitere Filter
-
+    // SQL-Abfrage zusammenstellen
     $sql = "SELECT * FROM anzeige AS a JOIN buchungszeitraum AS b ON a.AnzeigenID = b.AnzeigenID";
-    if (count($sqlConditions) > 0) {
-        $sql .= " WHERE " . join(" AND ", $sqlConditions);
+    if (!empty($sqlConditions)) {
+        $sql .= " WHERE " . implode(" AND ", $sqlConditions);
     }
-    $sql .= " ORDER BY a.$sortieren " . ($sortierreihenfolge == "absteigend" ? "DESC" : "ASC");
+    $sql .= " ORDER BY a.$sortieren " . ($sortierreihenfolge === "absteigend" ? "DESC" : "ASC");
 
+    // SQL-Abfrage vorbereiten und ausführen
     $stmt = $conn->prepare($sql);
-    if (count($params) > 0) {
+    if (!empty($paramTypes)) {
         $stmt->bind_param($paramTypes, ...$params);
     }
 
     $stmt->execute();
     $result = $stmt->get_result();
 
+    // Ergebnisse verarbeiten und ausgeben
     $resultArray = [];
     while ($row = $result->fetch_assoc()) {
         $resultArray[] = $row;

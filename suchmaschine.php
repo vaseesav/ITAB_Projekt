@@ -32,7 +32,7 @@ include 'assets/php/mobileHeader.php';
     <br><br><br><br><br><br><br><br>
 
     <form action="suchergebnisse.php" method="post">
-
+<div class="suchmaschine">
         <!-- Allgemeine Suche -->
         <section class="suche-container">
         <fieldset>
@@ -54,7 +54,6 @@ include 'assets/php/mobileHeader.php';
             </select>
             <label for="stadt">Stadt:</label>
             <input type="text" name="stadt" id="stadt" placeholder="Stadt eingeben">
-
             <label for="postleitzahl">Postleitzahl:</label>
             <input type="text" name="postleitzahl" id="postleitzahl" placeholder="Postleitzahl eingeben">
         </fieldset>
@@ -67,74 +66,49 @@ include 'assets/php/mobileHeader.php';
             <input type="text" name="veranstaltungstyp" id="veranstaltungstyp" placeholder="Veranstaltungstyp eingeben">
 
             <label for="anzahlGaeste">Maximale Anzahl der Gäste:</label>
-            <input type="number" name="anzahlGaeste" id="anzahlGaeste" placeholder="Anzahl der Gäste">
+            <input type="number" min="1" name="anzahlGaeste" id="anzahlGaeste" placeholder="Anzahl der Gäste">
         </fieldset>
 
         <!-- Sortierung und Preis -->
         <!-- Sortierung und Preis -->
-<fieldset>
-    <legend>Sortierung und Preis</legend>
-    <label for="sortieren">Sortieren nach:</label>
-    <select name="sortieren" id="sortieren">
-        <option value="preis">Preis</option>
-        <option value="anzahlGaeste">Anzahl der Gäste</option>
-        <option value="startdatum">Startdatum</option>
-    </select>
+        <fieldset>
+            <legend>Sortierung und Preis</legend>
+            <label for="sortieren">sortieren nach:</label>
+            <select name="sortieren" id="sortieren">
+            <option value="preis">Preis</option>
+            <option value="anzahlGaeste">Anzahl der Gäste</option>
+            <option value="startdatum">Startdatum</option>
+            </select>
 
-    <label for="sortierreihenfolge">Sortierreihenfolge:</label>
-    <select name="sortierreihenfolge" id="sortierreihenfolge">
-        <option value="aufsteigend">Aufsteigend</option>
-        <option value="absteigend">Absteigend</option>
-    </select>
+            <label for="sortierreihenfolge">Sortierreihenfolge:</label>
+            <select name="sortierreihenfolge" id="sortierreihenfolge">
+            <option value="aufsteigend">aufsteigend</option>
+            <option value="absteigend">absteigend</option>
+            </select>
 
-    <fieldset>
-        <legend>Preis (pro Tag):</legend>
-        <!-- vordefinierte Preissegmente -->
-        <label for="preis-0-50">
-        <input type="radio" name="preis" id="preis-0-50" value="0-50">
-        0 - 50 €
-    </label>
-
-    <label for="preis-50-100">
-        <input type="radio" name="preis" id="preis-50-100" value="50-100">
-        50 - 100 €
-    </label>
-
-    <label for="preis-100-200">
-        <input type="radio" name="preis" id="preis-100-200" value="100-200">
-        100 - 200 €
-    </label>
-
-    <label for="preis-200-300">
-        <input type="radio" name="preis" id="preis-200-300" value="200-300">
-        200 - 300 €
-    </label>
-
+            <fieldset>
         <!-- Benutzerdefinierte Mindest- und Maximalpreise -->
-        <label for="preis-custom">
-            <input type="radio" name="preis" id="preis-custom" value="custom">
-            Benutzerdefiniert:
-        </label>
-        von <input type="number" name="minPreis" id="minPreis" placeholder="Min">
-        bis <input type="number" name="maxPreis" id="maxPreis" placeholder="Max">
-    </fieldset>
-</fieldset>
+                <label for="preis-custom">Preisrahmen:</label>
+                    von <input type="number price" class="preis" name="minPreis" id="minPreis" placeholder="0"> €   
+                    bis <input type="number price" class="preis" name="maxPreis" id="maxPreis" placeholder="max."> €
+            </fieldset>
+        </fieldset>
 
         <!-- Zeitraum -->
         <fieldset>
             <legend>Zeitraum</legend>
-            <label for="zeitraum">Zeitraum:</label>
+            <label for="zeitraum"></label>
             von <input type="date" name="startdatum" id="startdatum">
             bis <input type="date" name="enddatum" id="enddatum">
-
+    	    <br><br>
             <label for="veranstaltungsdauer">Veranstaltungsdauer (in Tagen):</label>
-            <input type="number" name="veranstaltungsdauer" id="veranstaltungsdauer" placeholder="Veranstaltungsdauer">
+            <input type="number" min="1" name="veranstaltungsdauer" id="veranstaltungsdauer" placeholder="Veranstaltungsdauer">
         </fieldset>
 
         <input class="btn-suchen" type="submit" value="Suchen">
         </section>
     </form>
-
+</div>
     <!-- Ergebniscontainer -->
     <div class="result-container"></div>
         <!--Footer Start-->

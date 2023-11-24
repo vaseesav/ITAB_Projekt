@@ -38,7 +38,7 @@ include 'assets/php/mobileHeader.php';
     <h2>Kontakt</h2>
     <p>Telefon: 030 300 56 76-20 <br>
     Telefax: 030 300 56 76-16 <br>
-    E-Mail: kontakt[at]mieteinander[dot]de <br>
+    E-Mail: kontakt@mieteinander.de <br>
     Internet: https://itabitw.de/projekte/code-cruncher/htdocs/index.php
     </p>
 </section>
@@ -55,7 +55,7 @@ include 'assets/php/mobileHeader.php';
 
     <section>
         <h2>Gemeinnützigkeit:</h2>
-        <p> Die mieteinander e.V. ist gemäß Freistellungsbescheid des Finanzamts für Körperschaften I,
+        <p> Die mieteinander G.V. ist gemäß Freistellungsbescheid des Finanzamts für Körperschaften I,
             Berlin, als gemeinnützig anerkannt.
         </p>
     </section>
@@ -87,7 +87,7 @@ include 'assets/php/mobileHeader.php';
             der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum
             Zeitpunkt der Verlinkung nicht erkennbar.</p>
         <p>Urheberrecht<br>
-        © mieteinander e.V., Berlin. Alle Rechte sind vorbehalten. <br>
+        © mieteinander G.V., Berlin. Alle Rechte sind vorbehalten. <br>
         Text, Fotos, Grafiken, Animationen, Videos sowie deren Anordnung auf den Internetseiten unterliegen dem Schutz des Urheberrechts. <br>
         Die auf den Webseiten enthaltenen Bilder unterliegen teilweise dem Urheberrecht Dritter. <br>
 

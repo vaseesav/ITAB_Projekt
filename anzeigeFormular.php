@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve form data and store it in variables
     $anzeigenTitel =
         $anzeigenInhalt = $_POST['anzeigenInhalt'] ?? '';
-    $raumname = $_POST['raumname'] ?? '';
+    $WEGDAMIT = $_POST['WEGDAMIT'] ?? '';
     $veranstaltungstyp = $_POST['veranstaltungstyp'] ?? '';
     $anzahlGaeste = $_POST['anzahl-gaeste'] ?? 0;
     $beschreibung = $_POST['beschreibung'] ?? '';
@@ -28,13 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $nutzerID = $userId; // Beispiel-NutzerID
     $anzeigenName = $_POST['anzeigenTitel'] ?? '';
-    $veranstaltungstyp = 'Beispieltyp';
-    $beschreibung = 'Beispielbeschreibung';
-    $anzahlGaeste = 10;
-    $plz = 12345;
-    $stadt = 'Beispielstadt';
-    $bundesland = 'Beispielbundesland';
-    $preis = 100.50;
+    $veranstaltungstyp = $_POST['veranstaltungstyp'] ?? '';
+    $beschreibung = $_POST['beschreibung'] ?? '';
+    $anzahlGaeste = $_POST['anzahl-gaeste'] ?? 0;
+    $plz = $_POST['postleitzahl'] ?? '';
+    $stadt = $_POST['stadt'] ?? '';
+    $bundesland = $_POST['bundesland'] ?? '';
+    $preis = $_POST['preis'] ?? '';
     $istAnzeige = 1;
 
 
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Echo the variables
     echo "Titel der Anzeige: " . htmlspecialchars($anzeigenTitel) . "<br>";
     echo "Beschreibung der Anzeige: " . htmlspecialchars($anzeigenInhalt) . "<br>";
-    echo "Raumname: " . htmlspecialchars($raumname) . "<br>";
+    echo "WEGDAMIT: " . htmlspecialchars($WEGDAMIT) . "<br>";
     echo "Veranstaltungstyp: " . htmlspecialchars($veranstaltungstyp) . "<br>";
     echo "Anzahl der Gäste: " . htmlspecialchars($anzahlGaeste) . "<br>";
     echo "Beschreibung des Raumes: " . htmlspecialchars($beschreibung) . "<br>";
@@ -132,8 +132,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <textarea id="gesuchInhalt" name="gesuchInhalt" required></textarea>
             </div>
 
-            <label for="raumname">Raumname:</label>
-            <input type="text" id="raumname" name="raumname" required>
+            <label for="WEGDAMIT">WEGDAMIT:</label>
+            <input type="text" id="WEGDAMIT" name="WEGDAMIT" required>
 
             <label for="veranstaltungstyp">Veranstaltungstyp:</label>
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>

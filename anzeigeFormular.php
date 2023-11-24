@@ -133,14 +133,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <textarea id="gesuchInhalt" name="gesuchInhalt" required></textarea>
             </div>
 
-            <label for="WEGDAMIT">WEGDAMIT:</label>
-            <input type="text" id="WEGDAMIT" name="WEGDAMIT" required>
-
             <label for="veranstaltungstyp">Veranstaltungstyp:</label>
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
             <label for="anzahl-gaeste">Anzahl der Gäste:</label>
             <input type="number" min="1" id="anzahl-gaeste" name="anzahl-gaeste" required>
-
+            <br>
             <label for="beschreibung">Beschreibung des Raumes:</label>
             <textarea id="beschreibung" name="beschreibung" required></textarea>
 
@@ -158,25 +155,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <label for="startDatum">Startdatum und -zeit:</label>
             <input type="datetime-local" id="startDatum" name="startDatum" required>
-
+            <br>
             <label for="endDatum">Enddatum und -zeit:</label>
             <input type="datetime-local" id="endDatum" name="endDatum" required>
 
             <!-- Für die Auswahl zwischen Stunde und Tag -->
             <br>
-            <label for="preis">Mietpreis pro Tag</label>
-            <input type="text" id="preis" name="preis" required>
-            <div class="proBox">
+            <label for="preis">Mietpreis pro Tag in €:</label>
+            <input type="number" min="0" id="preis" name="preis" required>
+            <div class="proBox"></div>
 
-                <!-- <input type="radio" id="tag" name="pro-tag" value="tag">
-          <label for="tag">pro Tag</label><br>
-          <input type="radio" id="stunde" name="pro-stunde" value="stunde">
-          <label for="stunde">pro Stunde</label><br> -->
-
-                <!-- <span class="currency">EUR</span> -->
-            </div>
-
-            <label for="fotos">Fotos</label>
+            <label for="fotos">Fotos hochladen:</label>
             <br>
             <input type="file" id="fotos" name="fotos" accept="image/*">
             <br>

@@ -35,7 +35,7 @@ function getCookie(cookieName) {
             return c.substring(name.length, c.length);
         }
     }
-    return null; // Oder '' für einen leeren String
+    return null;
 }
 
 function setCookie(){

@@ -1,0 +1,75 @@
+body {
+    line-height: 1.6;
+    font-size: 1em;
+    margin: 0;
+    padding-top: 10em;
+    background: var(--impressum-bg);
+    color: var(--impressum-text);
+    height: auto;
+}
+
+section {
+    background-color: var(--impressum-section-bg);
+    max-width: 60em;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--impressum-section-shadow);
+    border-radius: 8px;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--impressum-divider);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p {
+    color: var(--impressum-text);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1.1em;
+}
+
+main {
+    margin-top: 60px;
+}
+.imp-sections {
+    margin-bottom: 60px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+    body {
+        padding: 0;
+    }
+
+    section {
+        margin: 20px;
+    }
+
+    .imp-sections {
+        margin-top: 100px;
+        margin-bottom: 40px;
+    }
+
+    section p {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 1170px) {
+    .imp-sections {
+        margin-top: 50px
+    }
+}
+
+/* Link Styles */
+a {
+    color: var(--impressum-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

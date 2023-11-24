@@ -130,6 +130,67 @@ input[type="password"] {
     padding: 0px;
 }
 
+/*
+---------------------------------------------
+Theme Switch Style
+---------------------------------------------
+*/
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    transform: translateY(5%);
+    width: 190px;
+    margin-top: -20px;
+}
+
+label, .toggle {
+    height: 2.8rem;
+    border-radius: 15px;
+}
+.content label {
+    width: 100%;
+    background-color: var(--profiles-switch-bg);
+    border-radius: 15px;
+    position: relative;
+    margin: 1.8rem 0 4rem 0;
+    cursor: pointer;
+    height: 40px;
+}
+.toggle {
+    position: absolute;
+    width: 50%;
+    background-color: var(--profiles-switch-light);
+    box-shadow: 0 2px 15px rgba(0,0,0,.15);
+    transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: 40px;
+}
+.names {
+
+    width: 65%;
+    margin-left: 17.5%;
+    margin-top: -4.5%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+[type="checkbox"] {
+    display: none;
+}
+
+[type="checkbox"]:checked + .app .toggle{
+    transform: translateX(100%);
+    background-color: var(--profiles-switch-dark);
+}
+
+.light {
+    margin-right: 25px;
+    margin-left: -15px;
+}
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -159,19 +220,34 @@ Responsive Style
     .menu__btn {
         z-index: 99999999;
     }
+    .menu__btn .toggle {
+        display: none;
+    }
 
     .containered {
         margin-top: 100px;
     }
+
+    .names {
+        margin-top: -5%;
+    }
+
+    .light {
+        margin-right: 27px;
+        margin-left: -15px;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .accessible-colors {
+        font-size: 14px;
+        font-weight: bolder;
+    }
+
 }
 
 @media (max-width: 400px) {
     body {
         height: 900px;
-    }
-
-    footer {
-        padding: 0;
     }
 }
 
@@ -179,15 +255,4 @@ Responsive Style
     body {
         height: 900px;
     }
-
-    footer {
-        padding: 0;
-    }
-}
-
-@media (max-width: 300px) {
-    .menu__box {
-        left: -200%;
-    }
-    
 }

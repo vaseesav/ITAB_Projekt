@@ -2,7 +2,7 @@
 global $conn;
 ini_set('display_errors', '1');
 
-require '../../database/connect.php';
+require '../database/connect.php';
 
 // Deaktivieren der Fremdschlüsselbeschränkungen
 $conn->query("SET FOREIGN_KEY_CHECKS=0");

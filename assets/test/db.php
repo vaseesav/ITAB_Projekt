@@ -1,6 +1,6 @@
 <?php
 global $conn;
-require '../../database/connect.php';
+require '../database/connect.php';
 
 try {
 
@@ -8,7 +8,7 @@ try {
         die("Verbindung fehlgeschlagen: " . $conn->connect_error);
     }
 
-    $dump = file_get_contents('sql/mieteinander.sql');
+    $dump = file_get_contents('../../sql/mieteinander.sql');
     if ($dump === false) {
         throw new Exception("Fehler beim Laden der SQL-Datei.");
     }

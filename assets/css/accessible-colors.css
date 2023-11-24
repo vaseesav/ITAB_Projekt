@@ -5,12 +5,12 @@
     ---------------------------------------------
     */
     --index-bg: #fff;
-    --button-main: #7453fc;
-    --button-main-hover: #7453fc;
+    --button-main: #6451D6;
+    --button-main-hover: #6451D6;
     --button-main-text: #fff;
-    --index-gradient: linear-gradient(to right, #5170ff, #da57fa);
-    --index-text: #fff;
-    --index-paragraph: white;
+    --index-gradient: linear-gradient(to right, #7791FF, #FF96C2);
+    --index-text: #333333;
+    --index-paragraph: #333333;
 
     /*
     ---------------------------------------------
@@ -19,27 +19,26 @@
     */
     --cookie-button:#e5a024;
     --cookie-button-hover:#be861c;
-    --cookie-button-text: black;
+    --cookie-button-text: #000;
     --cookie-background: #f0f0f0;
-    --cookie-box-shadow: rgba(0, 0, 0, 0.1);
 
     /*
     ---------------------------------------------
     Profiles color
     ---------------------------------------------
     */
-    --profiles-bg: linear-gradient(to right, #5170ff, #da57fa);
+    --profiles-bg: linear-gradient(to right, #7791FF, #FF96C2);
     --profiles-text: #000;
-    --profiles-button-bg: #5170ff;
+    --profiles-button-bg: #7453fc;
     --profiles-button-text: #fff;
-    --profiles-button-hover: #7453fc;
+    --profiles-button-hover: #A995FF;
     --profiles-error-text: red;
     --profiles-pass-field: rgba(0,0,0,0.4);
     --profiles-pass-field-bg: #fefefe;
     --profiles-pass-field-border: #888;
     --profiles-switch-bg: #ccc;
     --profiles-switch-light: #fff;
-    --profiles-switch-dark: #5170ff;
+    --profiles-switch-dark: #A995FF;
 
 
     /*
@@ -47,13 +46,13 @@
     Ueber Uns color
     ---------------------------------------------
     */
-    --uns-bg: linear-gradient(to right, #5170ff, #da57fa);
+    --uns-bg: linear-gradient(to right, #7791FF, #FF96C2);
     --uns-about-bg: #5170ff;
     --uns-about-text: #fff;
     --uns-title: grey;
     --uns-button-text: white;
-    --uns-button-bg: #5170ff;
-    --uns-button-hover: #7453fc;
+    --uns-button-bg: #7453fc;
+    --uns-button-hover: #A995FF;
     --uns-text: #000;
 
     /*
@@ -63,10 +62,10 @@
     */
     --login-bg: #2222229d;
     --login-text: #333;
-    --login-text-header: #fff;
+    --login-text-header: #333333;
     --login-button-border: #7453fc;
-    --login-button: #7453fc;
-    --login-button-text: #fff;
+    --login-button: #A995FF;
+    --login-button-text: #333333;
     --login-switch-button-border: #fff;
     --login-inside-panel: #e4e3e3;
     --login-input-field: #eee;
@@ -85,10 +84,10 @@
     Nav-bar color
     ---------------------------------------------
     */
-    --nav-bg: #5170ff;
+    --nav-bg: #6451D6;
     --nav-shadow: rgba(0,0,0,0.15);
-    --nav-text: #fff;
-    --nav-text-hover: #7453fc;
+    --nav-text: white;
+    --nav-text-hover: #A995FF;
 
 
     /*
@@ -96,19 +95,19 @@
     Nav-bar-mobile color
     ---------------------------------------------
     */
-    --nav-mob-ham: #000;
+    --nav-mob-ham: #333333;
     --nav-mob-bg: #fff;
     --nav-mob-shadow: rgba(0, 0, 0, .4);
-    --nav-mob-text: #fff;
-    --nav-mob-item-bg: #5170ff;
-    --nav-mob-item-bg-hover: #7453fc;
+    --nav-mob-text: #ffffff;
+    --nav-mob-item-bg: #6451D6;
+    --nav-mob-item-bg-hover: #A995FF;
 
     /*
     ---------------------------------------------
     Footer color
     ---------------------------------------------
     */
-    --footer-bg: #5170ff;
+    --footer-bg: #6451D6;
     --footer-text: #fff;
 
     /*
@@ -120,8 +119,8 @@
     --impressum-text: #333;
     --impressum-section-bg: #f8f7f7;
     --impressum-section-shadow: rgba(0, 0, 0, 0.29);
-    --impressum-link: #5170ff;
-    --impressum-divider: #5170ff;
+    --impressum-link: #6451D6;
+    --impressum-divider: #A995FF;
 
     /*
     ---------------------------------------------
@@ -132,8 +131,8 @@
     --agb-text: #333;
     --agb-section-bg: #f8f7f7;
     --agb-section-shadow: rgba(0, 0, 0, 0.29);
-    --agb-link: #5170ff;
-    --agb-divider: #5170ff;
+    --agb-link: #6451D6;
+    --agb-divider: #A995FF;
 
     /*
     ---------------------------------------------
@@ -144,8 +143,8 @@
     --such-text: #333;
     --such-border: #ddd;
     --such-shadow: rgba(0,0,0,0.1);
-    --such-btn: #5170ff;
-    --such-btn-hover: #7453fc;
+    --such-btn: #7453fc;
+    --such-btn-hover: #A995FF;
     --such-btn-text: #fff;
     --such-header: #333;
 }

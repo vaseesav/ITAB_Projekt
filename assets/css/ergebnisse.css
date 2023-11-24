@@ -1,0 +1,133 @@
+/* suchmaschine.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Dunkler Text für bessere Lesbarkeit */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ddd; /* Hinzugefügte Rahmen für bessere Abgrenzung */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold; /* Betont die Labels */
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px; /* Leicht erhöhter Abstand für bessere Sichtbarkeit */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ergebniscontainer */
+.result-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.result {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+/* Ergebniscontainer */
+.result-container {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.result {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Fügt einen sanften Hover-Effekt hinzu */
+}
+
+.result:hover {
+    transform: scale(1.05); /* Vergrößert das Ergebnis leicht beim Überfahren mit der Maus */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten hinzu */
+}
+
+.result h3 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.result p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.result a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.result a:hover {
+    text-decoration: underline;
+}
+
+/* Animierte Erscheinung beim Laden der Ergebnisse */
+.result-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.result-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animierte Verschwinden beim Entfernen von Ergebnissen (falls dynamisch aktualisiert) */
+.result-leave {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.result-leave-active {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}

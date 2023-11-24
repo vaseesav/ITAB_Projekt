@@ -34,14 +34,14 @@ include 'assets/php/head.php';
 		<div class="teamcontainter">
 			<h2>Jan Krüger</h2>
 			<p class="title">Back-End Programmierer</p>
-			<p>Jan ist unser junges Programmier-Talent. Mit nur 17 Jahren bringt er frische und innovative Ansichten in unsere technische Umsetzung. Seine Leidenschaft für das Programmieren und seine Fähigkeiten sind beeindruckend und tragen wesentlich dazu bei, dass "mieteinander" technisch auf dem neuesten Stand ist. </p>
+			<p>Jan ist unser jüngstes Programmier-Talent. Mit nur 17 Jahren bringt er frische und innovative Ansichten in unsere technische Umsetzung. Seine Leidenschaft für das Programmieren und seine Fähigkeiten sind beeindruckend und tragen wesentlich dazu bei, dass "mieteinander" technisch auf dem neuesten Stand ist. </p>
             <br>
 			<br>
 			<br>
 			<br>
             <div class="email-button-container">
-                <p>jan@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>jan@mieteinander.de</p>
+                <p><button class="button">Kontaktieren</button></p>
             </div>
 		</div>
 		</div>
@@ -58,8 +58,8 @@ include 'assets/php/head.php';
 			
 			<br>
             <div class="email-button-container">
-                <p>kilian@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>kilian@mieteinander.de</p>
+                <p><button class="button">Kontaktieren</button></p>
             </div>
 		</div>
 		</div>
@@ -71,11 +71,11 @@ include 'assets/php/head.php';
 		<div class="teamcontainter">
 			<h2>Annika With</h2>
 			<p class="title">Vorstandsvorsitzende und Designerin</p>
-			<p>Annika ist die treibende Kraft hinter "mieteinander". Mit einem Hintergrund in Design und Kreativität bringt sie frische Ideen und Ästhetik in die Plattform ein. Als Geschäftsführerin hat sie die Vision und das Engagement, die die Plattform antreiben. Ihre Fähigkeiten in Design und Benutzererfahrung sind von unschätzbarem Wert, um "mieteinander" zu einem ansprechenden und benutzerfreundlichen Ort zu machen.</p>
+			<p>Annika ist die treibende Kraft hinter "mieteinander". Mit einem Hintergrund in Design und Kreativität bringt sie frische Ideen und Ästhetik in die Plattform ein. Als Vorstandsvorsitzende hat sie die Vision und das Engagement, die die Plattform antreiben. Ihre Fähigkeiten in Design und Benutzererfahrung sind von unschätzbarem Wert, um "mieteinander" zu einem ansprechenden und benutzerfreundlichen Ort zu machen.</p>
             <br>
             <div class="email-button-container">
-                <p>annika@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>annika@mieteinander.de</p>
+                <p><button class="button">Kontaktieren</button></p>
             </div>
 		</div>
 		</div>
@@ -86,10 +86,10 @@ include 'assets/php/head.php';
 		<div class="teamcontainter">
 			<h2>Mohammad Salim</h2>
 			<p class="title">Vize-Vorstandsvorsitzender und Projektleiter</p>
-			<p>Mohammad ist der strukturierte Kopf hinter "mieteinander". Als Vize-Geschäftsführer und Projektleiter ist er für die reibungslose Umsetzung unserer Vision verantwortlich. Mit einem Auge fürs Detail und der Fähigkeit, komplexe Projekte zu koordinieren, spielt er eine zentrale Rolle bei der Entwicklung und Umsetzung unserer Plattform. Er ist auch der kreative Kopf hinter vielen unserer Layouts und Designs.</p>
+			<p>Mohammad ist der strukturierte Kopf hinter "mieteinander". Als Vize-Vorstandsvorsitzender und Projektleiter ist er für die reibungslose Umsetzung unserer Vision verantwortlich. Mit einem Auge fürs Detail und der Fähigkeit, komplexe Projekte zu koordinieren, spielt er eine zentrale Rolle bei der Entwicklung und Umsetzung unserer Plattform. Er ist auch der kreative Kopf hinter vielen unserer Layouts und Designs.</p>
             <div class="email-button-container">
-                <p>mohammad@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>mohammad@mieteinander.de</p>
+                <p><button class="button">Kontaktieren</button></p>
             </div>
 		</div>
 		</div>
@@ -102,8 +102,8 @@ include 'assets/php/head.php';
 			<p class="title">Programmierer - Der Visionär</p>
 			<p>Leon ist ein weiteres junges Talent in unserem Team und der kreative Kopf hinter der Idee von "mieteinander". Seine Begeisterung für Technologie und sein visionäres Denken haben die Grundlagen für unsere Plattform gelegt. Mit 19 Jahren bringt er eine frische Perspektive und innovative Ideen ein. Seine Vision, Raumknappheit entgegenzuwirken und gemeinschaftliche Ressourcennutzung zu fördern, ist der Antrieb unserer Plattform. </p>
             <div class="email-button-container">
-                <p>leon@example.com</p>
-                <p><button class="button">Contact</button></p>
+                <p>leon@mieteinander.de</p>
+                <p><button class="button">Kontaktieren</button></p>
             </div>
 		</div>
 		</div>

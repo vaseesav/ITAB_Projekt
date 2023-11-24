@@ -11,7 +11,7 @@
 
     function logout() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "../final/assets/php-backend/profile-page/logout.php", true);
+        xhr.open("GET", "../ITAB_Projekt/assets/php-backend/profile-page/logout.php", true);
         xhr.onreadystatechange = function() {
             if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
                 window.location.href = 'index.php';
@@ -45,7 +45,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "../final/assets/php-backend/profile-page/change_password.php", // Pfad zu Ihrer PHP-Datei
+                url: "../ITAB_Projekt/assets/php-backend/profile-page/change_password.php", // Pfad zu Ihrer PHP-Datei
                 data: formData,
                 success: function(response) {
                     hidePreloader(); // Preloader ausblenden

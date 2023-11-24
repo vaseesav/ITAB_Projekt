@@ -168,3 +168,48 @@ Responsive Style
    padding: 0;
  }
 }
+
+@media (max-height: 815px) {
+  .main-banner {
+    background: var(--index-gradient);
+    width: 100%;
+  }
+
+  .main-banner .bg {
+    display: none;
+  }
+
+  .header-area {
+    display: none;
+  }
+  .main-button{
+    padding-left: 50px;
+  }
+  .mobile-header {
+    width: 0px;
+    height: 0px;
+    display: block;
+  }
+  .mobile-banner {
+    display: block;
+  }
+  h1, h2, h3, h4, h5{
+    padding-left: 10px;
+  }
+  h1{
+    font-size: 40px;
+
+  }
+  h2{
+    font-size: 17px;
+  }
+  p{
+    font-size: 19px;
+    padding-left: 10px;
+    padding: 50px;
+  }
+
+  footer p {
+    padding: 0;
+  }
+}

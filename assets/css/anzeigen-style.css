@@ -34,7 +34,6 @@ form {
     max-width: 600px;
     margin: 10em auto; /* Zentriere horizontal und vertikal */
     padding: 60px;
-    background-color: #5170ff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
@@ -72,4 +71,5 @@ button {
 
 button:hover {
     background-color: var(--anzeige-btn-hover);
+    color: var(--anzeige-btn-hover-text);
 }

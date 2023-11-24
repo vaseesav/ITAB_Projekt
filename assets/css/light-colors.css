@@ -77,17 +77,12 @@
     Anzeige/Gesuch color
     ---------------------------------------------
     */
-    
     --anzeige-bg: #f4f4f4;
-    --anzeige-text: var(--such-text);
-    --anzeige-border: var(--such-border);
-    --anzeige-shadow: var(--such-shadow);
     --anzeige-btn: #5170ff;
     --anzeige-btn-hover: #7453fc;
     --anzeige-btn-text: white;
+    --anzeige-btn-hover-text: white;
     --textarea-border: #ccc;
-    --anzeige-header: var(--such-header);
-
 
     /*
     ---------------------------------------------
@@ -105,7 +100,8 @@
     --nav-bg: #5170ff;
     --nav-shadow: rgba(0,0,0,0.15);
     --nav-text: #fff;
-    --nav-text-hover: #7453fc;
+    --nav-bg-hover: #7453fc;
+    --nav-text-hover:#fff;
 
 
     /*

@@ -4,12 +4,27 @@ body {
     color: var(--such-text);
 }
 
-input[type="text"], select, input[type="number"], input[type="date"] {
+.suchmaschine{
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid var(--such-border);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+label{
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display:block;
+}
+
+input[type="text"], select, input[type="number"] {
     border: 1px solid var(--such-border);
     border-radius: 4px;
     padding: 10px;
     margin-bottom: 15px;
-    width: 100%;
+    width: 200px;
     box-shadow: 0 2px 4px var(--such-shadow);
 }
 
@@ -18,7 +33,7 @@ input[type="submit"] {
     color: var(--such-btn-text);
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -49,7 +64,17 @@ legend {
 .result-container p {
     color: var(--such-text)
 }
-
+input[type="number price"]{
+    max-width: 50px;
+    margin: 10px;
+}
+.preis{
+    /* margin-left: 10px; */
+    margin-right: 10px;
+}
+input[type="date"]{
+    max-width: 125px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .flex-container {

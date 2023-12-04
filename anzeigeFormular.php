@@ -10,9 +10,9 @@ if (!isset($_SESSION['loggedin'])) {
     header('Location: login.php');
     exit;
 }
-// Check if the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data and store it in variables
+
 
     $userId = $_SESSION['userId'];
 
@@ -28,25 +28,54 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bundesland = $_POST['bundesland'] ?? '';
     $preis = $_POST['preis'] ?? '';
     $istAnzeige = 1;
+    $starttime = $_POST['startDatum'] ?? '';
+    $endtime = $_POST['endDatum'] ?? '';
 
-
-    // Einfüge-Query vorbereiten
+    //
     $sql = "INSERT INTO anzeige (NutzerID, AnzeigenName, Veranstaltungstyp, Beschreibung, anzahlGaeste, Plz, Stadt, Bundesland, preis, istAnzeige) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
-    // Parameter an die Query binden
+    //
     $stmt->bind_param("isssiiisdi", $nutzerID, $anzeigenName, $veranstaltungstyp, $beschreibung, $anzahlGaeste, $plz, $stadt, $bundesland, $preis, $istAnzeige);
 
     // Query ausführen
     $stmt->execute();
 
-    echo "Neue Anzeige erfolgreich hinzugefügt!";
+    // Write SQL query
+    $query = "SELECT * FROM anzeige ORDER BY AnzeigenID DESC LIMIT 1";
 
-    // Schließe Statement und Verbindung
+    // Execute the query
+    $queryResult = mysqli_query($conn, $query);
+
+    // Check if the query returned a result
+    if (mysqli_num_rows($queryResult) > 0) {
+        // Fetch the first row from the result
+        $dataRow = mysqli_fetch_assoc($queryResult);
+
+        // Output the AnzeigenID
+        echo $dataRow['AnzeigenID'];
+    } else {
+        echo "No results found";
+    }
+    $currentID = $dataRow['AnzeigenID'];
+    // 
+    $sql_buchungszeitraum = "INSERT INTO buchungszeitraum (AnzeigenID,Startdatum, Enddatum) VALUES (?, ?, ?)";
+    $stmt_buchungszeitraum = $conn->prepare($sql_buchungszeitraum);
+
+    //
+    $stmt_buchungszeitraum->bind_param("iss", $currentID, $starttime, $endtime);
+
+    //
+    $stmt_buchungszeitraum->execute();
+
+    echo "Start time and end time successfully inserted into buchungszeitraum!";
+
+    // 
     $stmt->close();
+    $stmt_buchungszeitraum->close();
     $conn->close();
 
-    // Handle file upload
+    //
     if (isset($_FILES['fotos'])) {
         echo "Fotodatei: " . htmlspecialchars($_FILES['fotos']['name']) . "<br>";
     } else {
@@ -54,8 +83,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 //include 'assets/php-backend/anzeigen/anzeigeAufgeben.php';
-
-
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/anzeigen-style.css">
     <script src="assets/js/inserate.js"></script>
     <script src="assets/js/gesuch.js"></script>
+    <script src="assets/js/anzeigeToggle.js"></script>
+
 </head>
 
 <body>
@@ -84,8 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="post" enctype="multipart/form-data">
             <!-- Your HTML form content goes here -->
             <div class="toggle-container">
-                <button class="toggle-text" onclick="toggleAnzeige()">Anzeige aufgeben</button>
-                <button class="toggle-text" onclick="toggleGesuch()">Gesuch aufgeben</button>
+                <button class="toggle-text" type="button" onclick="toggleAnzeige()">Anzeige aufgeben</button>
+                <button class="toggle-text" type="button" onclick="toggleGesuch()">Gesuch aufgeben</button>
             </div>
             <!-- Weitere Eingabefelder für die Anzeige eines Raumes -->
             <div id="anzeigenButton">
@@ -105,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>
             <label for="anzahl-gaeste">Anzahl der Gäste:</label>
             <input type="number" id="anzahl-gaeste" name="anzahl-gaeste" required>
-
+            <br>
             <label for="postleitzahl">Postleitzahl:</label>
             <input type="text" id="postleitzahl" name="postleitzahl" required>
 

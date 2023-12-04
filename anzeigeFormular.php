@@ -91,8 +91,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <title>Anzeige oder Gesuch aufgeben</title>
     <link rel="stylesheet" href="assets/css/anzeigen-style.css">
-    <script src="assets/js/inserate.js"></script>
-    <script src="assets/js/gesuch.js"></script>
     <script src="assets/js/anzeigeToggle.js"></script>
 
 </head>

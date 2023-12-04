@@ -74,6 +74,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->close();
     $stmt_buchungszeitraum->close();
     $conn->close();
+    // Fotouploaden
+            
+        $anzeigeID = $currentID;
+        $targetDir = "../ITAB_Projekt/userdata/$anzeigeID/";
+        $inseratBildPath = $targetDir . "inseratBild.jpg"; // Festlegen des Dateinamens als inseratBild.jpg
+
+        // Erstellen Sie das Verzeichnis, wenn es nicht existiert
+        if (!file_exists($targetDir)) {
+            mkdir($targetDir, 0777, true);
+        }
+
+        $imageFileType = strtolower(pathinfo($_FILES["fotos"]["name"], PATHINFO_EXTENSION));
+
+        // zusätzliche Überprüfungen hinzufügen (Dateigröße, Dateityp usw.)
+
+        if (move_uploaded_file($_FILES["fotos"]["tmp_name"], $inseratBildPath)) {
+            // TODO: Pfad in der Datenbank aktualisieren
+            // echo "Bild erfolgreich hochgeladen";
+        } else {
+            // echo "Es gab einen Fehler beim Hochladen Ihres Bildes.";
+        }
+        
+
+        // Überprüfen, ob ein Profilbild vorhanden ist, sonst Platzhalter verwenden
+        if (file_exists("../ITAB_Projekt/userdata/$anzeigeID/inseratBild.jpg")) {
+            // Hinzufügen eines Zeitstempels als Query-Parameter
+            $imageToShow = "../ITAB_Projekt/userdata/$anzeigeID/inseratBild.jpg?t=" . time();
+        } else {
+            $imageToShow = 'assets/images/pb-placeholder.jpg';
+        }
+
+
 
     //
     if (isset($_FILES['fotos'])) {
@@ -122,11 +154,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <textarea id="anzeigenInhalt" name="anzeigenInhalt" required></textarea>
             </div>
 
-            <div id="gesuchButton">
-                <label for="gesuchTitel">Titel des Gesuchs:</label>
-                <input type="text" id="gesuchTitel" name="gesuchTitel" required>
+            <div id="gesuchButton" style="display: none;">
+                <label for="gesuchTitel" >Titel des Gesuchs:</label>
+                <input type="text" id="gesuchTitel" name="gesuchTitel">
                 <label for="gesuchInhalt">Inhalt des Gesuchs:</label>
-                <textarea id="gesuchInhalt" name="gesuchInhalt" required></textarea>
+                <textarea id="gesuchInhalt" name="gesuchInhalt"></textarea>
             </div>
             <label for="veranstaltungstyp">Veranstaltungstyp:</label>
             <input type="text" id="veranstaltungstyp" name="veranstaltungstyp" required>

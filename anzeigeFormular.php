@@ -30,64 +30,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $istAnzeige = 1;
     $starttime = $_POST['startDatum'] ?? '';
     $endtime = $_POST['endDatum'] ?? '';
-
-    //
+    //DB Reinpfeffern
+    // Die Normalen Sachen In Anzeige Reinpfeffern
     $sql = "INSERT INTO anzeige (NutzerID, AnzeigenName, Veranstaltungstyp, Beschreibung, anzahlGaeste, Plz, Stadt, Bundesland, preis, istAnzeige) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
-    //
     $stmt->bind_param("isssiiisdi", $nutzerID, $anzeigenName, $veranstaltungstyp, $beschreibung, $anzahlGaeste, $plz, $stadt, $bundesland, $preis, $istAnzeige);
 
-    // Query ausführen
+    
     $stmt->execute();
 
-    // Write SQL query
+    // Derzeitige AnzeigenID holen indem man die tabelle sortiert und die höchste nimmt 
     $query = "SELECT * FROM anzeige ORDER BY AnzeigenID DESC LIMIT 1";
-
-    // Execute the query
     $queryResult = mysqli_query($conn, $query);
-
-    // Check if the query returned a result
     if (mysqli_num_rows($queryResult) > 0) {
-        // Fetch the first row from the result
         $dataRow = mysqli_fetch_assoc($queryResult);
-
-        // Output the AnzeigenID
         echo $dataRow['AnzeigenID'];
     } else {
         echo "No results found";
     }
+    // Die AnzeigenID in eine Variable speichern
     $currentID = $dataRow['AnzeigenID'];
-    // 
+    // Die Start und Endzeit in Buchungszeitraum Reinpfeffern
     $sql_buchungszeitraum = "INSERT INTO buchungszeitraum (AnzeigenID,Startdatum, Enddatum) VALUES (?, ?, ?)";
+    
     $stmt_buchungszeitraum = $conn->prepare($sql_buchungszeitraum);
 
-    //
     $stmt_buchungszeitraum->bind_param("iss", $currentID, $starttime, $endtime);
 
-    //
     $stmt_buchungszeitraum->execute();
 
     echo "Start time and end time successfully inserted into buchungszeitraum!";
-
-    // 
-    $stmt->close();
-    $stmt_buchungszeitraum->close();
-    $conn->close();
-    // Fotouploaden
-            
+    // Inserat-Fotouploaden
+        $userId = $_SESSION['userId'];
         $anzeigeID = $currentID;
-        $targetDir = "../ITAB_Projekt/userdata/$anzeigeID/";
+        $targetDir = "../ITAB_Projekt/userdata/$userId/$anzeigeID/";
         $inseratBildPath = $targetDir . "inseratBild.jpg"; // Festlegen des Dateinamens als inseratBild.jpg
 
-        // Erstellen Sie das Verzeichnis, wenn es nicht existiert
+        // Erstelle das Verzeichnis, wenn es nicht existiert.
         if (!file_exists($targetDir)) {
             mkdir($targetDir, 0777, true);
         }
 
         $imageFileType = strtolower(pathinfo($_FILES["fotos"]["name"], PATHINFO_EXTENSION));
 
-        // zusätzliche Überprüfungen hinzufügen (Dateigröße, Dateityp usw.)
+        // TODO: zusätzliche Überprüfungen hinzufügen (Dateigröße, Dateityp usw.)
 
         if (move_uploaded_file($_FILES["fotos"]["tmp_name"], $inseratBildPath)) {
             // TODO: Pfad in der Datenbank aktualisieren
@@ -98,12 +85,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 
         // Überprüfen, ob ein Profilbild vorhanden ist, sonst Platzhalter verwenden
-        if (file_exists("../ITAB_Projekt/userdata/$anzeigeID/inseratBild.jpg")) {
+        if (file_exists("../ITAB_Projekt/userdata/$userId/$anzeigeID/inseratBild.jpg")) {
             // Hinzufügen eines Zeitstempels als Query-Parameter
-            $imageToShow = "../ITAB_Projekt/userdata/$anzeigeID/inseratBild.jpg?t=" . time();
+            $imageToShow = "../ITAB_Projekt/userdata/$userId/$anzeigeID/inseratBild.jpg?t=" . time();
         } else {
             $imageToShow = 'assets/images/pb-placeholder.jpg';
         }
+    // den Pfad des Inseratbildes in die Datenbank Reinpfeffern
+    
+    $sql_foto = $conn->prepare("INSERT INTO foto (Pfad, AnzeigenID) VALUES (?, ?)");
+
+    
+    $path = $targetDir;
+    $number = $currentID;
+    $sql_foto->bind_param("si", $path, $number);
+
+
+    if ($sql_foto->execute()) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql_foto->error;
+    }
+
+    $sql_foto->close();
+    $stmt->close();
+    $stmt_buchungszeitraum->close();
+    $conn->close();
+    
 
 
 

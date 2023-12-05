@@ -356,3 +356,59 @@ Responsive Style
         display: block;
     }
 }
+
+@media (max-width: 815px) {
+    .box {
+        width: auto; /* Passt die Breite an */
+        min-height: auto; /* Passt die Mindesthöhe an */
+        display: flex; /* Aktiviert flexibles Box-Layout */
+        flex-direction: column; /* Stapelt Elemente vertikal */
+    }
+
+    .form-box {
+        position: relative; /* Setzt die Position auf relativ */
+        width: 100%; /* Setzt die Breite auf 100% */
+        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+        transform: translateX(0); /* Entfernt Verschiebungen */
+        transition: none; /* Deaktiviert Übergänge/Animationen */
+    }
+
+    .sign-in-box, .sign-up-box {
+        width: 100%; /* Setzt die Breite auf 100% */
+        left: 0; /* Setzt die linke Position auf 0 */
+        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+        z-index: 1; /* Setzt den z-Index */
+    }
+
+    .overlay-box {
+        display: none; /* Versteckt das Overlay */
+    }
+}
+
+@media (max-height: 732px) {
+    .box {
+        width: auto; /* Passt die Breite an */
+        min-height: auto; /* Passt die Mindesthöhe an */
+        display: flex; /* Aktiviert flexibles Box-Layout */
+        flex-direction: column; /* Stapelt Elemente vertikal */
+    }
+
+    .form-box {
+        position: relative; /* Setzt die Position auf relativ */
+        width: 100%; /* Setzt die Breite auf 100% */
+        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+        transform: translateX(0); /* Entfernt Verschiebungen */
+        transition: none; /* Deaktiviert Übergänge/Animationen */
+    }
+
+    .sign-in-box, .sign-up-box {
+        width: 100%; /* Setzt die Breite auf 100% */
+        left: 0; /* Setzt die linke Position auf 0 */
+        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+        z-index: 1; /* Setzt den z-Index */
+    }
+
+    .overlay-box {
+        display: none; /* Versteckt das Overlay */
+    }
+}

@@ -8,8 +8,8 @@ $targetDir = "../../userdata/$userId/";
 $profilePicturePath = $targetDir . "pb.jpg"; // Festlegen des Dateinamens als pb.jpg
 
 // Erstellen Sie das Verzeichnis, wenn es nicht existiert
-if (!file_exists("../ITAB_Projekt/userdata/$userId/")) {
-    mkdir("../ITAB_Projekt/userdata/$userId/", 0777, false);
+if (!file_exists("../final/userdata/$userId/")) {
+    mkdir("../final/userdata/$userId/", 0777, false);
 }
 
 if (isset($_FILES['profilePicture']) && $_FILES['profilePicture']['error'] == 0) {
@@ -29,9 +29,9 @@ if (isset($_FILES['profilePicture']) && $_FILES['profilePicture']['error'] == 0)
 }
 
 // Überprüfen, ob ein Profilbild vorhanden ist, sonst Platzhalter verwenden
-if (file_exists("../ITAB_Projekt/userdata/$userId/pb.jpg")) {
+if (file_exists("../final/userdata/$userId/pb.jpg")) {
     // Hinzufügen eines Zeitstempels als Query-Parameter
-    $imageToShow = "../ITAB_Projekt/userdata/$userId/pb.jpg?t=" . time();
+    $imageToShow = "../final/userdata/$userId/pb.jpg?t=" . time();
 } else {
     $imageToShow = 'assets/images/pb-placeholder.jpg';
 }

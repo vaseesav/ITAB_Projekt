@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Inserat-Fotouploaden
         $userId = $_SESSION['userId'];
         $anzeigeID = $currentID;
-        $targetDir = "../ITAB_Projekt/userdata/$userId/$anzeigeID/";
+        $targetDir = "../final/userdata/$userId/$anzeigeID/";
         $inseratBildPath = $targetDir . "inseratBild.jpg"; // Festlegen des Dateinamens als inseratBild.jpg
 
         // Erstelle das Verzeichnis, wenn es nicht existiert.
@@ -85,9 +85,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
 
         // Überprüfen, ob ein Profilbild vorhanden ist, sonst Platzhalter verwenden
-        if (file_exists("../ITAB_Projekt/userdata/$userId/$anzeigeID/inseratBild.jpg")) {
+        if (file_exists("../final/userdata/$userId/$anzeigeID/inseratBild.jpg")) {
             // Hinzufügen eines Zeitstempels als Query-Parameter
-            $imageToShow = "../ITAB_Projekt/userdata/$userId/$anzeigeID/inseratBild.jpg?t=" . time();
+            $imageToShow = "../final/userdata/$userId/$anzeigeID/inseratBild.jpg?t=" . time();
         } else {
             $imageToShow = 'assets/images/pb-placeholder.jpg';
         }

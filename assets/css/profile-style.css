@@ -15,7 +15,7 @@ body {
 }
 
 h2, p {
-    color: var(--profiles-text)
+    color: var(--profiles-text);
 }
 
 button {
@@ -169,7 +169,7 @@ label, .toggle {
 .names {
 
     width: 65%;
-    margin-left: 17.5%;
+    margin-left: 14.5%;
     margin-top: -4.5%;
     position: absolute;
     display: flex;
@@ -190,6 +190,8 @@ label, .toggle {
     margin-right: 25px;
     margin-left: -15px;
 }
+
+
 
 /* 
 ---------------------------------------------
@@ -255,4 +257,8 @@ Responsive Style
     body {
         height: 900px;
     }
+}
+
+div.names p {
+    font-size: 16px;
 }

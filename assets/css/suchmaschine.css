@@ -19,6 +19,10 @@ label{
     display:block;
 }
 
+form {
+    padding-top: 50px;
+}
+
 input[type="text"], select, input[type="number"] {
     border: 1px solid var(--such-border);
     border-radius: 4px;

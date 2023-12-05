@@ -5,121 +5,121 @@ Header Style
 */
 
 .background-header {
-    background-color: var(--nav-bg) !important;
-    height: 70px!important;
-    position: fixed!important;
-    top: 0!important;
-    left: 0;
-    right: 0;
-    box-shadow: 0px 0px 10px var(--nav-shadow)!important;
-    transition: all .5s ease 0s;
-    width: 100%;
+  background-color: var(--nav-bg) !important;
+  height: 70px !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 10px var(--nav-shadow) !important;
+  transition: all 0.5s ease 0s;
+  width: 100%;
 }
 
 .header-area {
-    background-color: transparent;
-    position: absolute;
-    height: 70px;
-    top: 30px;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    transition: all .5s ease 0s;
+  background-color: transparent;
+  position: absolute;
+  height: 70px;
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: all 0.5s ease 0s;
 }
 
 .header-area .main-nav {
-    min-height: 80px;
-    background: transparent;
-    display: flex;
-    background-color: var(--nav-bg);
-    padding: 15px 30px;
-    border-radius: 50px;
-    width: 90%;
-    margin-left: 5%;
+  min-height: 80px;
+  background: transparent;
+  display: flex;
+  background-color: var(--nav-bg);
+  padding: 15px 30px;
+  border-radius: 50px;
+  width: 90%;
+  margin-left: 5%;
 }
 
 .background-header .main-nav {
-    padding: 0px;
-    background-color: transparent;
+  padding: 0px;
+  background-color: transparent;
 }
 
 .background-header .main-nav .logo {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 .header-area .main-nav .logo img {
-    width: 100px;
+  width: 167px;
 }
 
 .background-header .main-nav .logo img {
-    width: 75px;
+  width: 75px;
 }
 
 .header-area .main-nav .nav {
-    display: inline-flex;
-    flex-basis: 70%;
-    justify-content: flex-end;
-    vertical-align: middle;
-    text-align: right;
-    margin-top: 15px;
-    margin-right: 0px;
-    transition: all 0.3s ease 0s;
-    position: relative;
-    z-index: 999;
-    margin-left: 300px;
+  display: inline-flex;
+  flex-basis: 70%;
+  justify-content: flex-end;
+  vertical-align: middle;
+  text-align: right;
+  margin-top: 15px;
+  margin-right: 0px;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  z-index: 999;
+  margin-left: 300px;
 }
 
 .header-area .main-nav .nav li {
-    padding-left: 10px;
-    padding-right: 10px;
-    display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
 }
 
 .header-area .main-nav .nav li a {
-    display: block;
-    font-weight: 500;
-    font-size: 20px;
-    text-transform: capitalize;
-    color: var(--nav-text);
-    transition: all 0.3s ease 0s;
-    border: transparent;
-    padding: 8px;
-    border-radius: 18px;
-    letter-spacing: 1px;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+  color: var(--nav-text);
+  transition: all 0.3s ease 0s;
+  border: transparent;
+  padding: 8px;
+  border-radius: 18px;
+  letter-spacing: 1px;
 }
 
 .header-area .main-nav .nav li:hover a {
-    color: #fff;
-    background-color: var(--nav-text-hover);
+  color: #fff;
+  background-color: var(--nav-text-hover);
 }
 
 .header-area .main-nav .nav li a.active {
-    color: #fff;
-    background-color: var(--nav-text-hover);
+  color: #fff;
+  background-color: var(--nav-text-hover);
 }
 
 .nav li {
-    padding: 0;
+  padding: 0;
 }
 
 #profile {
-    display: none;
+  display: none;
 }
 
-@media(max-width: 1313px) {
-    .header-area .main-nav .nav li a {
-        font-size: 19px;
-        letter-spacing: 0;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 10px;
-    }
+@media (max-width: 1313px) {
+  .header-area .main-nav .nav li a {
+    font-size: 19px;
+    letter-spacing: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
+  }
 
-    .header-area .main-nav .nav {
-        text-align: center;
-    }
+  .header-area .main-nav .nav {
+    text-align: center;
+  }
 
-    .header-area .main-nav .nav {
-        margin-left: 200px;
-    }
+  .header-area .main-nav .nav {
+    margin-left: 200px;
+  }
 }

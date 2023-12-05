@@ -356,71 +356,70 @@ Responsive Style
   .mobile-banner {
     display: block;
   }
-  body {
-    height: 140vh;
-  }
 }
 
 @media (max-width: 815px) {
   .box {
-    width: auto; /* Passt die Breite an */
-    min-height: auto; /* Passt die Mindesthöhe an */
-    display: flex; /* Aktiviert flexibles Box-Layout */
-    flex-direction: column; /* Stapelt Elemente vertikal */
+    width: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-box {
-    position: relative; /* Setzt die Position auf relativ */
-    width: 100%; /* Setzt die Breite auf 100% */
-    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-    transform: translateX(0); /* Entfernt Verschiebungen */
-    transition: none; /* Deaktiviert Übergänge/Animationen */
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
   }
 
   .sign-in-box,
   .sign-up-box {
-    width: 100%; /* Setzt die Breite auf 100% */
-    left: 0; /* Setzt die linke Position auf 0 */
-    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-    z-index: 1; /* Setzt den z-Index */
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
   }
 
   .overlay-box {
-    display: none; /* Versteckt das Overlay */
+    display: none;
   }
-  body {
-    height: 140vh;
-  }
+
+    body {
+        height: 140vh;
+    }
 }
 
 @media (max-height: 732px) {
   .box {
-    width: auto; /* Passt die Breite an */
-    min-height: auto; /* Passt die Mindesthöhe an */
-    display: flex; /* Aktiviert flexibles Box-Layout */
-    flex-direction: column; /* Stapelt Elemente vertikal */
+    width: auto;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .form-box {
-    position: relative; /* Setzt die Position auf relativ */
-    width: 100%; /* Setzt die Breite auf 100% */
-    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-    transform: translateX(0); /* Entfernt Verschiebungen */
-    transition: none; /* Deaktiviert Übergänge/Animationen */
+    position: relative;
+    width: 100%;
+    opacity: 1;
+    transform: translateX(0);
+    transition: none;
   }
 
   .sign-in-box,
   .sign-up-box {
-    width: 100%; /* Setzt die Breite auf 100% */
-    left: 0; /* Setzt die linke Position auf 0 */
-    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-    z-index: 1; /* Setzt den z-Index */
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
   }
 
   .overlay-box {
-    display: none; /* Versteckt das Overlay */
+    display: none;
   }
-  body {
-    height: 140vh;
-  }
+
+    body {
+        height: 140vh;
+    }
 }

@@ -11,7 +11,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: sans-serif;
-  height: 140vh;
+  height: 100vh;
   margin: -20px 0 50px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -356,6 +356,9 @@ Responsive Style
   .mobile-banner {
     display: block;
   }
+  body {
+    height: 140vh;
+  }
 }
 
 @media (max-width: 815px) {
@@ -385,6 +388,9 @@ Responsive Style
   .overlay-box {
     display: none; /* Versteckt das Overlay */
   }
+  body {
+    height: 140vh;
+  }
 }
 
 @media (max-height: 732px) {
@@ -413,5 +419,8 @@ Responsive Style
 
   .overlay-box {
     display: none; /* Versteckt das Overlay */
+  }
+  body {
+    height: 140vh;
   }
 }

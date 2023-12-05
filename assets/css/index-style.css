@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5{
 }
 
 p {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 30px;
   color: var(--index-paragraph);
 }
@@ -41,7 +41,7 @@ img {
 }
 
 .main-button a {
-  font-size: 14px;
+  font-size: 20px;
   color: var(--button-main-text);
   background-color: var(--button-main);
   border: 1px solid var(--button-main);
@@ -117,7 +117,9 @@ Banner Style
   display: flex;
   justify-content: start;
 }
-
+.bildInserat{
+  max-width: 60%;
+}
 /* 
 ---------------------------------------------
 Responsive Style

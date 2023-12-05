@@ -22,7 +22,7 @@ if (isset($_FILES['profilePicture']) && $_FILES['profilePicture']['error'] == 0)
 
         // echo "Bild erfolgreich hochgeladen";
     } else {
-       // echo "Es gab einen Fehler beim Hochladen Ihres Bildes.";
+        // echo "Es gab einen Fehler beim Hochladen Ihres Bildes.";
     }
 } else {
     // echo "Keine gültige Datei ausgewählt oder ein anderer Fehler ist aufgetreten.";

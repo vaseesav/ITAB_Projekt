@@ -5,37 +5,37 @@ Global Styles
 */
 
 body {
-    background: var(--login-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  background: var(--login-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  height: 140vh;
+  margin: -20px 0 50px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 h1 {
-    font-weight: bold;
-    margin: 0;
+  font-weight: bold;
+  margin: 0;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 p {
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 20px;
-    letter-spacing: 0.5px;
-    margin: 20px 0 30px;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+  margin: 20px 0 30px;
 }
 
 span {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 /*
@@ -44,7 +44,7 @@ Mobile Header Style - Override
 ---------------------------------------------
 */
 .mobile-header {
-    z-index: 99999;
+  z-index: 99999;
 }
 
 /*
@@ -53,33 +53,32 @@ Button Styles
 ---------------------------------------------
 */
 button {
-    border-radius: 20px;
-    border: 1px solid var(--login-button-border);
-    background-color: var(--login-button);
-    color: var(--login-button-text);
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-    cursor: pointer;
-    margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid var(--login-button-border);
+  background-color: var(--login-button);
+  color: var(--login-button-text);
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 button:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 button:focus {
-    outline: none;
+  outline: none;
 }
 
 button.ghost {
-    background-color: transparent;
-    border-color: var(--login-switch-button-border);
+  background-color: transparent;
+  border-color: var(--login-switch-button-border);
 }
-
 
 /*
 ---------------------------------------------
@@ -87,179 +86,181 @@ Box Styles
 ---------------------------------------------
 */
 .social-box {
-    color: var(--login-text);
-    font-size: 14px;
-    text-decoration: none;
-    margin: 15px 0;
+  color: var(--login-text);
+  font-size: 14px;
+  text-decoration: none;
+  margin: 15px 0;
 }
 
 form {
-    background-color: var(--login-inside-panel);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 50px;
-    height: 100%;
-    text-align: center;
+  background-color: var(--login-inside-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
 }
 
-.form-box h1{
-    color: var(--login-text);
+.form-box h1 {
+  color: var(--login-text);
 }
 
 input {
-    background-color: var(--login-input-field);
-    border: none;
-    padding: 12px 15px;
-    margin: 8px 0;
-    width: 100%;
+  background-color: var(--login-input-field);
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
 }
 
 .box {
-    background-color: var(--login-inside-panel);
-    border-radius: 10px;
-    box-shadow: 0 14px 28px var(--login-panel-shadow);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
-    z-index: 1;
+  background-color: var(--login-inside-panel);
+  border-radius: 10px;
+  box-shadow: 0 14px 28px var(--login-panel-shadow);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  z-index: 1;
 }
 
 .form-box {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.6s ease-in-out;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
 }
 
 .sign-in-box {
-    left: 0;
-    width: 50%;
-    z-index: 2;
+  left: 0;
+  width: 50%;
+  z-index: 2;
 }
 
 .box.right-panel-active .sign-in-box {
-    transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 .sign-up-box {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
 }
 
 .box.right-panel-active .sign-up-box {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: show 0.6s;
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
 }
 
 @keyframes show {
-    0%, 49.99% {
-        opacity: 0;
-        z-index: 1;
-    }
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
 
-    50%, 100% {
-        opacity: 1;
-        z-index: 5;
-    }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
 }
 
 .overlay-box {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
 }
 
-.box.right-panel-active .overlay-box{
-    transform: translateX(-100%);
+.box.right-panel-active .overlay-box {
+  transform: translateX(-100%);
 }
 
 .overlay {
-    background: #FF416C;
-    background: var(--index-gradient);
-    background: var(--index-gradient);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
-    color: var(--login-text-header);
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+  background: #ff416c;
+  background: var(--index-gradient);
+  background: var(--index-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 0;
+  color: var(--login-text-header);
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .box.right-panel-active .overlay {
-    transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .overlay-panel {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    transform: translateX(0);
-    transition: transform 0.6s ease-in-out;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .overlay-left {
-    transform: translateX(-20%);
+  transform: translateX(-20%);
 }
 
 .box.right-panel-active .overlay-left {
-    transform: translateX(0);
+  transform: translateX(0);
 }
 
 .overlay-right {
-    right: 0;
-    transform: translateX(0);
+  right: 0;
+  transform: translateX(0);
 }
 
 .box.right-panel-active .overlay-right {
-    transform: translateX(20%);
+  transform: translateX(20%);
 }
 
 .social-box {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .social-box a {
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
 }
 
 #register-result {
-    color: green;
-    margin-top: 10px;
+  color: green;
+  margin-top: 10px;
 }
 
 #login-result {
-    color: green;
-    margin-top: 10px;
+  color: green;
+  margin-top: 10px;
 }
 
 /*
@@ -268,51 +269,51 @@ Password Field Style
 ---------------------------------------------
 */
 .password-container {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 }
 
 #password {
-    width: 100%;
-    padding-right: 30px;
+  width: 100%;
+  padding-right: 30px;
 }
 
 .show-password-btn {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    margin: 0;
-    outline: none;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
 .show-password-btn:active {
-    outline: none;
-    border: none;
-    /* Prevents the button from moving downwards */
-    top: 50%;
-    position: absolute;
-    transform: translateY(-50%);
+  outline: none;
+  border: none;
+  /* Prevents the button from moving downwards */
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
 }
 
 .show-password-btn:focus {
-    outline: none;
+  outline: none;
 }
-
 
 .show-password-btn img {
-    width: 20px;
-    height: auto;
-    display: block;
+  width: 20px;
+  height: auto;
+  display: block;
 }
 
-.show-password-btn:focus, .show-password-btn:active {
-    outline: none;
-    border: none;
+.show-password-btn:focus,
+.show-password-btn:active {
+  outline: none;
+  border: none;
 }
 
 /*
@@ -321,11 +322,11 @@ Footer Style Override
 ---------------------------------------------
 */
 footer {
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    z-index: 999;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 /*
@@ -335,80 +336,82 @@ Responsive Style
 */
 
 @media (max-width: 1000px) {
-    .main-banner {
-        width: 100%;
-    }
+  .main-banner {
+    width: 100%;
+  }
 
-    .main-banner .bg {
-        display: none;
-    }
+  .main-banner .bg {
+    display: none;
+  }
 
-    .header-area {
-        display: none;
-    }
+  .header-area {
+    display: none;
+  }
 
-    .mobile-header {
-        width: 0px;
-        height: 0px;
-        display: block;
-    }
-    .mobile-banner {
-        display: block;
-    }
+  .mobile-header {
+    width: 0px;
+    height: 0px;
+    display: block;
+  }
+  .mobile-banner {
+    display: block;
+  }
 }
 
 @media (max-width: 815px) {
-    .box {
-        width: auto; /* Passt die Breite an */
-        min-height: auto; /* Passt die Mindesthöhe an */
-        display: flex; /* Aktiviert flexibles Box-Layout */
-        flex-direction: column; /* Stapelt Elemente vertikal */
-    }
+  .box {
+    width: auto; /* Passt die Breite an */
+    min-height: auto; /* Passt die Mindesthöhe an */
+    display: flex; /* Aktiviert flexibles Box-Layout */
+    flex-direction: column; /* Stapelt Elemente vertikal */
+  }
 
-    .form-box {
-        position: relative; /* Setzt die Position auf relativ */
-        width: 100%; /* Setzt die Breite auf 100% */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        transform: translateX(0); /* Entfernt Verschiebungen */
-        transition: none; /* Deaktiviert Übergänge/Animationen */
-    }
+  .form-box {
+    position: relative; /* Setzt die Position auf relativ */
+    width: 100%; /* Setzt die Breite auf 100% */
+    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+    transform: translateX(0); /* Entfernt Verschiebungen */
+    transition: none; /* Deaktiviert Übergänge/Animationen */
+  }
 
-    .sign-in-box, .sign-up-box {
-        width: 100%; /* Setzt die Breite auf 100% */
-        left: 0; /* Setzt die linke Position auf 0 */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        z-index: 1; /* Setzt den z-Index */
-    }
+  .sign-in-box,
+  .sign-up-box {
+    width: 100%; /* Setzt die Breite auf 100% */
+    left: 0; /* Setzt die linke Position auf 0 */
+    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+    z-index: 1; /* Setzt den z-Index */
+  }
 
-    .overlay-box {
-        display: none; /* Versteckt das Overlay */
-    }
+  .overlay-box {
+    display: none; /* Versteckt das Overlay */
+  }
 }
 
 @media (max-height: 732px) {
-    .box {
-        width: auto; /* Passt die Breite an */
-        min-height: auto; /* Passt die Mindesthöhe an */
-        display: flex; /* Aktiviert flexibles Box-Layout */
-        flex-direction: column; /* Stapelt Elemente vertikal */
-    }
+  .box {
+    width: auto; /* Passt die Breite an */
+    min-height: auto; /* Passt die Mindesthöhe an */
+    display: flex; /* Aktiviert flexibles Box-Layout */
+    flex-direction: column; /* Stapelt Elemente vertikal */
+  }
 
-    .form-box {
-        position: relative; /* Setzt die Position auf relativ */
-        width: 100%; /* Setzt die Breite auf 100% */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        transform: translateX(0); /* Entfernt Verschiebungen */
-        transition: none; /* Deaktiviert Übergänge/Animationen */
-    }
+  .form-box {
+    position: relative; /* Setzt die Position auf relativ */
+    width: 100%; /* Setzt die Breite auf 100% */
+    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+    transform: translateX(0); /* Entfernt Verschiebungen */
+    transition: none; /* Deaktiviert Übergänge/Animationen */
+  }
 
-    .sign-in-box, .sign-up-box {
-        width: 100%; /* Setzt die Breite auf 100% */
-        left: 0; /* Setzt die linke Position auf 0 */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        z-index: 1; /* Setzt den z-Index */
-    }
+  .sign-in-box,
+  .sign-up-box {
+    width: 100%; /* Setzt die Breite auf 100% */
+    left: 0; /* Setzt die linke Position auf 0 */
+    opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
+    z-index: 1; /* Setzt den z-Index */
+  }
 
-    .overlay-box {
-        display: none; /* Versteckt das Overlay */
-    }
+  .overlay-box {
+    display: none; /* Versteckt das Overlay */
+  }
 }

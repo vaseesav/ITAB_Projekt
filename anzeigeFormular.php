@@ -210,6 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="file" id="fotos" name="fotos" accept="image/*">
         <br>
         <button type="submit">Anzeige aufgeben</button>
+        <butt
     </form>
 </inputboxn>
 <!-- Header Start-->

@@ -82,27 +82,44 @@ input[type='number price'] {
 input[type='date'] {
   max-width: 125px;
 }
-.styled-result {
-  /* Add your styles here */
-  color: blue;
 
+.styled-result {
   margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid var(--such-border);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
 
 .styled-title {
-  /* Add your styles here */
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--such-header);
+  margin-bottom: 10px;
 }
 
 .styled-type {
-  /* Add your styles here */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--such-header);
+  margin-bottom: 10px;
 }
 
 .styled-description {
-  /* Add your styles here */
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--such-header);
+  margin-bottom: 10px;
 }
 
 .styled-price {
-  /* Add your styles here */
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--such-header);
+  margin-bottom: 10px;
 }
 /* Responsive Design */
 @media (max-width: 768px) {

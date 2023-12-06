@@ -1,94 +1,118 @@
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: var(--such-bg);
-    color: var(--such-text);
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--such-bg);
+  color: var(--such-text);
 }
 
-.suchmaschine{
-    position: relative;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid var(--such-border);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: white;
+.suchmaschine {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid var(--such-border);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
 }
-label{
-    margin-bottom: 10px;
-    margin-top: 10px;
-    display:block;
+label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
 }
 
 form {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
-input[type="text"], select, input[type="number"] {
-    border: 1px solid var(--such-border);
-    border-radius: 4px;
-    padding: 10px;
-    margin-bottom: 15px;
-    width: 100%;
-    box-shadow: 0 2px 4px var(--such-shadow);
+input[type='text'],
+select,
+input[type='number'] {
+  border: 1px solid var(--such-border);
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 0 2px 4px var(--such-shadow);
 }
 
-input[type="submit"] {
-    background-color: var(--such-btn);
-    color: var(--such-btn-text);
-    padding: 12px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+input[type='submit'] {
+  background-color: var(--such-btn);
+  color: var(--such-btn-text);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background-color: var(--such-btn-hover);
+input[type='submit']:hover {
+  background-color: var(--such-btn-hover);
 }
 
 fieldset {
-    border: none;
-    margin-bottom: 20px;
+  border: none;
+  margin-bottom: 20px;
 }
 
 legend {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: var(--such-header);
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--such-header);
 }
 
 .btn-suchen {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .suche-container {
-    margin: 25px;
+  margin: 25px;
 }
 
 .result-container p {
-    color: var(--such-text)
+  color: var(--such-text);
 }
-input[type="number price"]{
-    max-width: 50px;
-    margin: 10px;
+input[type='number price'] {
+  max-width: 50px;
+  margin: 10px;
 }
-.preis{
-    /* margin-left: 10px; */
-    margin-right: 10px;
+.preis {
+  /* margin-left: 10px; */
+  margin-right: 10px;
 }
-input[type="date"]{
-    max-width: 125px;
+input[type='date'] {
+  max-width: 125px;
+}
+.styled-result {
+  /* Add your styles here */
+  color: blue;
+
+  margin-left: 20%;
+}
+
+.styled-title {
+  /* Add your styles here */
+}
+
+.styled-type {
+  /* Add your styles here */
+}
+
+.styled-description {
+  /* Add your styles here */
+}
+
+.styled-price {
+  /* Add your styles here */
 }
 /* Responsive Design */
 @media (max-width: 768px) {
-    .flex-container {
-        flex-direction: column;
-    }
+  .flex-container {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 1170px) {
-    .suche-container {
-        margin-top: 60px;
-    }
+  .suche-container {
+    margin-top: 60px;
+  }
 }

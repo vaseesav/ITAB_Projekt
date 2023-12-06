@@ -29,7 +29,7 @@ include 'assets/php/mobileHeader.php';
 <div id="preloader" style="display: none;">
     <?php include 'assets/php/preloader.php'; ?>
 </div>
-    <br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
 
     <form action="suchergebnisse.php" method="post">
 <div class="suchmaschine">

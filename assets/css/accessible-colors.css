@@ -73,6 +73,19 @@
 
     /*
     ---------------------------------------------
+    Anzeige/Gesuch color
+    ---------------------------------------------
+    */
+    
+    --anzeige-bg: #f4f4f4;
+    --anzeige-btn: #7453fc;
+    --anzeige-btn-hover: #A995FF;
+    --anzeige-btn-text: white;
+    --anzeige-btn-hover-text: black;
+    --textarea-border: #ccc;
+
+    /*
+    ---------------------------------------------
     Pre-loader color
     ---------------------------------------------
     */
@@ -87,7 +100,8 @@
     --nav-bg: #6451D6;
     --nav-shadow: rgba(0,0,0,0.15);
     --nav-text: white;
-    --nav-text-hover: #A995FF;
+    --nav-bg-hover: #A995FF;
+    --nav-text-hover:black;
 
 
     /*

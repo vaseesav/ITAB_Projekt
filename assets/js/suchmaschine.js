@@ -34,7 +34,9 @@ $(document).ready(function () {
             ergebnisseDiv.append(resultDiv);
           });
         } else {
-          ergebnisseDiv.html('<p>Keine Ergebnisse gefunden.</p>');
+          ergebnisseDiv.html(
+            '<p class="result styled-result styled-title">Keine Ergebnisse gefunden.</p>'
+          );
         }
         hidePreloader();
       },

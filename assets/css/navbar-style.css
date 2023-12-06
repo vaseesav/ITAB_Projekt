@@ -89,13 +89,13 @@ Header Style
 }
 
 .header-area .main-nav .nav li:hover a {
-    color: #fff;
-    background-color: var(--nav-text-hover);
+    color: var(--nav-text-hover);
+    background-color: var(--nav-bg-hover);
 }
 
 .header-area .main-nav .nav li a.active {
-    color: #fff;
-    background-color: var(--nav-text-hover);
+    color: var(--nav-text-hover);
+    background-color: var(--nav-bg-hover);
 }
 
 .nav li {

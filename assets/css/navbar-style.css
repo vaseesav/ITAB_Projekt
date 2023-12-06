@@ -86,6 +86,7 @@ Header Style
     padding: 8px;
     border-radius: 18px;
     letter-spacing: 1px;
+    text-decoration: none;
 }
 
 .header-area .main-nav .nav li:hover a {

@@ -2,14 +2,6 @@
 include 'assets/php/head.php';
 ?>
 <?php
-if (session_status() == PHP_SESSION_NONE) {
-    session_start();
-}
-// Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.php');
-    exit;
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -129,6 +121,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="de">
 
 <head>
+    <?php
+    // Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
+    if (!isset($_SESSION['loggedin'])) {
+        header('Location: login.php');
+        exit;
+    }
+    ?>
     <title>Anzeige/Gesuch Aufgeben</title>
     <link rel="stylesheet" href="assets/css/anzeigen-style.css">
     <script src="assets/js/anzeigeToggle.js"></script>
@@ -210,6 +209,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="file" id="fotos" name="fotos" accept="image/*">
         <br>
         <button type="submit">Anzeige aufgeben</button>
+        <butt
     </form>
 </inputboxn>
 <!-- Header Start-->

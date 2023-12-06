@@ -80,7 +80,6 @@ button.ghost {
     border-color: var(--login-switch-button-border);
 }
 
-
 /*
 ---------------------------------------------
 Box Styles
@@ -104,7 +103,7 @@ form {
     text-align: center;
 }
 
-.form-box h1{
+.form-box h1 {
     color: var(--login-text);
 }
 
@@ -160,12 +159,14 @@ input {
 }
 
 @keyframes show {
-    0%, 49.99% {
+    0%,
+    49.99% {
         opacity: 0;
         z-index: 1;
     }
 
-    50%, 100% {
+    50%,
+    100% {
         opacity: 1;
         z-index: 5;
     }
@@ -182,12 +183,12 @@ input {
     z-index: 100;
 }
 
-.box.right-panel-active .overlay-box{
+.box.right-panel-active .overlay-box {
     transform: translateX(-100%);
 }
 
 .overlay {
-    background: #FF416C;
+    background: #ff416c;
     background: var(--index-gradient);
     background: var(--index-gradient);
     background-repeat: no-repeat;
@@ -303,14 +304,14 @@ Password Field Style
     outline: none;
 }
 
-
 .show-password-btn img {
     width: 20px;
     height: auto;
     display: block;
 }
 
-.show-password-btn:focus, .show-password-btn:active {
+.show-password-btn:focus,
+.show-password-btn:active {
     outline: none;
     border: none;
 }
@@ -359,65 +360,66 @@ Responsive Style
 
 @media (max-width: 815px) {
     .box {
-        width: auto; /* Passt die Breite an */
-        min-height: auto; /* Passt die Mindesthöhe an */
-        display: flex; /* Aktiviert flexibles Box-Layout */
-        flex-direction: column; /* Stapelt Elemente vertikal */
+        width: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .form-box {
-        position: relative; /* Setzt die Position auf relativ */
-        width: 100%; /* Setzt die Breite auf 100% */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        transform: translateX(0); /* Entfernt Verschiebungen */
-        transition: none; /* Deaktiviert Übergänge/Animationen */
+        position: relative;
+        width: 100%;
+        opacity: 1;
+        transform: translateX(0);
+        transition: none;
     }
 
-    .sign-in-box, .sign-up-box {
-        width: 100%; /* Setzt die Breite auf 100% */
-        left: 0; /* Setzt die linke Position auf 0 */
-        opacity: 1; /* Stellt sicher, dass die Box sichtbar ist */
-        z-index: 1; /* Setzt den z-Index */
+    .sign-in-box,
+    .sign-up-box {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        z-index: 1;
     }
 
     .overlay-box {
-        display: none; /* Versteckt das Overlay */
-    }
-
-    .sign-up-box h1 {
-        padding-top: 15px;
+        display: none;
     }
 
     body {
-        margin: 0; /* Entfernt den Rand des Body-Elements */
-        padding: 0; /* Entfernt den Abstand des Body-Elements */
-        min-height: 125vh; /* Mindesthöhe auf 100% der Bildschirmhöhe setzen */
-    }
-
-    footer {
-        position: relative; /* Ändert die Position des Footers */
-        bottom: 0; /* Setzt den Footer am unteren Rand */
-        left: 0; /* Setzt den Footer am linken Rand */
-        right: 0; /* Setzt den Footer am rechten Rand */
-        width: 100%; /* Stellt sicher, dass der Footer die volle Breite einnimmt */
-        margin: 0; /* Entfernt Ränder um den Footer */
-        padding: 15px; /* Entfernt Abstände im Footer */
-        /* Weitere Stilangaben für den Footer... */
-    }
-
-    .box {
-        /* Stilangaben für das Box-Element... */
-        margin-bottom: 0; /* Entfernt den unteren Rand des Box-Elements */
-    }
-
-    /* Stellen Sie sicher, dass der Inhalt der Seite genug Platz hat */
-    body, .box {
-        display: flex; /* Flexibles Box-Layout verwenden */
-        flex-direction: column; /* Elemente vertikal stapeln */
-        justify-content: space-between; /* Platz zwischen den Elementen */
+        height: 140vh;
     }
 }
 
-@media (max-height: 850px) {
+@media (max-height: 732px) {
+    .box {
+        width: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .form-box {
+        position: relative;
+        width: 100%;
+        opacity: 1;
+        transform: translateX(0);
+        transition: none;
+    }
+
+    .sign-in-box,
+    .sign-up-box {
+        width: 100%;
+        left: 0;
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .overlay-box {
+        display: none;
+    }
+
+    body {
+        height: 140vh;
+    }
 }

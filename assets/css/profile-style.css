@@ -15,7 +15,7 @@ body {
 }
 
 h2, p {
-    color: var(--profiles-text)
+    color: var(--profiles-text);
 }
 
 button {
@@ -169,7 +169,7 @@ label, .toggle {
 .names {
 
     width: 65%;
-    margin-left: 17.5%;
+    margin-left: 14.5%;
     margin-top: -4.5%;
     position: absolute;
     display: flex;
@@ -191,6 +191,8 @@ label, .toggle {
     margin-left: -15px;
 }
 
+
+
 /* 
 ---------------------------------------------
 Footer Style
@@ -198,9 +200,12 @@ Footer Style
 */
 footer {
     bottom: 0;
-    position: fixed;
     left: 0;
     right: 0;
+}
+
+div.names p {
+    font-size: 16px;
 }
 
 /*
@@ -243,6 +248,11 @@ Responsive Style
         font-weight: bolder;
     }
 
+    div.names p {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-right: -30px;
+    }
 }
 
 @media (max-width: 400px) {

@@ -98,6 +98,28 @@ Header Style
     background-color: var(--nav-bg-hover);
 }
 
+.nav li {
+    padding: 0;
+}
+
 #profile {
     display: none;
+}
+
+@media (max-width: 1313px) {
+    .header-area .main-nav .nav li a {
+        font-size: 19px;
+        letter-spacing: 0;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: 10px;
+    }
+
+    .header-area .main-nav .nav {
+        text-align: center;
+    }
+
+    .header-area .main-nav .nav {
+        margin-left: 200px;
+    }
 }

@@ -1,7 +1,7 @@
 /*
 ---------------------------------------------
 Global Styles
---------------------------------------------- 
+---------------------------------------------
 */
 * {
   box-sizing: border-box;
@@ -62,10 +62,10 @@ img {
   border: 1px solid var(--button-main-text);
 }
 
-/* 
+/*
 ---------------------------------------------
 Banner Style
---------------------------------------------- 
+---------------------------------------------
 */
 .mobile-banner {
   display: none;
@@ -120,10 +120,10 @@ Banner Style
 .bildInserat{
   max-width: 60%;
 }
-/* 
+/*
 ---------------------------------------------
 Responsive Style
---------------------------------------------- 
+---------------------------------------------
 */
 
 @media (max-width: 1000px) {
@@ -131,12 +131,12 @@ Responsive Style
     background: var(--index-gradient);
     width: 100%;
   }
-  
+
   .main-banner .bg {
     display: none;
   }
 
-  .header-area { 
+  .header-area {
     display: none;
   }
   .main-button{
@@ -155,7 +155,7 @@ Responsive Style
   }
   h1{
     font-size: 40px;
- 
+
   }
   h2{
     font-size: 17px;
@@ -169,4 +169,49 @@ Responsive Style
  footer p {
    padding: 0;
  }
+}
+
+@media (max-height: 815px) {
+  .main-banner {
+    background: var(--index-gradient);
+    width: 100%;
+  }
+
+  .main-banner .bg {
+    display: none;
+  }
+
+  .header-area {
+    display: none;
+  }
+  .main-button{
+    padding-left: 50px;
+  }
+  .mobile-header {
+    width: 0px;
+    height: 0px;
+    display: block;
+  }
+  .mobile-banner {
+    display: block;
+  }
+  h1, h2, h3, h4, h5{
+    padding-left: 10px;
+  }
+  h1{
+    font-size: 40px;
+
+  }
+  h2{
+    font-size: 17px;
+  }
+  p{
+    font-size: 19px;
+    padding-left: 10px;
+    padding: 50px;
+  }
+
+  footer p {
+    padding: 0;
+  }
 }

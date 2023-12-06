@@ -8,27 +8,25 @@ include 'assets/php/head.php';
     <title>Inserat</title>
     <link rel="stylesheet" href="assets/css/bspInserat-style.css">
     <script>
-        function loadData() {
-            fetch('fetch_data.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('tableData').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("Error loading data");
-                });
+        async function loadData() {
+            try {
+                const response = await fetch('fetch_data.php');
+                const data = await response.text();
+                document.getElementById('tableData').innerHTML = data;
+            } catch (error) {
+                console.error('Error:', error);
+                alert("Error loading data");
+            }
         }
-        function loadImg() {
-            fetch('fetch_image.php')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('tableImg').innerHTML = data;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert("Error loading data");
-                });
+        async function loadImg() {
+            try {
+                const response = await fetch('fetch_image.php');
+                const data = await response.text();
+                document.getElementById('tableImg').innerHTML = data;
+            } catch (error) {
+                console.error('Error:', error);
+                alert("Error loading data");
+            }
         }
     </script>
     <script>

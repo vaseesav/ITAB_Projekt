@@ -9,6 +9,7 @@
                     <!-- Nav Bar Start -->
                     <ul class="nav">
                         <li><a href="index.php" class="active">Startseite</a></li>
+                        <li><a href="anzeigeFormular.php" class="active">Anzeige/Gesuch Aufgeben</a></li>
                         <li><a href="suchmaschine.php">Erkunden</a></li>
                         <li><a href="ueberUns.php">Über Uns</a></li>
                         <li><a href="profile.php" id="profile">Profil</a></li>

@@ -8,6 +8,7 @@
         <ul class="menu__box">
             <li><a class="menu__item" href="index.php">Startseite</a></li>
             <li><a class="menu__item" href="suchmaschine.php">Erkunden</a></li>
+            <li><a class="menu__item" href="anzeigeFormular.php">Anzeige/Gesuch Aufgeben</a></li>
             <li><a class="menu__item" href="ueberUns.php">Über Uns</a></li>
             <li><a class="menu__item" href="profile.php" id="profile">Profil</a></li>
             <li><a class="menu__item" href="login.php" id="login">Anmelden / Registrieren</a></li>

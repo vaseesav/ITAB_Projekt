@@ -6,13 +6,13 @@ Header Style
 
 .background-header {
     background-color: var(--nav-bg) !important;
-    height: 70px!important;
-    position: fixed!important;
-    top: 0!important;
+    height: 70px !important;
+    position: fixed !important;
+    top: 0 !important;
     left: 0;
     right: 0;
-    box-shadow: 0px 0px 10px var(--nav-shadow)!important;
-    transition: all .5s ease 0s;
+    box-shadow: 0px 0px 10px var(--nav-shadow) !important;
+    transition: all 0.5s ease 0s;
     width: 100%;
 }
 
@@ -24,7 +24,7 @@ Header Style
     left: 0;
     right: 0;
     z-index: 100;
-    transition: all .5s ease 0s;
+    transition: all 0.5s ease 0s;
 }
 
 .header-area .main-nav {
@@ -48,7 +48,7 @@ Header Style
 }
 
 .header-area .main-nav .logo img {
-    width: 100px;
+    width: 167px;
 }
 
 .background-header .main-nav .logo img {
@@ -83,7 +83,7 @@ Header Style
     color: var(--nav-text);
     transition: all 0.3s ease 0s;
     border: transparent;
-    padding: 8px 15px;
+    padding: 8px;
     border-radius: 18px;
     letter-spacing: 1px;
 }

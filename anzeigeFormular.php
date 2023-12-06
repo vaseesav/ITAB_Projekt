@@ -129,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="de">
 
 <head>
-    <title>Anzeige oder Gesuch aufgeben</title>
+    <title>Anzeige/Gesuch Aufgeben</title>
     <link rel="stylesheet" href="assets/css/anzeigen-style.css">
     <script src="assets/js/anzeigeToggle.js"></script>
 

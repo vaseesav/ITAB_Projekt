@@ -55,12 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Ergebnisse verarbeiten und ausgeben
     $resultArray = [];
-    while ($row = $result->fetch_assoc()) {
-        $resultArray[] = $row;
-    }
+                  
 
     header('Content-Type: application/json');
     echo json_encode($resultArray);
+    
 
     $stmt->close();
 } else {

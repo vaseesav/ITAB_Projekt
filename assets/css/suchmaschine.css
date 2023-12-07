@@ -114,7 +114,6 @@ input[type='date'] {
   color: var(--such-header);
   margin-bottom: 10px;
 }
-
 .styled-price {
   font-size: 1em;
   font-weight: bold;

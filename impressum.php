@@ -64,8 +64,8 @@ include 'assets/php/mobileHeader.php';
         <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2>
         <p>Annika With, Geschäftsührerin <br><br>
         Konzeption und Text: Code Cruncher GmbH: Mohammad Salim und Leon Schulz<br>
-        Webdesign: Jan Krüger<br>
-        Technische Umsetzung: Kilian Woldt
+        Webdesign: Jan Krüger und Kilian Woldt <br>
+        Technische Umsetzung: Jan Krüger und Kilian Woldt
         </p>
     </section>
 

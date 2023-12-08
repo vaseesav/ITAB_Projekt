@@ -56,12 +56,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ergebnisse verarbeiten und ausgeben
     $resultArray = [];
     while ($row = $result->fetch_assoc()) {
+        // Second SQL statement to fetch Pfad from foto table
+        $sql2 = "SELECT Pfad FROM foto WHERE AnzeigenID = ?";
+        $stmt2 = $conn->prepare($sql2);
+        $stmt2->bind_param("i", $row['AnzeigenID']); 
+        $stmt2->execute();
+        $result2 = $stmt2->get_result();
+        if ($result2->num_rows > 0) {
+            $row2 = $result2->fetch_assoc();
+            $row['Pfad'] = $row2['Pfad']; 
+        }
+        $stmt2->close();
+
         $resultArray[] = $row;
     }
 
     header('Content-Type: application/json');
     echo json_encode($resultArray);
 
+    
     $stmt->close();
 } else {
     header('Content-Type: application/json');

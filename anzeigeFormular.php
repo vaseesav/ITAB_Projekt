@@ -2,10 +2,18 @@
 include 'assets/php/head.php';
 ?>
 <?php
+  // Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
+  ob_start();
+if (!isset($_SESSION['loggedin'])) {
+	echo ("Bitte melden Sie sich an!");
+    header('Location: login.php?error=notloggedin');
+	 echo '<script>window.location.href="login.php?error=notloggedin";</script>';
+    exit;
+}
+ob_end_flush();
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-
     $userId = $_SESSION['userId'];
 
     include 'assets/database/connect.php';
@@ -146,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 </div>
 <br><br><br><br><br><br><br><br>
-<inputboxn>
+<div class="inputboxn">
     <form method="post" enctype="multipart/form-data">
         <!-- Your HTML form content goes here -->
         <div class="toggle-container">
@@ -209,9 +217,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="file" id="fotos" name="fotos" accept="image/*">
         <br>
         <button type="submit">Anzeige aufgeben</button>
-        <butt
     </form>
-</inputboxn>
+</div>
 <!-- Header Start-->
 <?php
 include 'assets/php/header.php';

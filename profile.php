@@ -6,11 +6,15 @@ require_once 'assets/php/head.php';
 <html lang="de">
 <head>
   <?php
-// Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
+  // Überprüfen, ob der Benutzer eingeloggt ist. Wenn nicht, zur Login-Seite umleiten
+  ob_start();
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: login.php');
+	echo ("Bitte melden Sie sich an!");
+    header('Location: login.php?error=notloggedin');
+	 echo '<script>window.location.href="login.php?error=notloggedin";</script>';
     exit;
 }
+ob_end_flush();
 ?>
     <title>Profil</title>
     <link rel="stylesheet" href="assets/css/profile-style.css">

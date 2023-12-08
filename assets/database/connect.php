@@ -1,10 +1,10 @@
 <?php
 global $conn;
 // Datenbankkonfiguration
-$dbServername = 'localhost';
-$dbUsername = 'root';
-$dbPassword = '';
-$dbName = 'mieteinander';
+$dbServername = "rdbms.strato.de";
+$dbUsername = "dbu2408738";
+$dbPassword = "#code-cruncher-2023%";
+$dbName = "dbs12222605";
 
 
 // Versuch, eine Verbindung zur Datenbank herzustellen

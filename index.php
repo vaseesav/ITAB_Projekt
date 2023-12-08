@@ -79,7 +79,7 @@ include 'assets/php/head.php';
       <br>
       <br>
       <br>
-      <p>Test</p>
+      <br>
       <br>
       <br>
       <br>

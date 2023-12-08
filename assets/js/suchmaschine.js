@@ -31,7 +31,7 @@ $(document).ready(function () {
                 <p class="styled-type">Veranstaltungstyp: ${row.Veranstaltungstyp}</p>
                 <p class="styled-description">Beschreibung: ${row.Beschreibung}</p>
                 <p class="styled-price">Preis: ${row.preis}</p>
-                <p class="styled-bild" style=""><img src="${row.Pfad}inseratBild.jpg"></img></p>`);
+                <p class="styled-bild" style=""><img src="${row.Pfad}/inseratBild.jpg"></img></p>`);
             ergebnisseDiv.append(resultDiv);
           });
         } else {
